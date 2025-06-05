@@ -61,11 +61,13 @@ function OxygenGradient() {
       <CalcHeader
         title="A-a gradient"
         description={
-          <p>
-            The A-a gradient is a measure of the difference between the alveolar
-            and arterial oxygen tensions. It is used to assess the efficiency of
-            gas exchange in the lungs.
-          </p>
+          <>
+            <p>
+              This calculator assumes normal barometric pressure at sea level
+              and will give inaccurate results at altitude.
+            </p>
+            <p>A-a gradient = PAO2-PaO2</p>
+          </>
         }
       />
       <CalcTab
