@@ -59,5 +59,4 @@ export default defineConfig({
       'Cross-Origin-Embedder-Policy': 'require-corp',
     },
   },
-  base: '/quick-calc/',
 });
