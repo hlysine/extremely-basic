@@ -13,6 +13,12 @@
 import { Route as rootRoute } from './routes/__root'
 import { Route as IndexImport } from './routes/index'
 import { Route as CalcOxygenGradientImport } from './routes/calc/oxygen-gradient'
+import { Route as CalcMetabolicAlkalosisImport } from './routes/calc/metabolic-alkalosis'
+import { Route as CalcMetabolicAcidosisImport } from './routes/calc/metabolic-acidosis'
+import { Route as CalcChronicRespiratoryAlkalosisImport } from './routes/calc/chronic-respiratory-alkalosis'
+import { Route as CalcChronicRespiratoryAcidosisImport } from './routes/calc/chronic-respiratory-acidosis'
+import { Route as CalcAcuteRespiratoryAlkalosisImport } from './routes/calc/acute-respiratory-alkalosis'
+import { Route as CalcAcuteRespiratoryAcidosisImport } from './routes/calc/acute-respiratory-acidosis'
 
 // Create/Update Routes
 
@@ -28,6 +34,46 @@ const CalcOxygenGradientRoute = CalcOxygenGradientImport.update({
   getParentRoute: () => rootRoute,
 } as any)
 
+const CalcMetabolicAlkalosisRoute = CalcMetabolicAlkalosisImport.update({
+  id: '/calc/metabolic-alkalosis',
+  path: '/calc/metabolic-alkalosis',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const CalcMetabolicAcidosisRoute = CalcMetabolicAcidosisImport.update({
+  id: '/calc/metabolic-acidosis',
+  path: '/calc/metabolic-acidosis',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const CalcChronicRespiratoryAlkalosisRoute =
+  CalcChronicRespiratoryAlkalosisImport.update({
+    id: '/calc/chronic-respiratory-alkalosis',
+    path: '/calc/chronic-respiratory-alkalosis',
+    getParentRoute: () => rootRoute,
+  } as any)
+
+const CalcChronicRespiratoryAcidosisRoute =
+  CalcChronicRespiratoryAcidosisImport.update({
+    id: '/calc/chronic-respiratory-acidosis',
+    path: '/calc/chronic-respiratory-acidosis',
+    getParentRoute: () => rootRoute,
+  } as any)
+
+const CalcAcuteRespiratoryAlkalosisRoute =
+  CalcAcuteRespiratoryAlkalosisImport.update({
+    id: '/calc/acute-respiratory-alkalosis',
+    path: '/calc/acute-respiratory-alkalosis',
+    getParentRoute: () => rootRoute,
+  } as any)
+
+const CalcAcuteRespiratoryAcidosisRoute =
+  CalcAcuteRespiratoryAcidosisImport.update({
+    id: '/calc/acute-respiratory-acidosis',
+    path: '/calc/acute-respiratory-acidosis',
+    getParentRoute: () => rootRoute,
+  } as any)
+
 // Populate the FileRoutesByPath interface
 
 declare module '@tanstack/react-router' {
@@ -37,6 +83,48 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexImport
+      parentRoute: typeof rootRoute
+    }
+    '/calc/acute-respiratory-acidosis': {
+      id: '/calc/acute-respiratory-acidosis'
+      path: '/calc/acute-respiratory-acidosis'
+      fullPath: '/calc/acute-respiratory-acidosis'
+      preLoaderRoute: typeof CalcAcuteRespiratoryAcidosisImport
+      parentRoute: typeof rootRoute
+    }
+    '/calc/acute-respiratory-alkalosis': {
+      id: '/calc/acute-respiratory-alkalosis'
+      path: '/calc/acute-respiratory-alkalosis'
+      fullPath: '/calc/acute-respiratory-alkalosis'
+      preLoaderRoute: typeof CalcAcuteRespiratoryAlkalosisImport
+      parentRoute: typeof rootRoute
+    }
+    '/calc/chronic-respiratory-acidosis': {
+      id: '/calc/chronic-respiratory-acidosis'
+      path: '/calc/chronic-respiratory-acidosis'
+      fullPath: '/calc/chronic-respiratory-acidosis'
+      preLoaderRoute: typeof CalcChronicRespiratoryAcidosisImport
+      parentRoute: typeof rootRoute
+    }
+    '/calc/chronic-respiratory-alkalosis': {
+      id: '/calc/chronic-respiratory-alkalosis'
+      path: '/calc/chronic-respiratory-alkalosis'
+      fullPath: '/calc/chronic-respiratory-alkalosis'
+      preLoaderRoute: typeof CalcChronicRespiratoryAlkalosisImport
+      parentRoute: typeof rootRoute
+    }
+    '/calc/metabolic-acidosis': {
+      id: '/calc/metabolic-acidosis'
+      path: '/calc/metabolic-acidosis'
+      fullPath: '/calc/metabolic-acidosis'
+      preLoaderRoute: typeof CalcMetabolicAcidosisImport
+      parentRoute: typeof rootRoute
+    }
+    '/calc/metabolic-alkalosis': {
+      id: '/calc/metabolic-alkalosis'
+      path: '/calc/metabolic-alkalosis'
+      fullPath: '/calc/metabolic-alkalosis'
+      preLoaderRoute: typeof CalcMetabolicAlkalosisImport
       parentRoute: typeof rootRoute
     }
     '/calc/oxygen-gradient': {
@@ -53,36 +141,91 @@ declare module '@tanstack/react-router' {
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/calc/acute-respiratory-acidosis': typeof CalcAcuteRespiratoryAcidosisRoute
+  '/calc/acute-respiratory-alkalosis': typeof CalcAcuteRespiratoryAlkalosisRoute
+  '/calc/chronic-respiratory-acidosis': typeof CalcChronicRespiratoryAcidosisRoute
+  '/calc/chronic-respiratory-alkalosis': typeof CalcChronicRespiratoryAlkalosisRoute
+  '/calc/metabolic-acidosis': typeof CalcMetabolicAcidosisRoute
+  '/calc/metabolic-alkalosis': typeof CalcMetabolicAlkalosisRoute
   '/calc/oxygen-gradient': typeof CalcOxygenGradientRoute
 }
 
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/calc/acute-respiratory-acidosis': typeof CalcAcuteRespiratoryAcidosisRoute
+  '/calc/acute-respiratory-alkalosis': typeof CalcAcuteRespiratoryAlkalosisRoute
+  '/calc/chronic-respiratory-acidosis': typeof CalcChronicRespiratoryAcidosisRoute
+  '/calc/chronic-respiratory-alkalosis': typeof CalcChronicRespiratoryAlkalosisRoute
+  '/calc/metabolic-acidosis': typeof CalcMetabolicAcidosisRoute
+  '/calc/metabolic-alkalosis': typeof CalcMetabolicAlkalosisRoute
   '/calc/oxygen-gradient': typeof CalcOxygenGradientRoute
 }
 
 export interface FileRoutesById {
   __root__: typeof rootRoute
   '/': typeof IndexRoute
+  '/calc/acute-respiratory-acidosis': typeof CalcAcuteRespiratoryAcidosisRoute
+  '/calc/acute-respiratory-alkalosis': typeof CalcAcuteRespiratoryAlkalosisRoute
+  '/calc/chronic-respiratory-acidosis': typeof CalcChronicRespiratoryAcidosisRoute
+  '/calc/chronic-respiratory-alkalosis': typeof CalcChronicRespiratoryAlkalosisRoute
+  '/calc/metabolic-acidosis': typeof CalcMetabolicAcidosisRoute
+  '/calc/metabolic-alkalosis': typeof CalcMetabolicAlkalosisRoute
   '/calc/oxygen-gradient': typeof CalcOxygenGradientRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/calc/oxygen-gradient'
+  fullPaths:
+    | '/'
+    | '/calc/acute-respiratory-acidosis'
+    | '/calc/acute-respiratory-alkalosis'
+    | '/calc/chronic-respiratory-acidosis'
+    | '/calc/chronic-respiratory-alkalosis'
+    | '/calc/metabolic-acidosis'
+    | '/calc/metabolic-alkalosis'
+    | '/calc/oxygen-gradient'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/calc/oxygen-gradient'
-  id: '__root__' | '/' | '/calc/oxygen-gradient'
+  to:
+    | '/'
+    | '/calc/acute-respiratory-acidosis'
+    | '/calc/acute-respiratory-alkalosis'
+    | '/calc/chronic-respiratory-acidosis'
+    | '/calc/chronic-respiratory-alkalosis'
+    | '/calc/metabolic-acidosis'
+    | '/calc/metabolic-alkalosis'
+    | '/calc/oxygen-gradient'
+  id:
+    | '__root__'
+    | '/'
+    | '/calc/acute-respiratory-acidosis'
+    | '/calc/acute-respiratory-alkalosis'
+    | '/calc/chronic-respiratory-acidosis'
+    | '/calc/chronic-respiratory-alkalosis'
+    | '/calc/metabolic-acidosis'
+    | '/calc/metabolic-alkalosis'
+    | '/calc/oxygen-gradient'
   fileRoutesById: FileRoutesById
 }
 
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CalcAcuteRespiratoryAcidosisRoute: typeof CalcAcuteRespiratoryAcidosisRoute
+  CalcAcuteRespiratoryAlkalosisRoute: typeof CalcAcuteRespiratoryAlkalosisRoute
+  CalcChronicRespiratoryAcidosisRoute: typeof CalcChronicRespiratoryAcidosisRoute
+  CalcChronicRespiratoryAlkalosisRoute: typeof CalcChronicRespiratoryAlkalosisRoute
+  CalcMetabolicAcidosisRoute: typeof CalcMetabolicAcidosisRoute
+  CalcMetabolicAlkalosisRoute: typeof CalcMetabolicAlkalosisRoute
   CalcOxygenGradientRoute: typeof CalcOxygenGradientRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CalcAcuteRespiratoryAcidosisRoute: CalcAcuteRespiratoryAcidosisRoute,
+  CalcAcuteRespiratoryAlkalosisRoute: CalcAcuteRespiratoryAlkalosisRoute,
+  CalcChronicRespiratoryAcidosisRoute: CalcChronicRespiratoryAcidosisRoute,
+  CalcChronicRespiratoryAlkalosisRoute: CalcChronicRespiratoryAlkalosisRoute,
+  CalcMetabolicAcidosisRoute: CalcMetabolicAcidosisRoute,
+  CalcMetabolicAlkalosisRoute: CalcMetabolicAlkalosisRoute,
   CalcOxygenGradientRoute: CalcOxygenGradientRoute,
 }
 
@@ -97,11 +240,35 @@ export const routeTree = rootRoute
       "filePath": "__root.tsx",
       "children": [
         "/",
+        "/calc/acute-respiratory-acidosis",
+        "/calc/acute-respiratory-alkalosis",
+        "/calc/chronic-respiratory-acidosis",
+        "/calc/chronic-respiratory-alkalosis",
+        "/calc/metabolic-acidosis",
+        "/calc/metabolic-alkalosis",
         "/calc/oxygen-gradient"
       ]
     },
     "/": {
       "filePath": "index.tsx"
+    },
+    "/calc/acute-respiratory-acidosis": {
+      "filePath": "calc/acute-respiratory-acidosis.tsx"
+    },
+    "/calc/acute-respiratory-alkalosis": {
+      "filePath": "calc/acute-respiratory-alkalosis.tsx"
+    },
+    "/calc/chronic-respiratory-acidosis": {
+      "filePath": "calc/chronic-respiratory-acidosis.tsx"
+    },
+    "/calc/chronic-respiratory-alkalosis": {
+      "filePath": "calc/chronic-respiratory-alkalosis.tsx"
+    },
+    "/calc/metabolic-acidosis": {
+      "filePath": "calc/metabolic-acidosis.tsx"
+    },
+    "/calc/metabolic-alkalosis": {
+      "filePath": "calc/metabolic-alkalosis.tsx"
     },
     "/calc/oxygen-gradient": {
       "filePath": "calc/oxygen-gradient.tsx"

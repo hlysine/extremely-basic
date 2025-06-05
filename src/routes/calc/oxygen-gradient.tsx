@@ -9,20 +9,6 @@ import CalcOutputPanel from '../../components/CalcOutputPanel';
 import CalcOutputEntry from '../../components/CalcOutputEntry';
 import CalcDivider from '../../components/CalcDivider';
 
-function convertUnit(
-  value: number,
-  from: PressureUnit,
-  to: PressureUnit
-): number {
-  if (from === to) return value;
-  if (from === 'kPa' && to === 'mmHg') {
-    return Math.round(value * 7.5 * 100) / 100;
-  } else if (from === 'mmHg' && to === 'kPa') {
-    return Math.round((value / 7.5) * 100) / 100;
-  }
-  throw new Error(`Unsupported unit conversion from ${from} to ${to}`);
-}
-
 function OxygenGradient() {
   const [unit, setUnit] = useState<PressureUnit>('kPa');
   const [paO2, setPaO2] = useState<number>(Number.NaN);
@@ -62,7 +48,7 @@ function OxygenGradient() {
         title="A-a gradient"
         description={
           <>
-            <p>
+            <p className="pb-2">
               This calculator assumes normal barometric pressure at sea level
               and will give inaccurate results at altitude.
             </p>
@@ -76,12 +62,6 @@ function OxygenGradient() {
         onSelect={newUnit => {
           if (newUnit !== unit) {
             setUnit(newUnit);
-            if (!Number.isNaN(paO2)) {
-              setPaO2(convertUnit(paO2, unit, newUnit));
-            }
-            if (!Number.isNaN(paCO2)) {
-              setPaCO2(convertUnit(paCO2, unit, newUnit));
-            }
           }
         }}
       />

@@ -2,7 +2,7 @@ import { createFileRoute, Link } from '@tanstack/react-router';
 
 interface Calculator {
   title: string;
-  badges: string[];
+  badges: React.ReactNode[];
   path: string;
 }
 
@@ -17,8 +17,65 @@ const calculators: Section[] = [
     calculators: [
       {
         title: 'A-a gradient',
-        badges: ['kPa', 'mmHg'],
+        badges: [
+          <span key="PaO2">
+            P<sub>a</sub>O<sub>2</sub>
+          </span>,
+          <span key="FiO2">
+            FiO<sub>2</sub>
+          </span>,
+          <span key="PaCO2">
+            P<sub>a</sub>CO<sub>2</sub>
+          </span>,
+          'Age',
+        ],
         path: '/calc/oxygen-gradient',
+      },
+      {
+        title: 'Acute respiratory acidosis',
+        badges: [
+          <span key="PaCO2">
+            P<sub>a</sub>CO<sub>2</sub>
+          </span>,
+        ],
+        path: '/calc/acute-respiratory-acidosis',
+      },
+      {
+        title: 'Acute respiratory alkalosis',
+        badges: [
+          <span key="PaCO2">
+            P<sub>a</sub>CO<sub>2</sub>
+          </span>,
+        ],
+        path: '/calc/acute-respiratory-alkalosis',
+      },
+      {
+        title: 'Chronic respiratory acidosis',
+        badges: [
+          <span key="PaCO2">
+            P<sub>a</sub>CO<sub>2</sub>
+          </span>,
+        ],
+        path: '/calc/chronic-respiratory-acidosis',
+      },
+      {
+        title: 'Chronic respiratory alkalosis',
+        badges: [
+          <span key="PaCO2">
+            P<sub>a</sub>CO<sub>2</sub>
+          </span>,
+        ],
+        path: '/calc/chronic-respiratory-alkalosis',
+      },
+      {
+        title: 'Metabolic acidosis',
+        badges: ['Bicarbonate'],
+        path: '/calc/metabolic-acidosis',
+      },
+      {
+        title: 'Metabolic alkalosis',
+        badges: ['Bicarbonate'],
+        path: '/calc/metabolic-alkalosis',
       },
     ],
   },
@@ -41,7 +98,10 @@ function Index() {
                   <h2 className="card-title">{calc.title}</h2>
                   <div className="flex flex-wrap gap-2">
                     {calc.badges.map(badge => (
-                      <div key={badge} className="badge badge-secondary">
+                      <div
+                        key={badge?.toString() ?? 'null'}
+                        className="badge badge-secondary"
+                      >
                         {badge}
                       </div>
                     ))}
