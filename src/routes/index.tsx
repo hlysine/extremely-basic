@@ -97,7 +97,7 @@ function Index() {
       {calculators.map(section => (
         <div key={section.title} className="mb-6">
           <div className="divider divider-primary">{section.title}</div>
-          <ul className="flex flex-col gap-2">
+          <ul className="flex flex-wrap gap-2">
             {section.calculators.map(calc => (
               <Link
                 to={calc.path}
