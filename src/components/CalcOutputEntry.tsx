@@ -1,4 +1,5 @@
 import React, { memo } from 'react';
+import { format } from '../types';
 
 export interface CalcOutputEntryProps {
   suffix?: React.ReactNode;
@@ -6,16 +7,6 @@ export interface CalcOutputEntryProps {
   value?: React.ReactNode;
   topLabel?: React.ReactNode;
   bottomLabel?: React.ReactNode;
-}
-
-function format(value: React.ReactNode): React.ReactNode {
-  if (typeof value === 'number') {
-    return value.toLocaleString(undefined, {
-      maximumFractionDigits: 2,
-      minimumFractionDigits: 0,
-    });
-  }
-  return value;
 }
 
 export default memo(function CalcOutputEntry({

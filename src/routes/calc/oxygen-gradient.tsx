@@ -3,7 +3,7 @@ import CalcHeader from '../../components/CalcHeader';
 import Calculator from '../../components/Calculator';
 import CalcTab from '../../components/CalcTab';
 import { useState } from 'react';
-import { PressureUnit, PressureUnits, safeCompute } from '../../types';
+import { format, PressureUnit, PressureUnits, safeCompute } from '../../types';
 import CalcNumberInput from '../../components/CalcNumberInput';
 import CalcOutputPanel from '../../components/CalcOutputPanel';
 import CalcOutputEntry from '../../components/CalcOutputEntry';
@@ -16,9 +16,9 @@ function convertUnit(
 ): number {
   if (from === to) return value;
   if (from === 'kPa' && to === 'mmHg') {
-    return Math.round(value * 7.50062 * 100) / 100;
+    return Math.round(value * 7.5 * 100) / 100;
   } else if (from === 'mmHg' && to === 'kPa') {
-    return Math.round((value / 7.50062) * 100) / 100;
+    return Math.round((value / 7.5) * 100) / 100;
   }
   throw new Error(`Unsupported unit conversion from ${from} to ${to}`);
 }
@@ -28,6 +28,7 @@ function OxygenGradient() {
   const [paO2, setPaO2] = useState<number>(Number.NaN);
   const [fiO2, setFiO2] = useState<number>(Number.NaN);
   const [paCO2, setPaCO2] = useState<number>(Number.NaN);
+  const [age, setAge] = useState<number>(Number.NaN);
 
   const paO2Computed = safeCompute(
     (fiO2, paCO2) => {
@@ -44,6 +45,15 @@ function OxygenGradient() {
       return paO2Computed - paO2;
     },
     [paO2, paO2Computed]
+  );
+  const normalAaGradient = safeCompute(
+    age => {
+      if (unit === 'kPa') {
+        return (age / 4 + 4) / 7.5;
+      }
+      return age / 4 + 4;
+    },
+    [age]
   );
 
   return (
@@ -84,11 +94,19 @@ function OxygenGradient() {
           value={paO2Computed}
           suffix={unit}
         />
-        <CalcOutputEntry prefix="A-a gradient" value={aaGradient} />
+        <CalcOutputEntry
+          prefix="A-a gradient"
+          value={aaGradient}
+          bottomLabel={
+            normalAaGradient === '-' ? undefined : (
+              <>Normal A-a gradient: {format(normalAaGradient)}</>
+            )
+          }
+        />
       </CalcOutputPanel>
       <CalcDivider>Inputs</CalcDivider>
       <CalcNumberInput
-        value={paO2 ?? 0}
+        value={paO2}
         onChange={value => setPaO2(value)}
         min={0}
         prefix={
@@ -99,7 +117,7 @@ function OxygenGradient() {
         suffix={unit}
       />
       <CalcNumberInput
-        value={fiO2 ?? 0}
+        value={fiO2}
         onChange={value => setFiO2(value)}
         min={0.21}
         max={1}
@@ -111,7 +129,7 @@ function OxygenGradient() {
         suffix=">0.21"
       />
       <CalcNumberInput
-        value={paCO2 ?? 0}
+        value={paCO2}
         onChange={value => setPaCO2(value)}
         min={0}
         prefix={
@@ -120,6 +138,12 @@ function OxygenGradient() {
           </>
         }
         suffix={unit}
+      />
+      <CalcNumberInput
+        value={age}
+        onChange={value => setAge(value)}
+        min={0}
+        prefix="Age"
       />
     </Calculator>
   );

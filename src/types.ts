@@ -18,3 +18,13 @@ export function safeCompute<const T extends unknown[]>(
   const result = operation(...(args as unknown as ToNumber<T>));
   return Number.isNaN(result) ? '-' : result;
 }
+
+export function format(value: React.ReactNode) {
+  if (typeof value === 'number') {
+    return value.toLocaleString(undefined, {
+      maximumFractionDigits: 2,
+      minimumFractionDigits: 0,
+    });
+  }
+  return value;
+}
