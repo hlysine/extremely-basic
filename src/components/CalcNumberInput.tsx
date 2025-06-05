@@ -29,10 +29,12 @@ export default memo(function CalcNumberInput({
     onChange(Math.max(min ?? -Infinity, Math.min(max ?? Infinity, newValue)));
   };
   return (
-    <fieldset className="fieldset w-full max-w-400">
-      {topLabel && <legend className="fieldset-legend">{topLabel}</legend>}
+    <fieldset className="fieldset w-full">
+      {topLabel && (
+        <legend className="fieldset-legend opacity-80">{topLabel}</legend>
+      )}
       <label className="input w-full input-lg">
-        {prefix && <span className="shrink-0 block w-20">{prefix}</span>}
+        {prefix && <span className="shrink-0 block w-28">{prefix}</span>}
         <input
           type="number"
           className="grow"
@@ -60,7 +62,7 @@ export default memo(function CalcNumberInput({
           </span>
         )}
       </label>
-      {bottomLabel && <p className="label">{bottomLabel}</p>}
+      {bottomLabel && <p className="label opacity-80">{bottomLabel}</p>}
     </fieldset>
   );
 });

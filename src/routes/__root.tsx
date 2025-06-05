@@ -7,10 +7,19 @@ export const Route = createRootRoute({
     <div className="w-full h-full flex flex-col">
       <PWAPrompt />
       <nav className="navbar bg-base-300 shadow-sm">
-        <Link to="/" className="btn btn-ghost text-xl">
-          <img src="/logo.svg" alt="Logo" className="h-8 mr-2" />
-          Quick Calc
-        </Link>
+        <div className="breadcrumbs text-sm ms-2">
+          <ul>
+            <li>
+              <a href="https://lysine-med.hf.space/">Med</a>
+            </li>
+            <li>
+              <Link to="/" className="btn btn-ghost text-xl">
+                <img src="/logo.svg" alt="Logo" className="h-8 mr-2" />
+                Quick Calc
+              </Link>
+            </li>
+          </ul>
+        </div>
       </nav>
       <Outlet />
       <TanStackRouterDevtools />

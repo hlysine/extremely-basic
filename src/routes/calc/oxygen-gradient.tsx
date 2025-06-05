@@ -3,14 +3,49 @@ import CalcHeader from '../../components/CalcHeader';
 import Calculator from '../../components/Calculator';
 import CalcTab from '../../components/CalcTab';
 import { useState } from 'react';
-import { PressureUnit, PressureUnits } from '../../types';
+import { PressureUnit, PressureUnits, safeCompute } from '../../types';
 import CalcNumberInput from '../../components/CalcNumberInput';
+import CalcOutputPanel from '../../components/CalcOutputPanel';
+import CalcOutputEntry from '../../components/CalcOutputEntry';
+import CalcDivider from '../../components/CalcDivider';
+
+function convertUnit(
+  value: number,
+  from: PressureUnit,
+  to: PressureUnit
+): number {
+  if (from === to) return value;
+  if (from === 'kPa' && to === 'mmHg') {
+    return Math.round(value * 7.50062 * 100) / 100;
+  } else if (from === 'mmHg' && to === 'kPa') {
+    return Math.round((value / 7.50062) * 100) / 100;
+  }
+  throw new Error(`Unsupported unit conversion from ${from} to ${to}`);
+}
 
 function OxygenGradient() {
   const [unit, setUnit] = useState<PressureUnit>('kPa');
   const [paO2, setPaO2] = useState<number>(Number.NaN);
-  const [paCO2, setPaCO2] = useState<number>(Number.NaN);
   const [fiO2, setFiO2] = useState<number>(Number.NaN);
+  const [paCO2, setPaCO2] = useState<number>(Number.NaN);
+
+  const paO2Computed = safeCompute(
+    (fiO2, paCO2) => {
+      if (unit === 'kPa') {
+        return fiO2 * 94.5 - paCO2 * 1.25;
+      } else {
+        return fiO2 * 713 - paCO2 * 1.25;
+      }
+    },
+    [fiO2, paCO2]
+  );
+  const aaGradient = safeCompute(
+    (paO2, paO2Computed) => {
+      return paO2Computed - paO2;
+    },
+    [paO2, paO2Computed]
+  );
+
   return (
     <Calculator>
       <CalcHeader
@@ -23,14 +58,42 @@ function OxygenGradient() {
           </p>
         }
       />
-      <CalcTab options={PressureUnits} selected={unit} onSelect={setUnit} />
+      <CalcTab
+        options={PressureUnits}
+        selected={unit}
+        onSelect={newUnit => {
+          if (newUnit !== unit) {
+            setUnit(newUnit);
+            if (!Number.isNaN(paO2)) {
+              setPaO2(convertUnit(paO2, unit, newUnit));
+            }
+            if (!Number.isNaN(paCO2)) {
+              setPaCO2(convertUnit(paCO2, unit, newUnit));
+            }
+          }
+        }}
+      />
+      <CalcDivider>Results</CalcDivider>
+      <CalcOutputPanel>
+        <CalcOutputEntry
+          prefix={
+            <>
+              P<sub>A</sub>O<sub>2</sub>
+            </>
+          }
+          value={paO2Computed}
+          suffix={unit}
+        />
+        <CalcOutputEntry prefix="A-a gradient" value={aaGradient} />
+      </CalcOutputPanel>
+      <CalcDivider>Inputs</CalcDivider>
       <CalcNumberInput
         value={paO2 ?? 0}
         onChange={value => setPaO2(value)}
         min={0}
         prefix={
           <>
-            PaO<sub>2</sub>
+            P<sub>a</sub>O<sub>2</sub>
           </>
         }
         suffix={unit}
@@ -53,7 +116,7 @@ function OxygenGradient() {
         min={0}
         prefix={
           <>
-            PaCO<sub>2</sub>
+            P<sub>a</sub>CO<sub>2</sub>
           </>
         }
         suffix={unit}
