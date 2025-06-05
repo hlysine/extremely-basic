@@ -79,6 +79,16 @@ const calculators: Section[] = [
       },
     ],
   },
+  {
+    title: 'Neurological emergencies',
+    calculators: [
+      {
+        title: 'Glasgow Coma Scale',
+        badges: [],
+        path: '/calc/glasgow-coma-scale',
+      },
+    ],
+  },
 ];
 
 function Index() {

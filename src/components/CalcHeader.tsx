@@ -1,4 +1,5 @@
 import { memo } from 'react';
+import { cn } from '../helper';
 
 export interface CalcHeaderProps {
   title: string;
@@ -10,12 +11,19 @@ export default memo(function CalcHeader({
   description,
 }: CalcHeaderProps) {
   return (
-    <div className="collapse collapse-arrow bg-base-200">
+    <div
+      className={cn(
+        'collapse bg-base-200',
+        description ? 'collapse-arrow' : 'collapse-open'
+      )}
+    >
       <input type="checkbox" />
       <div className="collapse-title font-semibold text-xl flex flex-col items-center gap-1">
         {title}
       </div>
-      <div className="collapse-content text-sm">{description}</div>
+      {description && (
+        <div className="collapse-content text-sm">{description}</div>
+      )}
     </div>
   );
 });

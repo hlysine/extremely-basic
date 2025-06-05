@@ -15,6 +15,7 @@ import { Route as IndexImport } from './routes/index'
 import { Route as CalcOxygenGradientImport } from './routes/calc/oxygen-gradient'
 import { Route as CalcMetabolicAlkalosisImport } from './routes/calc/metabolic-alkalosis'
 import { Route as CalcMetabolicAcidosisImport } from './routes/calc/metabolic-acidosis'
+import { Route as CalcGlasgowComaScaleImport } from './routes/calc/glasgow-coma-scale'
 import { Route as CalcChronicRespiratoryAlkalosisImport } from './routes/calc/chronic-respiratory-alkalosis'
 import { Route as CalcChronicRespiratoryAcidosisImport } from './routes/calc/chronic-respiratory-acidosis'
 import { Route as CalcAcuteRespiratoryAlkalosisImport } from './routes/calc/acute-respiratory-alkalosis'
@@ -43,6 +44,12 @@ const CalcMetabolicAlkalosisRoute = CalcMetabolicAlkalosisImport.update({
 const CalcMetabolicAcidosisRoute = CalcMetabolicAcidosisImport.update({
   id: '/calc/metabolic-acidosis',
   path: '/calc/metabolic-acidosis',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const CalcGlasgowComaScaleRoute = CalcGlasgowComaScaleImport.update({
+  id: '/calc/glasgow-coma-scale',
+  path: '/calc/glasgow-coma-scale',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -113,6 +120,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CalcChronicRespiratoryAlkalosisImport
       parentRoute: typeof rootRoute
     }
+    '/calc/glasgow-coma-scale': {
+      id: '/calc/glasgow-coma-scale'
+      path: '/calc/glasgow-coma-scale'
+      fullPath: '/calc/glasgow-coma-scale'
+      preLoaderRoute: typeof CalcGlasgowComaScaleImport
+      parentRoute: typeof rootRoute
+    }
     '/calc/metabolic-acidosis': {
       id: '/calc/metabolic-acidosis'
       path: '/calc/metabolic-acidosis'
@@ -145,6 +159,7 @@ export interface FileRoutesByFullPath {
   '/calc/acute-respiratory-alkalosis': typeof CalcAcuteRespiratoryAlkalosisRoute
   '/calc/chronic-respiratory-acidosis': typeof CalcChronicRespiratoryAcidosisRoute
   '/calc/chronic-respiratory-alkalosis': typeof CalcChronicRespiratoryAlkalosisRoute
+  '/calc/glasgow-coma-scale': typeof CalcGlasgowComaScaleRoute
   '/calc/metabolic-acidosis': typeof CalcMetabolicAcidosisRoute
   '/calc/metabolic-alkalosis': typeof CalcMetabolicAlkalosisRoute
   '/calc/oxygen-gradient': typeof CalcOxygenGradientRoute
@@ -156,6 +171,7 @@ export interface FileRoutesByTo {
   '/calc/acute-respiratory-alkalosis': typeof CalcAcuteRespiratoryAlkalosisRoute
   '/calc/chronic-respiratory-acidosis': typeof CalcChronicRespiratoryAcidosisRoute
   '/calc/chronic-respiratory-alkalosis': typeof CalcChronicRespiratoryAlkalosisRoute
+  '/calc/glasgow-coma-scale': typeof CalcGlasgowComaScaleRoute
   '/calc/metabolic-acidosis': typeof CalcMetabolicAcidosisRoute
   '/calc/metabolic-alkalosis': typeof CalcMetabolicAlkalosisRoute
   '/calc/oxygen-gradient': typeof CalcOxygenGradientRoute
@@ -168,6 +184,7 @@ export interface FileRoutesById {
   '/calc/acute-respiratory-alkalosis': typeof CalcAcuteRespiratoryAlkalosisRoute
   '/calc/chronic-respiratory-acidosis': typeof CalcChronicRespiratoryAcidosisRoute
   '/calc/chronic-respiratory-alkalosis': typeof CalcChronicRespiratoryAlkalosisRoute
+  '/calc/glasgow-coma-scale': typeof CalcGlasgowComaScaleRoute
   '/calc/metabolic-acidosis': typeof CalcMetabolicAcidosisRoute
   '/calc/metabolic-alkalosis': typeof CalcMetabolicAlkalosisRoute
   '/calc/oxygen-gradient': typeof CalcOxygenGradientRoute
@@ -181,6 +198,7 @@ export interface FileRouteTypes {
     | '/calc/acute-respiratory-alkalosis'
     | '/calc/chronic-respiratory-acidosis'
     | '/calc/chronic-respiratory-alkalosis'
+    | '/calc/glasgow-coma-scale'
     | '/calc/metabolic-acidosis'
     | '/calc/metabolic-alkalosis'
     | '/calc/oxygen-gradient'
@@ -191,6 +209,7 @@ export interface FileRouteTypes {
     | '/calc/acute-respiratory-alkalosis'
     | '/calc/chronic-respiratory-acidosis'
     | '/calc/chronic-respiratory-alkalosis'
+    | '/calc/glasgow-coma-scale'
     | '/calc/metabolic-acidosis'
     | '/calc/metabolic-alkalosis'
     | '/calc/oxygen-gradient'
@@ -201,6 +220,7 @@ export interface FileRouteTypes {
     | '/calc/acute-respiratory-alkalosis'
     | '/calc/chronic-respiratory-acidosis'
     | '/calc/chronic-respiratory-alkalosis'
+    | '/calc/glasgow-coma-scale'
     | '/calc/metabolic-acidosis'
     | '/calc/metabolic-alkalosis'
     | '/calc/oxygen-gradient'
@@ -213,6 +233,7 @@ export interface RootRouteChildren {
   CalcAcuteRespiratoryAlkalosisRoute: typeof CalcAcuteRespiratoryAlkalosisRoute
   CalcChronicRespiratoryAcidosisRoute: typeof CalcChronicRespiratoryAcidosisRoute
   CalcChronicRespiratoryAlkalosisRoute: typeof CalcChronicRespiratoryAlkalosisRoute
+  CalcGlasgowComaScaleRoute: typeof CalcGlasgowComaScaleRoute
   CalcMetabolicAcidosisRoute: typeof CalcMetabolicAcidosisRoute
   CalcMetabolicAlkalosisRoute: typeof CalcMetabolicAlkalosisRoute
   CalcOxygenGradientRoute: typeof CalcOxygenGradientRoute
@@ -224,6 +245,7 @@ const rootRouteChildren: RootRouteChildren = {
   CalcAcuteRespiratoryAlkalosisRoute: CalcAcuteRespiratoryAlkalosisRoute,
   CalcChronicRespiratoryAcidosisRoute: CalcChronicRespiratoryAcidosisRoute,
   CalcChronicRespiratoryAlkalosisRoute: CalcChronicRespiratoryAlkalosisRoute,
+  CalcGlasgowComaScaleRoute: CalcGlasgowComaScaleRoute,
   CalcMetabolicAcidosisRoute: CalcMetabolicAcidosisRoute,
   CalcMetabolicAlkalosisRoute: CalcMetabolicAlkalosisRoute,
   CalcOxygenGradientRoute: CalcOxygenGradientRoute,
@@ -244,6 +266,7 @@ export const routeTree = rootRoute
         "/calc/acute-respiratory-alkalosis",
         "/calc/chronic-respiratory-acidosis",
         "/calc/chronic-respiratory-alkalosis",
+        "/calc/glasgow-coma-scale",
         "/calc/metabolic-acidosis",
         "/calc/metabolic-alkalosis",
         "/calc/oxygen-gradient"
@@ -263,6 +286,9 @@ export const routeTree = rootRoute
     },
     "/calc/chronic-respiratory-alkalosis": {
       "filePath": "calc/chronic-respiratory-alkalosis.tsx"
+    },
+    "/calc/glasgow-coma-scale": {
+      "filePath": "calc/glasgow-coma-scale.tsx"
     },
     "/calc/metabolic-acidosis": {
       "filePath": "calc/metabolic-acidosis.tsx"
