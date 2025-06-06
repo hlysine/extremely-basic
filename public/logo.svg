@@ -1,1 +1,52 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--logos" width="31.88" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 257"><defs><linearGradient id="IconifyId1813088fe1fbc01fb466" x1="-.828%" x2="57.636%" y1="7.652%" y2="78.411%"><stop offset="0%" stop-color="#41D1FF"></stop><stop offset="100%" stop-color="#BD34FE"></stop></linearGradient><linearGradient id="IconifyId1813088fe1fbc01fb467" x1="43.376%" x2="50.316%" y1="2.242%" y2="89.03%"><stop offset="0%" stop-color="#FFEA83"></stop><stop offset="8.333%" stop-color="#FFDD35"></stop><stop offset="100%" stop-color="#FFA800"></stop></linearGradient></defs><path fill="url(#IconifyId1813088fe1fbc01fb466)" d="M255.153 37.938L134.897 252.976c-2.483 4.44-8.862 4.466-11.382.048L.875 37.958c-2.746-4.814 1.371-10.646 6.827-9.67l120.385 21.517a6.537 6.537 0 0 0 2.322-.004l117.867-21.483c5.438-.991 9.574 4.796 6.877 9.62Z"></path><path fill="url(#IconifyId1813088fe1fbc01fb467)" d="M185.432.063L96.44 17.501a3.268 3.268 0 0 0-2.634 3.014l-5.474 92.456a3.268 3.268 0 0 0 3.997 3.378l24.777-5.718c2.318-.535 4.413 1.507 3.936 3.838l-7.361 36.047c-.495 2.426 1.782 4.5 4.151 3.78l15.304-4.649c2.372-.72 4.652 1.36 4.15 3.788l-11.698 56.621c-.732 3.542 3.979 5.473 5.943 2.437l1.313-2.028l72.516-144.72c1.215-2.423-.88-5.186-3.54-4.672l-25.505 4.922c-2.396.462-4.435-1.77-3.759-4.114l16.646-57.705c.677-2.35-1.37-4.583-3.769-4.113Z"></path></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="250" y1="137.356" x2="250" y2="457.157" id="gradient-2" gradientTransform="matrix(0.882728, -0.469883, 0.351727, 0.66076, -103.521988, 224.634918)">
+      <stop offset="0" style="stop-color: rgb(250, 126, 97);"></stop>
+      <stop offset="1" style="stop-color: rgb(244, 65, 116);"></stop>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="296.297" y1="-3.771" x2="296.297" y2="285.577" id="gradient-3" gradientTransform="matrix(0.934215, -0.534698, 0.293913, 0.513518, -82.442154, 267.341003)">
+      <stop offset="0" style="stop-color: rgb(233, 217, 114);"></stop>
+      <stop offset="1" style="stop-color: rgb(0, 119, 182);"></stop>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="250" y1="137.356" x2="250" y2="457.157" id="gradient-1" gradientTransform="matrix(0.882728, -0.469883, 0.351727, 0.66076, -103.521988, 224.634918)">
+      <stop offset="0" style="stop-color: rgb(250, 126, 97);"></stop>
+      <stop offset="1" style="stop-color: rgb(244, 65, 116);"></stop>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="296.297" y1="-3.771" x2="296.297" y2="285.577" id="gradient-4" gradientTransform="matrix(0.934215, -0.534698, 0.293913, 0.513518, -82.442154, 267.341003)">
+      <stop offset="0" style="stop-color: rgb(233, 217, 114);"></stop>
+      <stop offset="1" style="stop-color: rgb(0, 119, 182);"></stop>
+    </linearGradient>
+    <filter id="drop-shadow-filter-0" bx:preset="drop-shadow 1 10 10 7 0.5 rgba(0,0,0,0.3)" color-interpolation-filters="sRGB" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="7"></feGaussianBlur>
+      <feOffset dx="10" dy="10"></feOffset>
+      <feComponentTransfer result="offsetblur">
+        <feFuncA id="spread-ctrl" type="linear" slope="1"></feFuncA>
+      </feComponentTransfer>
+      <feFlood flood-color="rgba(0,0,0,0.3)"></feFlood>
+      <feComposite in2="offsetblur" operator="in"></feComposite>
+      <feMerge>
+        <feMergeNode></feMergeNode>
+        <feMergeNode in="SourceGraphic"></feMergeNode>
+      </feMerge>
+    </filter>
+    <filter id="inner-shadow-filter-0" bx:preset="inner-shadow 1 0 0 10 0.5 #87ffbd75" color-interpolation-filters="sRGB" x="-50%" y="-50%" width="200%" height="200%">
+      <feOffset dx="0" dy="0"></feOffset>
+      <feGaussianBlur stdDeviation="10"></feGaussianBlur>
+      <feComposite operator="out" in="SourceGraphic"></feComposite>
+      <feComponentTransfer result="choke">
+        <feFuncA type="linear" slope="1"></feFuncA>
+      </feComponentTransfer>
+      <feFlood flood-color="#87ffbd75" result="color"></feFlood>
+      <feComposite operator="in" in="color" in2="choke" result="shadow"></feComposite>
+      <feComposite operator="over" in="shadow" in2="SourceGraphic"></feComposite>
+    </filter>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 0.000465, -0.446014)" style="filter: url(#drop-shadow-filter-0);">
+    <path d="M 404.263 307.628 L 266.137 450.251 C 257.214 459.459 242.723 459.459 233.801 450.251 L 95.675 307.628 C 55.558 266.154 57.913 197.483 102.742 159.223 C 116.519 147.482 132.668 140.621 149.375 138.275 L 141.086 200.402 C 140.816 207.692 143.788 218.124 148.045 223.678 C 152.961 228.624 162.534 233.211 169.825 233.911 L 223.668 233.93 L 200 333.787 C 198.975 341.563 201.34 352.826 205.52 358.879 C 210.275 364.205 220.566 370.192 228.77 370.192 C 237.704 370.192 248.873 363.021 254.03 356.003 L 361.467 170.48 C 365.135 162.006 365.257 148.692 361.646 141.112 C 361.476 140.862 361.298 140.612 361.112 140.362 C 374.045 143.728 386.393 149.955 397.268 159.223 C 442.096 197.483 444.452 266.154 404.263 307.628 Z" style="stroke-width: 1; fill: url(#gradient-2);"></path>
+    <path d="M 335.893 141.065 L 265.695 141.065 L 291.609 62.107 C 294.043 52.861 287.046 43.735 277.497 43.735 L 189.899 43.735 C 182.597 43.735 176.395 49.149 175.42 56.388 L 155.954 202.385 C 154.8 211.143 161.613 218.931 170.434 218.931 L 242.64 218.931 L 214.595 337.246 C 212.405 346.493 219.463 355.192 228.77 355.192 C 233.88 355.192 238.747 352.516 241.423 347.893 L 348.486 162.965 C 354.143 153.293 347.148 141.065 335.893 141.065 Z" style="stroke-width: 1; fill-rule: nonzero; fill: url(#gradient-3);"></path>
+  </g>
+  <g transform="matrix(1, 0, 0, 1, 0.00047, -0.446013)" style="filter: url(#inner-shadow-filter-0);">
+    <path d="M 404.263 307.628 L 266.137 450.251 C 257.214 459.459 242.723 459.459 233.801 450.251 L 95.675 307.628 C 55.558 266.154 57.913 197.483 102.742 159.223 C 116.519 147.482 132.668 140.621 149.375 138.275 L 141.086 200.402 C 140.816 207.692 143.788 218.124 148.045 223.678 C 152.961 228.624 162.534 233.211 169.825 233.911 L 223.668 233.93 L 200 333.787 C 198.975 341.563 201.34 352.826 205.52 358.879 C 210.275 364.205 220.566 370.192 228.77 370.192 C 237.704 370.192 248.873 363.021 254.03 356.003 L 361.467 170.48 C 365.135 162.006 365.257 148.692 361.646 141.112 C 361.476 140.862 361.298 140.612 361.112 140.362 C 374.045 143.728 386.393 149.955 397.268 159.223 C 442.096 197.483 444.452 266.154 404.263 307.628 Z" style="stroke-width: 1; fill: url(#gradient-1);"></path>
+    <path d="M 335.893 141.065 L 265.695 141.065 L 291.609 62.107 C 294.043 52.861 287.046 43.735 277.497 43.735 L 189.899 43.735 C 182.597 43.735 176.395 49.149 175.42 56.388 L 155.954 202.385 C 154.8 211.143 161.613 218.931 170.434 218.931 L 242.64 218.931 L 214.595 337.246 C 212.405 346.493 219.463 355.192 228.77 355.192 C 233.88 355.192 238.747 352.516 241.423 347.893 L 348.486 162.965 C 354.143 153.293 347.148 141.065 335.893 141.065 Z" style="stroke-width: 1; fill-rule: nonzero; fill: url(#gradient-4);"></path>
+  </g>
+</svg>

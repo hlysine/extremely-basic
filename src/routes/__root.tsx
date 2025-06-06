@@ -15,7 +15,7 @@ export const Route = createRootRoute({
             <li>
               <Link to="/" className="btn btn-ghost text-xl">
                 <img src="/logo.svg" alt="Logo" className="h-8 mr-2" />
-                Quick Calc
+                Extremely Basic
               </Link>
             </li>
           </ul>
