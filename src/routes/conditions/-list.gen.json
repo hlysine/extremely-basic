@@ -1,9 +1,27 @@
 [
   {
+    "title": "Acute respiratory failure",
+    "section": "Acute respiratory failure",
+    "keywords": [
+      "hypoxemic",
+      "hypercapnic",
+      "desaturation"
+    ],
+    "key": "acute-respiratory-failure"
+  },
+  {
+    "title": "Severe illness",
+    "section": "Assessment",
+    "keywords": [
+      "seriously ill",
+      "initial assessment"
+    ],
+    "key": "severe-illness"
+  },
+  {
     "title": "Shock",
     "section": "Shock",
     "keywords": [
-      "shock",
       "cardiogenic",
       "distributive",
       "hypovolemic",

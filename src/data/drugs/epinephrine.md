@@ -1,7 +1,7 @@
 ---
 title: Epinephrine
 section: Cardiocerebral resuscitation
-keywords: epinephrine, adrenaline, vasopressor
+keywords: adrenaline, vasopressor
 ---
 
 # Epinephrine

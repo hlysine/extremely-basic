@@ -38,7 +38,7 @@
 
 .markdown ul,
 .markdown ol {
-  @apply list-inside list-disc my-4 px-4 flex flex-col gap-2;
+  @apply list-outside list-disc my-2 ps-8 flex flex-col gap-2;
 }
 
 .markdown img {
@@ -50,7 +50,7 @@
 }
 
 .markdown table {
-  @apply table border border-base-content/20 shadow-sm my-2;
+  @apply table table-sm border border-base-content/20 shadow-sm my-2;
 }
 
 .markdown hr {
