@@ -41,8 +41,7 @@
   @apply list-outside list-disc my-2 ps-8 flex flex-col gap-2;
 }
 
-.markdown img:not(.skeleton-img img),
-.markdown .skeleton-img {
+.markdown img {
   @apply max-w-[min(400px,100%)] w-fit h-auto rounded-md border border-base-content/20 shadow-sm my-2;
 }
 
