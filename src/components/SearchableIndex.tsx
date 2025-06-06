@@ -2,6 +2,7 @@ import { Link } from '@tanstack/react-router';
 import { memo, useMemo, useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
 import { WikiPage } from '../utils/types';
+import CollapsibleSections from './CollapsibleSections';
 
 export interface SearchableIndexProps {
   entries: WikiPage[];
@@ -46,26 +47,19 @@ export default memo(function SearchableIndex({
           onInput={e => setSearchString(e.currentTarget.value)}
         />
       </label>
-      <div className="flex-1 overflow-y-auto py-4">
-        {Object.entries(sections).map(([key, entries]) => (
-          <div key={key} className="mb-6">
-            <div className="divider divider-primary">{key}</div>
-            <ul className="flex flex-wrap justify-center gap-1">
-              {entries.map(entry => (
-                <Link
-                  to={routeBase + entry.key}
-                  key={entry.title}
-                  className="card w-96 bg-base-200 card-sm shadow-sm hover:shadow-lg hover:bg-base-300 transition-all cursor-pointer"
-                >
-                  <div className="card-body">
-                    <h2 className="card-title">{entry.title}</h2>
-                  </div>
-                </Link>
-              ))}
-            </ul>
-          </div>
-        ))}
-      </div>
+      <CollapsibleSections sections={sections}>
+        {entry => (
+          <Link
+            to={routeBase + entry.key}
+            key={entry.title}
+            className="card w-96 bg-base-200 card-sm shadow-sm hover:shadow-lg hover:bg-base-300 transition-all cursor-pointer"
+          >
+            <div className="card-body">
+              <h2 className="card-title">{entry.title}</h2>
+            </div>
+          </Link>
+        )}
+      </CollapsibleSections>
     </div>
   );
 });
