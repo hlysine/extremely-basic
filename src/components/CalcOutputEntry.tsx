@@ -1,5 +1,5 @@
 import React, { memo } from 'react';
-import { format } from '../types';
+import { format } from '../utils/types';
 
 export interface CalcOutputEntryProps {
   suffix?: React.ReactNode;

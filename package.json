@@ -4,16 +4,17 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --host",
-    "build": "tsc && vite build",
+    "dev": "bunx --bun vite --host",
+    "build": "tsc && bunx --bun vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
+    "preview": "bunx --bun vite preview",
     "generate-pwa-assets": "pwa-assets-generator --preset minimal-2023 public/logo.svg"
   },
   "dependencies": {
     "@tanstack/react-router": "^1.120.15",
     "@tanstack/react-router-devtools": "^1.120.15",
     "clsx": "^2.1.1",
+    "markdown-to-jsx": "^7.7.6",
     "million": "^3.1.11",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -44,6 +45,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
     "eslint-plugin-standard": "^5.0.0",
+    "fast-glob": "^3.3.3",
     "typescript": "^5.2.2",
     "vite": "^6.3.5",
     "vite-bundle-visualizer": "^1.2.1",

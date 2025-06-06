@@ -3,7 +3,12 @@ import CalcHeader from '../../components/CalcHeader';
 import Calculator from '../../components/Calculator';
 import CalcTab from '../../components/CalcTab';
 import { useState } from 'react';
-import { format, PressureUnit, PressureUnits, safeCompute } from '../../types';
+import {
+  format,
+  PressureUnit,
+  PressureUnits,
+  safeCompute,
+} from '../../utils/types';
 import CalcNumberInput from '../../components/CalcNumberInput';
 import CalcOutputPanel from '../../components/CalcOutputPanel';
 import CalcOutputEntry from '../../components/CalcOutputEntry';

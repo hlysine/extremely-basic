@@ -1,0 +1,62 @@
+@import '../index.css';
+
+.markdown p:not(:last-child) {
+  @apply mb-2;
+}
+
+.markdown blockquote {
+  @apply border-l-6 border-l-primary bg-primary/20 rounded-md p-2 m-2;
+}
+
+.markdown code:not(pre code) {
+  @apply bg-base-300 border p-0.5 rounded-sm;
+}
+
+.markdown input[type='checkbox'] {
+  @apply checkbox checkbox-primary;
+}
+
+.markdown h1 {
+  @apply text-3xl font-extrabold my-4 text-center w-full;
+}
+
+.markdown h2 {
+  @apply text-2xl text-info font-extrabold my-4 w-full border-b border-b-base-content/50 pb-2;
+}
+.markdown h3 {
+  @apply text-xl text-primary font-extrabold my-2;
+}
+.markdown h4 {
+  @apply text-lg font-extrabold my-1;
+}
+.markdown h5 {
+  @apply text-base font-extrabold my-1;
+}
+.markdown h6 {
+  @apply text-base font-semibold my-1;
+}
+
+.markdown ul,
+.markdown ol {
+  @apply list-inside list-disc my-4 px-4 flex flex-col gap-2;
+}
+
+.markdown img {
+  @apply max-w-[min(400px,100%)] w-fit h-auto rounded-md border border-base-content/20 shadow-sm my-2;
+}
+
+.markdown a {
+  @apply text-primary hover:underline;
+}
+
+.markdown table {
+  @apply table border border-base-content/20 shadow-sm my-2;
+}
+
+.markdown hr {
+  @apply divider border-0;
+}
+
+.markdown footer {
+  @apply text-sm text-base-content/70 my-4;
+}

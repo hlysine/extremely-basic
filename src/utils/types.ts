@@ -28,3 +28,13 @@ export function format(value: React.ReactNode) {
   }
   return value;
 }
+
+export interface WikiMeta {
+  title: string;
+  section: string;
+  keywords: string[];
+}
+
+export interface WikiPage extends WikiMeta {
+  key: string;
+}

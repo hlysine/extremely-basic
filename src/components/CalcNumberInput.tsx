@@ -42,14 +42,14 @@ export default memo(function CalcNumberInput({
           max={max}
           step={step}
           value={Number.isNaN(value) ? '' : value}
-          onChange={e => {
-            const newValue = parseFloat(e.target.value);
+          onInput={e => {
+            const newValue = parseFloat(e.currentTarget.value);
             if (!isNaN(newValue)) {
               setValue(newValue);
             }
           }}
           onBlur={e => {
-            const newValue = parseFloat(e.target.value);
+            const newValue = parseFloat(e.currentTarget.value);
             if (!isNaN(newValue)) {
               setValue(newValue);
             }

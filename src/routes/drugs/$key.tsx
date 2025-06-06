@@ -1,0 +1,28 @@
+import { createFileRoute, useLoaderData } from '@tanstack/react-router';
+import StyledMarkdown from '../../components/StyledMarkdown';
+
+function Condition() {
+  const data = useLoaderData({ from: '/drugs/$key' });
+  return (
+    <div className="flex-1 p-2 overflow-y-auto">
+      <StyledMarkdown>{data}</StyledMarkdown>
+    </div>
+  );
+}
+
+export const Route = createFileRoute('/drugs/$key')({
+  component: Condition,
+  loader: async ({ params }) => {
+    const content = (
+      (await import(`../../data/drugs/${params.key}.md?raw`)) as {
+        default: string;
+      }
+    ).default;
+    const metadataMatch = /^---\s*$.+^---\s*$(.*)/ms.exec(content);
+    if (!metadataMatch) {
+      return content;
+    }
+    const metadataStripped = metadataMatch[1];
+    return metadataStripped;
+  },
+});

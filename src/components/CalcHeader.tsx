@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import { cn } from '../helper';
+import { cn } from '../utils/uiUtils';
 
 export interface CalcHeaderProps {
   title: string;
