@@ -25,11 +25,13 @@ keywords: COPD, COAD, chronic obstructive pulmonary disease, bronchodilators
 
 #### Bronchodilation
 
-- Inhaled beta-2 agonists
-- Inhaled anticholinergics
+- [Inhaled beta-2 agonists](../drugs/bronchodilators)
+- [Inhaled anticholinergics](../drugs/bronchodilators)
 - Theophylline not recommended
 
-### Support fatigued respiratory muscles
+#### Reduce inflammation
+
+- [Corticosteroids](../drugs/corticosteroids)
 
 ### Treat underlying cause of exacerbation
 

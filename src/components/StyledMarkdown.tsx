@@ -3,6 +3,7 @@ import Markdown from 'markdown-to-jsx';
 import './styledMarkdown.css';
 import SkeletonImage from './SkeletonImage';
 import makeClickableHeading from './ClickableHeading';
+import RouterAnchor from './RouterAnchor';
 
 export interface MarkdownProps {
   children: string;
@@ -21,6 +22,7 @@ export default memo(function StyledMarkdown({ children }: MarkdownProps) {
           h4: makeClickableHeading('h4'),
           h5: makeClickableHeading('h5'),
           h6: makeClickableHeading('h6'),
+          a: RouterAnchor,
         },
       }}
     >
