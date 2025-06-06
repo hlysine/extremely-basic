@@ -21,7 +21,11 @@ export default function SkeletonImage({
   return (
     <>
       <div
-        className={cn('skeleton w-full h-64', className, isLoading || 'hidden')}
+        className={cn(
+          'skeleton w-full max-w-[400px] h-64',
+          className,
+          isLoading || 'hidden'
+        )}
       ></div>
       <img
         className={cn(className, isLoading && 'hidden')}
