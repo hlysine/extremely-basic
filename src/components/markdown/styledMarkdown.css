@@ -1,4 +1,4 @@
-@import '../index.css';
+@import '../../index.css';
 
 .markdown p:not(:last-child) {
   @apply mb-2;
@@ -46,7 +46,7 @@
 }
 
 .markdown a {
-  @apply text-primary hover:underline;
+  @apply text-primary brightness-125 hover:underline;
 }
 
 .markdown table {

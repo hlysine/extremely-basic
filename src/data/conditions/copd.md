@@ -1,7 +1,7 @@
 ---
-title: Management of COPD
+title: COPD
 section: Acute respiratory failure
-keywords: COPD, COAD, chronic obstructive pulmonary disease, bronchodilators
+keywords: AECOPD, acute exacerbation of COPD, COAD, chronic obstructive pulmonary disease, bronchodilators, corticosteroids
 ---
 
 # Acute Exacerbation of COPD
@@ -35,4 +35,21 @@ keywords: COPD, COAD, chronic obstructive pulmonary disease, bronchodilators
 
 ### Treat underlying cause of exacerbation
 
+- Give antibiotics if
+  - Increased sputum purulence AND
+    - Increased sputum volume OR increased dyspnea
+  - On mechanical ventilation
+- Treat comorbidities
+
 ### Prevent complications
+
+- Encourage coughing
+- Avoid aggressive physiotherapy
+- Routine thromboprophylaxis
+  - SC LMWH or compression stockings if contraindicated
+
+## Refer to ICU
+
+- Invasive ventilation required
+- Severe hypoxia, acidosis, respiratory distress
+- Hemodynamic instability

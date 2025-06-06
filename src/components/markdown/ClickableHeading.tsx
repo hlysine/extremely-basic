@@ -1,5 +1,5 @@
 import { useNavigate } from '@tanstack/react-router';
-import { cn } from '../utils/uiUtils';
+import { cn } from '../../utils/uiUtils';
 export interface ClickableHeadingProps {
   id?: string;
   className?: string;

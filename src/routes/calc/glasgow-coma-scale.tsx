@@ -1,11 +1,11 @@
 import { createFileRoute } from '@tanstack/react-router';
-import CalcHeader from '../../components/CalcHeader';
-import Calculator from '../../components/Calculator';
+import CalcHeader from '../../components/calculator/CalcHeader';
+import Calculator from '../../components/calculator/Calculator';
 import { useState } from 'react';
-import CalcOutputPanel from '../../components/CalcOutputPanel';
-import CalcOutputEntry from '../../components/CalcOutputEntry';
-import CalcDivider from '../../components/CalcDivider';
-import CalcRadioInput from '../../components/CalcRadioInput';
+import CalcOutputPanel from '../../components/calculator/CalcOutputPanel';
+import CalcOutputEntry from '../../components/calculator/CalcOutputEntry';
+import CalcDivider from '../../components/calculator/CalcDivider';
+import CalcRadioInput from '../../components/calculator/CalcRadioInput';
 
 function GlasgowComaScale() {
   const [motor, setMotor] = useState<number>(Number.NaN);

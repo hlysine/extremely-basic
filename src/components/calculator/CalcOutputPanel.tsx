@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import { cn } from '../utils/uiUtils';
+import { cn } from '../../utils/uiUtils';
 
 export interface CalcOutputPanelProps {
   children: React.ReactNode;

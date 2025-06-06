@@ -1,5 +1,5 @@
 import { memo, useId } from 'react';
-import { cn } from '../utils/uiUtils';
+import { cn } from '../../utils/uiUtils';
 
 export interface CalcRadioInputProps {
   value: number;

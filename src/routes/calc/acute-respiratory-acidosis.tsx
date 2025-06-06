@@ -1,13 +1,13 @@
 import { createFileRoute } from '@tanstack/react-router';
-import CalcHeader from '../../components/CalcHeader';
-import Calculator from '../../components/Calculator';
-import CalcTab from '../../components/CalcTab';
+import CalcHeader from '../../components/calculator/CalcHeader';
+import Calculator from '../../components/calculator/Calculator';
+import CalcTab from '../../components/calculator/CalcTab';
 import { useState } from 'react';
 import { PressureUnit, PressureUnits, safeCompute } from '../../utils/types';
-import CalcNumberInput from '../../components/CalcNumberInput';
-import CalcOutputPanel from '../../components/CalcOutputPanel';
-import CalcOutputEntry from '../../components/CalcOutputEntry';
-import CalcDivider from '../../components/CalcDivider';
+import CalcNumberInput from '../../components/calculator/CalcNumberInput';
+import CalcOutputPanel from '../../components/calculator/CalcOutputPanel';
+import CalcOutputEntry from '../../components/calculator/CalcOutputEntry';
+import CalcDivider from '../../components/calculator/CalcDivider';
 
 function AcuteRespiratoryAcidosis() {
   const [unit, setUnit] = useState<PressureUnit>('kPa');

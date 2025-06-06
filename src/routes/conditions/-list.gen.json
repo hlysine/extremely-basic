@@ -36,15 +36,27 @@
     "key": "airway-management"
   },
   {
-    "title": "Management of COPD",
+    "title": "Asthma",
     "section": "Acute respiratory failure",
     "keywords": [
-      "COPD",
+      "acute exacerbation of asthma",
+      "bronchodilators",
+      "corticosteroids"
+    ],
+    "key": "asthma"
+  },
+  {
+    "title": "COPD",
+    "section": "Acute respiratory failure",
+    "keywords": [
+      "AECOPD",
+      "acute exacerbation of COPD",
       "COAD",
       "chronic obstructive pulmonary disease",
-      "bronchodilators"
+      "bronchodilators",
+      "corticosteroids"
     ],
-    "key": "management-of-copd"
+    "key": "copd"
   },
   {
     "title": "Severe illness",

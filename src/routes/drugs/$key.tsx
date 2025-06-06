@@ -1,5 +1,5 @@
 import { createFileRoute, useLoaderData } from '@tanstack/react-router';
-import StyledMarkdown from '../../components/StyledMarkdown';
+import StyledMarkdown from '../../components/markdown/StyledMarkdown';
 
 function Condition() {
   const data = useLoaderData({ from: '/drugs/$key' });
