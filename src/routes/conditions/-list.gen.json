@@ -68,17 +68,6 @@
     "key": "severe-illness"
   },
   {
-    "title": "Shock",
-    "section": "Shock",
-    "keywords": [
-      "cardiogenic",
-      "distributive",
-      "hypovolemic",
-      "obstructive"
-    ],
-    "key": "shock"
-  },
-  {
     "title": "Tension pneumothorax",
     "section": "Acute respiratory failure",
     "keywords": [
