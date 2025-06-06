@@ -4,6 +4,7 @@ import './styledMarkdown.css';
 import SkeletonImage from './SkeletonImage';
 import makeClickableHeading from './ClickableHeading';
 import RouterAnchor from './RouterAnchor';
+import ScrollableTable from './ScrollableTable';
 
 export interface MarkdownProps {
   children: string;
@@ -23,6 +24,7 @@ export default memo(function StyledMarkdown({ children }: MarkdownProps) {
           h5: makeClickableHeading('h5'),
           h6: makeClickableHeading('h6'),
           a: RouterAnchor,
+          table: ScrollableTable,
         },
       }}
     >
