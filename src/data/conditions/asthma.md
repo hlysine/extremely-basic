@@ -21,3 +21,35 @@ keywords: acute exacerbation of asthma, bronchodilators, corticosteroids
 | PaO2              | <9 kPa on FiO2 0.4                | <9 kPa on 15L/min O2             |
 | PaCO2             | Normal or low                     | >6 kPa                           |
 | Peak flow rate    | <100 L/min or 33-50% of predicted | <60 L/min or <33% of predicted   |
+
+`TODO: add peak flow rate calculator`
+
+## Management
+
+### Treat hypoxia
+
+- Asthma responds well to oxygen therapy
+  - Usually with low flow devices
+- Target 94-98% oxygen saturation
+
+### Support fatigued respiratory muscles
+
+- Refer to ICU if mechanical ventilation required
+
+### Treat expiratory obstruction
+
+- [Bronchodilators](../drugs/bronchodilators)
+- [Corticosteroids](../drugs/corticosteroids)
+- [Magnesium sulphate](../drugs/magnesium-sulphate)
+
+### Remove trigger of the exacerbation
+
+- Most likely trigger is viral infection
+- Antibiotics only if bacterial infection suspected
+- Allergen avoidance
+
+### Prevent complications
+
+- Sputum management controversial although mucus plug and atelectasis is common in severe asthma
+- Avoid aggressive physiotherapy
+- rule out tension pneumothorax in acute deterioration

@@ -32,5 +32,15 @@
       "vasopressor"
     ],
     "key": "epinephrine"
+  },
+  {
+    "title": "Magnesium sulphate",
+    "section": "Acute respiratory failure",
+    "keywords": [
+      "MgSO4",
+      "bronchodilator",
+      "severe asthma exacerbation"
+    ],
+    "key": "magnesium-sulphate"
   }
 ]
