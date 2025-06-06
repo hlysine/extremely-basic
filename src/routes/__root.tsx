@@ -48,7 +48,7 @@ export const Route = createRootRoute({
   component: () => (
     <div className="w-full h-full flex flex-col">
       <PWAPrompt />
-      <nav className="navbar bg-base-300 shadow-sm">
+      <nav className="navbar py-0 bg-base-300 shadow-sm">
         <div className="breadcrumbs text-sm ms-2">
           <ul>
             <li>

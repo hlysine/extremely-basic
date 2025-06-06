@@ -1,13 +1,39 @@
 [
   {
-    "title": "Acute respiratory failure",
+    "title": "Assessment of acute respiratory failure",
     "section": "Acute respiratory failure",
     "keywords": [
       "hypoxemic",
       "hypercapnic",
       "desaturation"
     ],
-    "key": "acute-respiratory-failure"
+    "key": "acute-respiratory-failure-assessment"
+  },
+  {
+    "title": "Management of acute respiratory failure",
+    "section": "Acute respiratory failure",
+    "keywords": [
+      "hypoxemic",
+      "hypercapnic",
+      "desaturation",
+      "oxygen",
+      "nasal cannula",
+      "face masks",
+      "Hudson masks",
+      "Venturi masks",
+      "reservoir face masks"
+    ],
+    "key": "acute-respiratory-failure-management"
+  },
+  {
+    "title": "Airway management",
+    "section": "Acute respiratory failure",
+    "keywords": [
+      "recovery position",
+      "airway obstruction",
+      "airway maneuvers"
+    ],
+    "key": "airway-management"
   },
   {
     "title": "Severe illness",
@@ -28,5 +54,15 @@
       "obstructive"
     ],
     "key": "shock"
+  },
+  {
+    "title": "Tension pneumothorax",
+    "section": "Acute respiratory failure",
+    "keywords": [
+      "needle thoracostomy",
+      "chest tube",
+      "chest drain"
+    ],
+    "key": "tension-pneumothorax"
   }
 ]
