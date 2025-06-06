@@ -36,6 +36,17 @@
     "key": "airway-management"
   },
   {
+    "title": "Management of COPD",
+    "section": "Acute respiratory failure",
+    "keywords": [
+      "COPD",
+      "COAD",
+      "chronic obstructive pulmonary disease",
+      "bronchodilators"
+    ],
+    "key": "management-of-copd"
+  },
+  {
     "title": "Severe illness",
     "section": "Assessment",
     "keywords": [
