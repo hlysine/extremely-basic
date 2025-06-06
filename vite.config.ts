@@ -22,9 +22,9 @@ export default defineConfig({
         maximumFileSizeToCacheInBytes: 50 * 1024 * 1024,
       },
       manifest: {
-        name: 'Quick Calc',
-        short_name: 'Quick Calc',
-        description: 'Fastest medical calculator',
+        name: 'Extremely Basic',
+        short_name: 'Extremely Basic',
+        description: 'Acute medicine quick reference',
         theme_color: '#414558',
         background_color: '#edeff7',
         icons: [
