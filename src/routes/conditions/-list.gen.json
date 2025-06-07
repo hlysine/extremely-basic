@@ -46,23 +46,6 @@
     "key": "asthma"
   },
   {
-    "title": "Community-acquired pneumonia",
-    "section": "Acute respiratory failure",
-    "keywords": [
-      "CAP",
-      "staphylococcus aureus",
-      "streptococcus pyogenes",
-      "streptococcus pneumoniae",
-      "moraxella catarrhalis",
-      "klebsiella pneumoniae",
-      "haemophilus influenzae",
-      "mycoplasma pneumoniae",
-      "legionella pneumophila",
-      "chlamydia pneumoniae"
-    ],
-    "key": "community-acquired-pneumonia"
-  },
-  {
     "title": "COPD",
     "section": "Acute respiratory failure",
     "keywords": [
@@ -87,14 +70,21 @@
     "key": "hemodynamic-monitoring"
   },
   {
-    "title": "Massive pulmonary embolism",
-    "section": "Shock",
+    "title": "Community-acquired pneumonia",
+    "section": "Acute respiratory failure",
     "keywords": [
-      "massive PE",
-      "massive pulmonary embolism",
-      "acute respiratory failure"
+      "CAP",
+      "staphylococcus aureus",
+      "streptococcus pyogenes",
+      "streptococcus pneumoniae",
+      "moraxella catarrhalis",
+      "klebsiella pneumoniae",
+      "haemophilus influenzae",
+      "mycoplasma pneumoniae",
+      "legionella pneumophila",
+      "chlamydia pneumoniae"
     ],
-    "key": "massive-pulmonary-embolism"
+    "key": "pneumonia-community-acquired"
   },
   {
     "title": "Nosocomial pneumonia",
@@ -110,7 +100,7 @@
       "klebsiella pneumoniae",
       "escherichia coli"
     ],
-    "key": "nosocomial-pneumonia"
+    "key": "pneumonia-nosocomial"
   },
   {
     "title": "Severe illness",
@@ -169,7 +159,17 @@
       "cardiac tamponade",
       "massive pulmonary embolism"
     ],
-    "key": "shock-obstructive"
+    "key": "shock-obstructive-all"
+  },
+  {
+    "title": "Massive pulmonary embolism",
+    "section": "Shock",
+    "keywords": [
+      "massive PE",
+      "massive pulmonary embolism",
+      "acute respiratory failure"
+    ],
+    "key": "shock-obstructive-pulmonary-embolism"
   },
   {
     "title": "Tension pneumothorax",
@@ -179,6 +179,6 @@
       "chest tube",
       "chest drain"
     ],
-    "key": "tension-pneumothorax"
+    "key": "shock-obstructive-tension-pneumothorax"
   }
 ]
