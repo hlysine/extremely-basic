@@ -28,6 +28,40 @@
     "key": "antibiotics"
   },
   {
+    "title": "Antiplatelet therapy",
+    "section": "Cardiology",
+    "keywords": [
+      "chewable aspirin",
+      "P2Y12 inhibitors",
+      "dual antiplatelet therapy (DAPT)",
+      "myocardial infarction",
+      "acute coronary syndrome"
+    ],
+    "key": "antiplatelet"
+  },
+  {
+    "title": "Antithrombotic therapy",
+    "section": "Cardiology",
+    "keywords": [
+      "unfractionated heparin",
+      "low molecular weight heparin (LMWH)",
+      "enoxaparin",
+      "fondaparinux",
+      "bivalirudin"
+    ],
+    "key": "antithrombotic"
+  },
+  {
+    "title": "Beta-blocker",
+    "section": "Cardiology",
+    "keywords": [
+      "cardioselective beta-blocker",
+      "non-selective beta-blocker",
+      "metoprolol tartrate"
+    ],
+    "key": "beta-blocker"
+  },
+  {
     "title": "Bronchodilators",
     "section": "Acute respiratory failure",
     "keywords": [
@@ -85,6 +119,18 @@
     "key": "magnesium-sulphate"
   },
   {
+    "title": "Morphine",
+    "section": "Cardiology",
+    "keywords": [
+      "opioid",
+      "analgesic",
+      "pain relief",
+      "myocardial infarction",
+      "acute coronary syndrome"
+    ],
+    "key": "morphine"
+  },
+  {
     "title": "Naloxone",
     "section": "Cardiocerebral resuscitation",
     "keywords": [
@@ -93,6 +139,18 @@
       "narcan"
     ],
     "key": "naloxone"
+  },
+  {
+    "title": "Nitroglycerin",
+    "section": "Cardiology",
+    "keywords": [
+      "GTN",
+      "TNG",
+      "angina",
+      "acute coronary syndrome",
+      "sublingual"
+    ],
+    "key": "nitroglycerin"
   },
   {
     "title": "Vasopressors",

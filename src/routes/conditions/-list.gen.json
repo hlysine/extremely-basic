@@ -1,5 +1,20 @@
 [
   {
+    "title": "Acute coronary syndrome",
+    "section": "Cardiology",
+    "keywords": [
+      "ACS",
+      "myocardial infarction",
+      "STEMI",
+      "NSTEMI",
+      "unstable angina",
+      "chest pain",
+      "troponin",
+      "ECG"
+    ],
+    "key": "acute-coronary-syndrome"
+  },
+  {
     "title": "Acute respiratory failure - assessment",
     "section": "Acute respiratory failure",
     "keywords": [
