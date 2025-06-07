@@ -1,6 +1,6 @@
 ---
 title: Tension pneumothorax
-section: Acute respiratory failure
+section: Shock
 keywords:
   - needle thoracostomy
   - chest tube

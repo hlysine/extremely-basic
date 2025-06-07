@@ -1,5 +1,5 @@
 ---
-title: Management of acute respiratory failure
+title: Acute respiratory failure - management
 section: Acute respiratory failure
 keywords:
   - hypoxemic

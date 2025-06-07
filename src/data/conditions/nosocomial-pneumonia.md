@@ -20,42 +20,19 @@ keywords:
 - Pneumonia occurring 48 hours or more after hospital admission
 - Pneumonia in patient who was discharged from hospital within the last 2 weeks
 
-## Etiology
-
-| Type               | Pathogen                                                                                                                                                            |
-|--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Typical bacterial  | - Streptococcus pneumoniae<br>- Staphylococcus aureus<br>- Streptococcus pyogenes<br>- Moraxella catarrhalis<br>- Klebsiella pneumoniae<br>- Haemophilus influenzae |
-| Atypical bacterial | - Mycoplasma pneumoniae<br>- Legionella pneumophila<br>- Chlamydia pneumoniae                                                                                       |
-| Viral              | - Influenza A/B virus<br>- RSV<br>- Adenovirus<br>- Rhinovirus<br>- Parainfluenza virus<br>- SARS-CoV-2                                                             |
-
 ## Investigations
 
-- Chest X-ray
-- Blood cultures x2 before antibiotics
-  - Taken urgently to avoid delay in antibiotics
-- Sputum for urgent Gram stain and culture before antibiotics
-  - Transport to lab within 2 hours
-- NPA for viral PCR
-- Pleural fluid aspiration for Gram stain, culture, pH and white cell count if effusion present
-- Urine legionella and pneumococcal antigen tests
-- Arterial blood gas or pulse oximetry
-- Full blood count
-- Renal and liver function tests
-- HIV status in high-risk patients
+Refer to [Community-acquired pneumonia](../conditions/community-acquired-pneumonia#investigations)
+
+- Assess risk of multi-drug resistance, hence need for broad-spectrum antibiotics
+
+| Source      | Risk factors                                                                                                                                                         |
+|-------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Environment | - Hospitalization >5 days<br>- Hospitalization >2 days in the past 90 days<br>- High frequency of antibiotic resistance in unit<br>- Family member with MDR pathogen |
+| Patient     | - Antibiotic therapy in the last 90 days<br>- Immunosuppression<br>- Bronchiectasis<br>- Isolation of MDR pathogen in the past year                                  |
 
 ## Management
 
-- Oxygen therapy
-  - Mechanical ventilation if severe hypoxemia
-- Fluids for maintenance and dehydration
-- Organ support if septic
-- Antibiotics
-  - For severe pneumonia
-    - **3rd generation cephalosporin** - ceftriaxone, cefotaxime
-    - **Macrolide** - erythromycin, azithromycin, clarithromycin
-  - For high risk of multidrug-resistant organisms
-    - **Anti-pseudomonal cephalosporin / carbapenem / BLBLI**
-    - **Macrolide**
-- Antivirals
-  - Oseltamivir for influenza
-  - Remdesivir for COVID-19
+Refer to [Community-acquired pneumonia](../conditions/community-acquired-pneumonia#management)
+
+- [Empirical antibiotics](../drugs/antibiotics#nosocomial-pneumonia)

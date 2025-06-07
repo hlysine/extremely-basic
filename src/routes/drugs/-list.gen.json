@@ -44,9 +44,39 @@
     "key": "corticosteroids"
   },
   {
+    "title": "Fluids",
+    "section": "Shock",
+    "keywords": [
+      "crystalloids",
+      "normal saline",
+      "Hartmann's solution",
+      "lactated Ringer's solution",
+      "colloids",
+      "gelofusine"
+    ],
+    "key": "fluids"
+  },
+  {
     "title": "Magnesium sulphate",
     "section": "Acute respiratory failure",
-    "keywords": ["MgSO4", "bronchodilator", "severe asthma exacerbation"],
+    "keywords": [
+      "MgSO4",
+      "bronchodilator",
+      "severe asthma exacerbation"
+    ],
     "key": "magnesium-sulphate"
+  },
+  {
+    "title": "Vasopressors",
+    "section": "Shock",
+    "keywords": [
+      "norepinephrine",
+      "noradrenaline",
+      "epinephrine",
+      "adrenaline",
+      "dopamine",
+      "dobutamine"
+    ],
+    "key": "vasopressors"
   }
 ]

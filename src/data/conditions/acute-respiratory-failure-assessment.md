@@ -1,5 +1,5 @@
 ---
-title: Assessment of acute respiratory failure
+title: Acute respiratory failure - assessment
 section: Acute respiratory failure
 keywords:
   - hypoxemic

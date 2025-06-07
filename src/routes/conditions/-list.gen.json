@@ -1,6 +1,6 @@
 [
   {
-    "title": "Assessment of acute respiratory failure",
+    "title": "Acute respiratory failure - assessment",
     "section": "Acute respiratory failure",
     "keywords": [
       "hypoxemic",
@@ -10,7 +10,7 @@
     "key": "acute-respiratory-failure-assessment"
   },
   {
-    "title": "Management of acute respiratory failure",
+    "title": "Acute respiratory failure - management",
     "section": "Acute respiratory failure",
     "keywords": [
       "hypoxemic",
@@ -76,6 +76,27 @@
     "key": "copd"
   },
   {
+    "title": "Hemodynamic monitoring",
+    "section": "Assessment",
+    "keywords": [
+      "tissue perfusion",
+      "urine output",
+      "blood pressure",
+      "passive leg raise"
+    ],
+    "key": "hemodynamic-monitoring"
+  },
+  {
+    "title": "Massive pulmonary embolism",
+    "section": "Shock",
+    "keywords": [
+      "massive PE",
+      "massive pulmonary embolism",
+      "acute respiratory failure"
+    ],
+    "key": "massive-pulmonary-embolism"
+  },
+  {
     "title": "Nosocomial pneumonia",
     "section": "Acute respiratory failure",
     "keywords": [
@@ -101,8 +122,58 @@
     "key": "severe-illness"
   },
   {
+    "title": "Shock",
+    "section": "Shock",
+    "keywords": [
+      "hypotension",
+      "hypoperfusion",
+      "JVP"
+    ],
+    "key": "shock-all"
+  },
+  {
+    "title": "Cardiogenic shock",
+    "section": "Shock",
+    "keywords": [
+      "myocardial infarction",
+      "heart failure",
+      "arrhythmia"
+    ],
+    "key": "shock-cardiogenic"
+  },
+  {
+    "title": "Distributive shock",
+    "section": "Shock",
+    "keywords": [
+      "septic shock",
+      "anaphylactic shock",
+      "sepsis",
+      "anaphylaxis"
+    ],
+    "key": "shock-distributive"
+  },
+  {
+    "title": "Hypovolemic shock",
+    "section": "Shock",
+    "keywords": [
+      "hemorrhagic shock",
+      "hypovolemia"
+    ],
+    "key": "shock-hypovolemic"
+  },
+  {
+    "title": "Obstructive shock",
+    "section": "Shock",
+    "keywords": [
+      "tension pneumothorax",
+      "cardiac tamponade",
+      "massive pulmonary embolism"
+    ],
+    "key": "shock-obstructive"
+  },
+  {
     "title": "Tension pneumothorax",
-    "section": "Acute respiratory failure",
+    "section": "Shock",
     "keywords": [
       "needle thoracostomy",
       "chest tube",
