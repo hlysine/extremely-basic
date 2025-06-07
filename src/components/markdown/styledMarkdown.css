@@ -24,21 +24,21 @@
   @apply text-2xl text-info font-extrabold my-4 w-full border-b border-b-base-content/50 pb-2;
 }
 .markdown h3 {
-  @apply text-xl text-primary font-extrabold my-2;
+  @apply text-xl text-primary brightness-150 my-2;
 }
 .markdown h4 {
-  @apply text-lg font-extrabold my-1;
+  @apply text-base font-medium text-secondary brightness-150 my-1;
 }
 .markdown h5 {
-  @apply text-base font-extrabold my-1;
+  @apply text-base my-1;
 }
 .markdown h6 {
-  @apply text-base font-semibold my-1;
+  @apply text-sm my-1;
 }
 
 .markdown ul,
 .markdown ol {
-  @apply list-outside list-disc my-2 ps-8 flex flex-col gap-2;
+  @apply list-outside list-disc my-1 ps-8 flex flex-col gap-1;
 }
 
 .markdown img {
@@ -46,7 +46,7 @@
 }
 
 .markdown a {
-  @apply text-primary brightness-125 hover:underline;
+  @apply text-info hover:underline;
 }
 
 .markdown table {

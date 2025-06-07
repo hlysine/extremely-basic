@@ -34,7 +34,7 @@ function Dock() {
         <Link
           key={tab.name}
           to={tab.to}
-          className={location.pathname === tab.to ? 'dock-active' : ''}
+          className={location.pathname.startsWith(tab.to) ? 'dock-active' : ''}
         >
           {tab.icon}
           <span className="dock-label">{tab.name}</span>
