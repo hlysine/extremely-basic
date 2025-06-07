@@ -1,6 +1,6 @@
 ---
 title: Antithrombotic therapy
-section: Cardiology
+section: ACS and heart failure
 keywords:
   - unfractionated heparin
   - low molecular weight heparin (LMWH)

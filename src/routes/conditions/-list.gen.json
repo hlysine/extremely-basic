@@ -1,7 +1,7 @@
 [
   {
     "title": "Acute coronary syndrome",
-    "section": "Cardiology",
+    "section": "ACS and heart failure",
     "keywords": [
       "ACS",
       "myocardial infarction",
@@ -13,6 +13,17 @@
       "ECG"
     ],
     "key": "acute-coronary-syndrome"
+  },
+  {
+    "title": "Acute heart failure",
+    "section": "ACS and heart failure",
+    "keywords": [
+      "acute on chronic heart failure",
+      "diastolic heart failure",
+      "fluid overload",
+      "acute pulmonary edema"
+    ],
+    "key": "acute-heart-failure"
   },
   {
     "title": "Acute respiratory failure - assessment",
@@ -206,6 +217,31 @@
       "massive pulmonary embolism"
     ],
     "key": "shock-obstructive"
+  },
+  {
+    "title": "Stable wide complex tachycardia",
+    "section": "Arrhythmia",
+    "keywords": [
+      "ventricular tachycardia",
+      "supraventricular tachycardia",
+      "accessory pathway"
+    ],
+    "key": "tachyarrhythmia-stable-wide-complex"
+  },
+  {
+    "title": "Unstable tachyarrhythmia",
+    "section": "Arrhythmia",
+    "keywords": [
+      "tachyarrhythmia",
+      "ventricular tachycardia",
+      "atrial fibrillation",
+      "atrial flutter",
+      "supraventricular tachycardia",
+      "ventricular fibrillation",
+      "cardioversion",
+      "anti-arrhythmics"
+    ],
+    "key": "tachyarrhythmia-unstable"
   },
   {
     "title": "Tension pneumothorax",

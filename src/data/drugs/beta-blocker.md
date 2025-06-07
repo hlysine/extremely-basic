@@ -1,6 +1,6 @@
 ---
 title: Beta-blocker
-section: Cardiology
+section: ACS and heart failure
 keywords:
   - cardioselective beta-blocker
   - non-selective beta-blocker

@@ -29,7 +29,7 @@
   },
   {
     "title": "Antiplatelet therapy",
-    "section": "Cardiology",
+    "section": "ACS and heart failure",
     "keywords": [
       "chewable aspirin",
       "P2Y12 inhibitors",
@@ -41,7 +41,7 @@
   },
   {
     "title": "Antithrombotic therapy",
-    "section": "Cardiology",
+    "section": "ACS and heart failure",
     "keywords": [
       "unfractionated heparin",
       "low molecular weight heparin (LMWH)",
@@ -53,7 +53,7 @@
   },
   {
     "title": "Beta-blocker",
-    "section": "Cardiology",
+    "section": "ACS and heart failure",
     "keywords": [
       "cardioselective beta-blocker",
       "non-selective beta-blocker",
@@ -120,7 +120,7 @@
   },
   {
     "title": "Morphine",
-    "section": "Cardiology",
+    "section": "ACS and heart failure",
     "keywords": [
       "opioid",
       "analgesic",
@@ -141,8 +141,8 @@
     "key": "naloxone"
   },
   {
-    "title": "Nitroglycerin",
-    "section": "Cardiology",
+    "title": "Nitrates",
+    "section": "ACS and heart failure",
     "keywords": [
       "GTN",
       "TNG",
@@ -150,7 +150,7 @@
       "acute coronary syndrome",
       "sublingual"
     ],
-    "key": "nitroglycerin"
+    "key": "nitrate"
   },
   {
     "title": "Vasopressors",

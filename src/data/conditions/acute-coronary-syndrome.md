@@ -1,6 +1,6 @@
 ---
 title: Acute coronary syndrome
-section: Cardiology
+section: ACS and heart failure
 keywords:
   - ACS
   - myocardial infarction

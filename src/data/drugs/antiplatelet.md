@@ -1,6 +1,6 @@
 ---
 title: Antiplatelet therapy
-section: Cardiology
+section: ACS and heart failure
 keywords:
   - chewable aspirin
   - P2Y12 inhibitors

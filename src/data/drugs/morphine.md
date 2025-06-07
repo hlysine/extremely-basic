@@ -1,6 +1,6 @@
 ---
 title: Morphine
-section: Cardiology
+section: ACS and heart failure
 keywords:
   - opioid
   - analgesic
