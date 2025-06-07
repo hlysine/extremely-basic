@@ -46,7 +46,7 @@
 }
 
 .markdown a {
-  @apply text-info hover:underline;
+  @apply text-blue-500 hover:underline;
 }
 
 .markdown table {

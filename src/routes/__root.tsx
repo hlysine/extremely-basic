@@ -7,6 +7,7 @@ import {
 import { TanStackRouterDevtools } from '@tanstack/react-router-devtools';
 import PWAPrompt from '../components/PWAPrompt';
 import { FaBookMedical, FaCalculator, FaSyringe } from 'react-icons/fa';
+import ThemeToggle from '../components/ThemeToggle';
 
 const dockTabs = [
   {
@@ -48,7 +49,7 @@ export const Route = createRootRoute({
   component: () => (
     <div className="w-full h-full flex flex-col">
       <PWAPrompt />
-      <nav className="navbar py-0 bg-base-300 shadow-sm">
+      <nav className="navbar py-0 bg-base-300 shadow-sm justify-between">
         <div className="breadcrumbs text-sm ms-2">
           <ul>
             <li>
@@ -62,6 +63,7 @@ export const Route = createRootRoute({
             </li>
           </ul>
         </div>
+        <ThemeToggle />
       </nav>
       <Outlet />
       <Dock />
