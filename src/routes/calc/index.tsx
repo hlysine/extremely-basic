@@ -83,7 +83,7 @@ const calculators: Record<string, Calculator[]> = {
 
 function CalcIndex() {
   return (
-    <div className="flex-1 max-w-[1000px] self-center">
+    <div className="flex-1 w-full max-w-[1000px] self-center">
       <CollapsibleSections sections={calculators}>
         {entry => (
           <Link

@@ -36,7 +36,7 @@ export default memo(function SearchableIndex({
   }, [allEntries, searchString]);
 
   return (
-    <div className="flex-1 flex flex-col items-center justify-center gap-2 mt-2 max-w-[1000px] self-center">
+    <div className="flex-1 flex flex-col items-center justify-center gap-2 w-full mt-2 max-w-[1000px] self-center">
       <label className="input w-full max-w-[400px]">
         <FaSearch />
         <input
