@@ -50,7 +50,7 @@
 }
 
 .markdown table {
-  @apply table table-sm border border-base-content/20 shadow-sm my-2;
+  @apply table table-sm rounded-none border border-base-content/20 shadow-sm my-2;
 }
 
 .markdown hr {
