@@ -4,7 +4,7 @@ import StyledMarkdown from '../../components/markdown/StyledMarkdown';
 function Condition() {
   const data = useLoaderData({ from: '/drugs/$key' });
   return (
-    <div className="flex-1 p-2 overflow-y-auto">
+    <div className="flex-1 p-2 overflow-y-auto self-center w-full max-w-[1000px]">
       <StyledMarkdown>{data}</StyledMarkdown>
     </div>
   );
