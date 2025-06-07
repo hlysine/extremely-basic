@@ -19,7 +19,7 @@ export default function CollapsibleSections<T>({
     }
   };
   return (
-    <div className="flex-1 overflow-y-auto py-4 w-full">
+    <div className="flex-1 overflow-y-auto pb-4 w-full">
       {Object.entries(sections).map(([key, entries]) => {
         const isSelected = selectedSection === key || selectedSection === '*';
         return (
