@@ -83,26 +83,28 @@ const calculators: Record<string, Calculator[]> = {
 
 function CalcIndex() {
   return (
-    <CollapsibleSections sections={calculators}>
-      {entry => (
-        <Link
-          to={entry.path}
-          key={entry.title}
-          className="card w-96 bg-base-200 card-sm shadow-sm hover:shadow-lg hover:bg-base-300 transition-all cursor-pointer"
-        >
-          <div className="card-body">
-            <h2 className="card-title">{entry.title}</h2>
-            <div className="flex flex-wrap gap-2">
-              {entry.badges.map((badge, idx) => (
-                <div key={idx} className="badge badge-secondary">
-                  {badge}
-                </div>
-              ))}
-            </div>
-          </div>
-        </Link>
-      )}
-    </CollapsibleSections>
+    <div className="flex-1 max-w-[1000px] self-center">
+      <CollapsibleSections sections={calculators}>
+        {entry => (
+          <Link
+            to={entry.path}
+            key={entry.title}
+            className="flex flex-col gap-1 w-96 bg-base-200 text-base border-b border-neutral/30 py-3 px-6 hover:bg-base-300 transition-all cursor-pointer"
+          >
+            <h2 className="">{entry.title}</h2>
+            {entry.badges.length > 0 && (
+              <div className="flex flex-wrap gap-2">
+                {entry.badges.map((badge, idx) => (
+                  <div key={idx} className="badge badge-secondary badge-sm">
+                    {badge}
+                  </div>
+                ))}
+              </div>
+            )}
+          </Link>
+        )}
+      </CollapsibleSections>
+    </div>
   );
 }
 

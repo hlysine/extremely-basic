@@ -131,6 +131,7 @@ function OxygenGradient() {
         onChange={value => setAge(value)}
         min={0}
         prefix="Age"
+        suffix="optional"
       />
     </Calculator>
   );

@@ -44,7 +44,7 @@ export default function CollapsibleSections<T>({
               {key}
             </a>
             {isSelected ? (
-              <ul className="flex flex-wrap justify-center gap-1">
+              <ul className="flex flex-wrap justify-center">
                 {entries.map(entry => children(entry))}
               </ul>
             ) : null}

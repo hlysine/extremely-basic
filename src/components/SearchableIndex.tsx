@@ -36,7 +36,7 @@ export default memo(function SearchableIndex({
   }, [allEntries, searchString]);
 
   return (
-    <div className="flex-1 flex flex-col items-center justify-center gap-2 mt-2">
+    <div className="flex-1 flex flex-col items-center justify-center gap-2 mt-2 max-w-[1000px] self-center">
       <label className="input w-full max-w-[400px]">
         <FaSearch />
         <input
@@ -52,11 +52,9 @@ export default memo(function SearchableIndex({
           <Link
             to={routeBase + entry.key}
             key={entry.title}
-            className="card w-96 bg-base-200 card-sm shadow-sm hover:shadow-lg hover:bg-base-300 transition-all cursor-pointer"
+            className="w-96 bg-base-200 text-base border-b border-neutral/30 py-3 px-6 hover:bg-base-300 transition-all cursor-pointer"
           >
-            <div className="card-body">
-              <h2 className="card-title">{entry.title}</h2>
-            </div>
+            {entry.title}
           </Link>
         )}
       </CollapsibleSections>
