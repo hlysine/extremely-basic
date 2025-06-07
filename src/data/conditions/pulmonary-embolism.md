@@ -1,6 +1,6 @@
 ---
 title: Massive pulmonary embolism
-section: Shock
+section: Emergencies
 keywords:
   - massive PE
   - massive pulmonary embolism

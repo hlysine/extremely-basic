@@ -36,6 +36,15 @@
     "key": "airway-management"
   },
   {
+    "title": "Anaphylaxis",
+    "section": "Emergencies",
+    "keywords": [
+      "anaphylactic shock",
+      "distributive shock"
+    ],
+    "key": "anaphylaxis"
+  },
+  {
     "title": "Asthma",
     "section": "Acute respiratory failure",
     "keywords": [
@@ -103,6 +112,16 @@
     "key": "pneumonia-nosocomial"
   },
   {
+    "title": "Massive pulmonary embolism",
+    "section": "Emergencies",
+    "keywords": [
+      "massive PE",
+      "massive pulmonary embolism",
+      "acute respiratory failure"
+    ],
+    "key": "pulmonary-embolism"
+  },
+  {
     "title": "Severe illness",
     "section": "Assessment",
     "keywords": [
@@ -159,26 +178,16 @@
       "cardiac tamponade",
       "massive pulmonary embolism"
     ],
-    "key": "shock-obstructive-all"
-  },
-  {
-    "title": "Massive pulmonary embolism",
-    "section": "Shock",
-    "keywords": [
-      "massive PE",
-      "massive pulmonary embolism",
-      "acute respiratory failure"
-    ],
-    "key": "shock-obstructive-pulmonary-embolism"
+    "key": "shock-obstructive"
   },
   {
     "title": "Tension pneumothorax",
-    "section": "Shock",
+    "section": "Emergencies",
     "keywords": [
       "needle thoracostomy",
       "chest tube",
       "chest drain"
     ],
-    "key": "shock-obstructive-tension-pneumothorax"
+    "key": "tension-pneumothorax"
   }
 ]

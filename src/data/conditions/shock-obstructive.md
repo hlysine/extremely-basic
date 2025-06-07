@@ -23,8 +23,8 @@ keywords:
 
 ## Tension pneumothorax
 
-Refer to [Tension pneumothorax](tension-pneumothorax.md)
+Refer to [Tension pneumothorax](shock-obstructive-tension-pneumothorax)
 
 ## Massive pulmonary embolism
 
-Refer to [Massive pulmonary embolism](massive-pulmonary-embolism.md)
+Refer to [Massive pulmonary embolism](shock-obstructive-pulmonary-embolism)

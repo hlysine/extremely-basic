@@ -1,6 +1,6 @@
 ---
 title: Tension pneumothorax
-section: Shock
+section: Emergencies
 keywords:
   - needle thoracostomy
   - chest tube
