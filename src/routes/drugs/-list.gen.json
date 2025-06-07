@@ -1,5 +1,14 @@
 [
   {
+    "title": "Anti-arrhythmics",
+    "section": "Cardiocerebral resuscitation",
+    "keywords": [
+      "amiodarone",
+      "lignocaine"
+    ],
+    "key": "anti-arrhythmics"
+  },
+  {
     "title": "Empirical antibiotics",
     "section": "Acute respiratory failure",
     "keywords": [
@@ -44,6 +53,15 @@
     "key": "corticosteroids"
   },
   {
+    "title": "Epinephrine",
+    "section": "Cardiocerebral resuscitation",
+    "keywords": [
+      "adrenaline",
+      "vasopressors"
+    ],
+    "key": "epinephrine"
+  },
+  {
     "title": "Fluids",
     "section": "Shock",
     "keywords": [
@@ -65,6 +83,16 @@
       "severe asthma exacerbation"
     ],
     "key": "magnesium-sulphate"
+  },
+  {
+    "title": "Naloxone",
+    "section": "Cardiocerebral resuscitation",
+    "keywords": [
+      "opioid overdose",
+      "opioid antagonist",
+      "narcan"
+    ],
+    "key": "naloxone"
   },
   {
     "title": "Vasopressors",

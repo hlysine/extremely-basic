@@ -79,6 +79,18 @@
     "key": "hemodynamic-monitoring"
   },
   {
+    "title": "In-hospital cardiocerebral resuscitation",
+    "section": "Cardiocerebral resuscitation",
+    "keywords": [
+      "chest compressions",
+      "CPR",
+      "defibrillation",
+      "advanced life support",
+      "ACLS"
+    ],
+    "key": "in-hospital-cardiocerebral-resuscitation"
+  },
+  {
     "title": "Community-acquired pneumonia",
     "section": "Acute respiratory failure",
     "keywords": [
@@ -138,7 +150,7 @@
       "hypoperfusion",
       "JVP"
     ],
-    "key": "shock-all"
+    "key": "shock-basic"
   },
   {
     "title": "Cardiogenic shock",
