@@ -1,7 +1,12 @@
 ---
 title: Corticosteroids
 section: Acute respiratory failure
-keywords: hydrocortisone, prednisolone, prednisone, methylprednisolone, dexamethasone
+keywords:
+  - hydrocortisone
+  - prednisolone
+  - prednisone
+  - methylprednisolone
+  - dexamethasone
 ---
 
 # Corticosteroids

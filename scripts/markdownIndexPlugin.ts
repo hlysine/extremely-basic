@@ -1,6 +1,7 @@
 import { Plugin } from 'vite';
 import path from 'path';
 import fg from 'fast-glob';
+import fm from 'front-matter';
 
 export interface Config {
   entries: {
@@ -9,10 +10,13 @@ export interface Config {
   }[];
 }
 
-interface OutputEntry {
+interface FrontMatter {
   title: string;
   section: string;
   keywords: string[];
+}
+
+interface OutputEntry extends FrontMatter {
   key: string;
 }
 
@@ -20,45 +24,20 @@ function stripExtension(path: string) {
   return path.split('.').slice(0, -1).join('.');
 }
 
-function parseMarkdownMetadata(markdown: string): OutputEntry | undefined {
-  const metadata: OutputEntry = {
-    title: '',
-    section: '',
-    keywords: [],
-    key: '',
-  };
-
-  const metadataMatch = /^---\s*$(.+)^---\s*$/ms.exec(markdown);
-  if (!metadataMatch) {
+function parseMarkdownMetadata(markdown: string): FrontMatter | undefined {
+  const { attributes } = fm<FrontMatter>(markdown);
+  if (
+    !attributes ||
+    typeof attributes !== 'object' ||
+    !(typeof attributes.title === 'string') ||
+    !(typeof attributes.section === 'string') ||
+    (attributes.keywords && !Array.isArray(attributes.keywords))
+  ) {
+    console.warn('⚠️  Invalid or missing frontmatter in markdown file.');
     return undefined;
   }
-  const metadataContent = metadataMatch[1];
-  const lines = metadataContent
-    .split('\n')
-    .map(line => line.trim())
-    .filter(line => line.length > 0);
-  for (const line of lines) {
-    const [key, ...valueParts] = line.split(':');
-    const value = valueParts.join(':').trim();
-    switch (key) {
-      case 'title':
-        metadata.title = value;
-        break;
-      case 'section':
-        metadata.section = value;
-        break;
-      case 'keywords':
-        metadata.keywords = value.split(',').map(keyword => keyword.trim());
-        break;
-      default:
-        // Ignore unknown keys
-        break;
-    }
-  }
-  if (!metadata.title || !metadata.section) {
-    return undefined;
-  }
-  return metadata;
+  attributes.keywords = attributes.keywords ?? [];
+  return attributes;
 }
 
 async function generateIndex(config: Config) {
@@ -83,8 +62,10 @@ async function generateIndex(config: Config) {
         console.warn(`⚠️  No metadata found in ${file}. Skipping...`);
         continue;
       }
-      metadata.key = key;
-      entries.push(metadata);
+      entries.push({
+        ...metadata,
+        key,
+      });
     }
 
     await Bun.write(

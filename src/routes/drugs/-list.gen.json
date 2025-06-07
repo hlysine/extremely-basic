@@ -1,5 +1,24 @@
 [
   {
+    "title": "Empirical antibiotics",
+    "section": "Acute respiratory failure",
+    "keywords": [
+      "community-acquired pneumonia",
+      "nosocomial pneumonia",
+      "antibiotics",
+      "amoxicillin",
+      "amoxicillin-clavulanate",
+      "doxycycline",
+      "azithromycin",
+      "ceftriaxone",
+      "cefotaxime",
+      "piperacillin-tazobactam",
+      "meropenem",
+      "levofloxacin"
+    ],
+    "key": "antibiotics"
+  },
+  {
     "title": "Bronchodilators",
     "section": "Acute respiratory failure",
     "keywords": [
@@ -27,11 +46,7 @@
   {
     "title": "Magnesium sulphate",
     "section": "Acute respiratory failure",
-    "keywords": [
-      "MgSO4",
-      "bronchodilator",
-      "severe asthma exacerbation"
-    ],
+    "keywords": ["MgSO4", "bronchodilator", "severe asthma exacerbation"],
     "key": "magnesium-sulphate"
   }
 ]

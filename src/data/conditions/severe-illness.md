@@ -1,7 +1,9 @@
 ---
 title: Severe illness
 section: Assessment
-keywords: seriously ill, initial assessment
+keywords:
+  - seriously ill
+  - initial assessment
 ---
 
 # Assessment of the Seriously Ill Patient

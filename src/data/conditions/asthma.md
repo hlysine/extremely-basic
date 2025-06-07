@@ -1,7 +1,10 @@
 ---
 title: Asthma
 section: Acute respiratory failure
-keywords: acute exacerbation of asthma, bronchodilators, corticosteroids
+keywords:
+  - acute exacerbation of asthma
+  - bronchodilators
+  - corticosteroids
 ---
 
 # Acute exacerbation of asthma

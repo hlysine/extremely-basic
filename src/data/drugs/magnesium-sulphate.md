@@ -1,7 +1,10 @@
 ---
 title: Magnesium sulphate
 section: Acute respiratory failure
-keywords: MgSO4, bronchodilator, severe asthma exacerbation
+keywords:
+  - MgSO4
+  - bronchodilator
+  - severe asthma exacerbation
 ---
 
 # Magnesium sulphate

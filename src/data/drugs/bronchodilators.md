@@ -1,7 +1,13 @@
 ---
 title: Bronchodilators
 section: Acute respiratory failure
-keywords: salbutamol, ipratropium bromide, theophylline, beta-2 agonists, anticholinergics, methylxanthines derivatives
+keywords:
+  - salbutamol
+  - ipratropium bromide
+  - theophylline
+  - beta-2 agonists
+  - anticholinergics
+  - methylxanthines derivatives
 ---
 
 # Bronchodilators

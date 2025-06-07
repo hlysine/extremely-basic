@@ -1,7 +1,10 @@
 ---
 title: Airway management
 section: Acute respiratory failure
-keywords: recovery position, airway obstruction, airway maneuvers
+keywords:
+  - recovery position
+  - airway obstruction
+  - airway maneuvers
 ---
 
 # Airway management

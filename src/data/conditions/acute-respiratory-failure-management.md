@@ -1,7 +1,16 @@
 ---
 title: Management of acute respiratory failure
 section: Acute respiratory failure
-keywords: hypoxemic, hypercapnic, desaturation, oxygen, nasal cannula, face masks, Hudson masks, Venturi masks, reservoir face masks
+keywords:
+  - hypoxemic
+  - hypercapnic
+  - desaturation
+  - oxygen
+  - nasal cannula
+  - face masks
+  - Hudson masks
+  - Venturi masks
+  - reservoir face masks
 ---
 
 # Acute respiratory failure

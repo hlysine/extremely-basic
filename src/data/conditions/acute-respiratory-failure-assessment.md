@@ -1,7 +1,10 @@
 ---
 title: Assessment of acute respiratory failure
 section: Acute respiratory failure
-keywords: hypoxemic, hypercapnic, desaturation
+keywords:
+  - hypoxemic
+  - hypercapnic
+  - desaturation
 ---
 
 # Acute respiratory failure

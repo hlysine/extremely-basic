@@ -1,7 +1,10 @@
 ---
 title: Tension pneumothorax
 section: Acute respiratory failure
-keywords: needle thoracostomy, chest tube, chest drain
+keywords:
+  - needle thoracostomy
+  - chest tube
+  - chest drain
 ---
 
 # Tension pneumothorax

@@ -46,6 +46,23 @@
     "key": "asthma"
   },
   {
+    "title": "Community-acquired pneumonia",
+    "section": "Acute respiratory failure",
+    "keywords": [
+      "CAP",
+      "staphylococcus aureus",
+      "streptococcus pyogenes",
+      "streptococcus pneumoniae",
+      "moraxella catarrhalis",
+      "klebsiella pneumoniae",
+      "haemophilus influenzae",
+      "mycoplasma pneumoniae",
+      "legionella pneumophila",
+      "chlamydia pneumoniae"
+    ],
+    "key": "community-acquired-pneumonia"
+  },
+  {
     "title": "COPD",
     "section": "Acute respiratory failure",
     "keywords": [
@@ -57,6 +74,22 @@
       "corticosteroids"
     ],
     "key": "copd"
+  },
+  {
+    "title": "Nosocomial pneumonia",
+    "section": "Acute respiratory failure",
+    "keywords": [
+      "hospital-acquired pneumonia",
+      "HAP",
+      "ventilator-associated pneumonia",
+      "VAP",
+      "pseudomonas aeruginosa",
+      "staphylococcus aureus",
+      "streptococcus pneumoniae",
+      "klebsiella pneumoniae",
+      "escherichia coli"
+    ],
+    "key": "nosocomial-pneumonia"
   },
   {
     "title": "Severe illness",

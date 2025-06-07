@@ -1,7 +1,13 @@
 ---
 title: COPD
 section: Acute respiratory failure
-keywords: AECOPD, acute exacerbation of COPD, COAD, chronic obstructive pulmonary disease, bronchodilators, corticosteroids
+keywords:
+  - AECOPD
+  - acute exacerbation of COPD
+  - COAD
+  - chronic obstructive pulmonary disease
+  - bronchodilators
+  - corticosteroids
 ---
 
 # Acute Exacerbation of COPD
