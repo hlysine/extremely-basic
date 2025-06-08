@@ -20,13 +20,13 @@ export default function SkeletonImage({
 
   return (
     <>
-      <div
+      <span
         className={cn(
-          'skeleton w-full max-w-[400px] h-64',
+          'skeleton block w-full max-w-[400px] h-64',
           className,
           isLoading || 'hidden'
         )}
-      ></div>
+      ></span>
       <img
         className={cn(className, isLoading && 'hidden')}
         loading="eager"

@@ -1,8 +1,8 @@
-import { Link } from '@tanstack/react-router';
 import { memo, useMemo, useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
 import { WikiPage } from '../utils/types';
 import CollapsibleSections from './CollapsibleSections';
+import MouseDownLink from './MouseDownLink';
 
 export interface SearchableIndexProps {
   entries: WikiPage[];
@@ -49,13 +49,13 @@ export default memo(function SearchableIndex({
       </label>
       <CollapsibleSections sections={sections}>
         {entry => (
-          <Link
+          <MouseDownLink
             to={routeBase + entry.key}
             key={entry.title}
             className="w-96 bg-base-200 text-base border-b border-neutral/30 py-3 px-6 hover:bg-base-300 transition-all cursor-pointer"
           >
             {entry.title}
-          </Link>
+          </MouseDownLink>
         )}
       </CollapsibleSections>
     </div>

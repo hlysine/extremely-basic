@@ -1,5 +1,6 @@
-import { createFileRoute, Link } from '@tanstack/react-router';
+import { createFileRoute } from '@tanstack/react-router';
 import CollapsibleSections from '../../components/CollapsibleSections';
+import MouseDownLink from '../../components/MouseDownLink';
 
 interface Calculator {
   title: string;
@@ -86,7 +87,7 @@ function CalcIndex() {
     <div className="flex-1 w-full max-w-[1000px] self-center">
       <CollapsibleSections sections={calculators}>
         {entry => (
-          <Link
+          <MouseDownLink
             to={entry.path}
             key={entry.title}
             className="flex flex-col gap-1 w-96 bg-base-200 text-base border-b border-neutral/30 py-3 px-6 hover:bg-base-300 transition-all cursor-pointer"
@@ -101,7 +102,7 @@ function CalcIndex() {
                 ))}
               </div>
             )}
-          </Link>
+          </MouseDownLink>
         )}
       </CollapsibleSections>
     </div>

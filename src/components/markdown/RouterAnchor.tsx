@@ -1,4 +1,5 @@
-import { Link, useRouterState } from '@tanstack/react-router';
+import { useRouterState } from '@tanstack/react-router';
+import MouseDownLink from '../MouseDownLink';
 
 export interface RouterAnchorProps {
   href?: string;
@@ -18,7 +19,9 @@ function getRelativePath(href: string, base: string): string {
 export default function RouterAnchor({ href, ...rest }: RouterAnchorProps) {
   const location = useRouterState({ select: state => state.location });
   if (isSameOrigin(href)) {
-    return <Link to={getRelativePath(href, location.href)} {...rest} />;
+    return (
+      <MouseDownLink to={getRelativePath(href, location.href)} {...rest} />
+    );
   }
 
   return <a href={href} {...rest} />;

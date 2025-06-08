@@ -1,6 +1,5 @@
 import {
   createRootRoute,
-  Link,
   Outlet,
   useRouterState,
 } from '@tanstack/react-router';
@@ -9,6 +8,7 @@ import PWAPrompt from '../components/PWAPrompt';
 import { FaBookMedical, FaCalculator, FaSyringe } from 'react-icons/fa';
 import ThemeToggle from '../components/ThemeToggle';
 import { useEffect } from 'react';
+import MouseDownLink from '../components/MouseDownLink';
 
 const dockTabs = [
   {
@@ -42,14 +42,14 @@ function Dock() {
   return (
     <div className="dock static">
       {dockTabs.map(tab => (
-        <Link
+        <MouseDownLink
           key={tab.name}
           to={tab.to}
           className={location.pathname.startsWith(tab.to) ? 'dock-active' : ''}
         >
           {tab.icon}
           <span className="dock-label">{tab.name}</span>
-        </Link>
+        </MouseDownLink>
       ))}
     </div>
   );
@@ -66,10 +66,10 @@ export const Route = createRootRoute({
               <a href="https://lysine-med.hf.space/">Med</a>
             </li>
             <li>
-              <Link to="/" className="btn btn-ghost text-xl">
+              <MouseDownLink to="/" className="btn btn-ghost text-xl">
                 <img src="/logo.svg" alt="Logo" className="h-8 mr-2" />
                 Extremely Basic
-              </Link>
+              </MouseDownLink>
             </li>
           </ul>
         </div>
