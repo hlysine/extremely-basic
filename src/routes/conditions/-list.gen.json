@@ -238,6 +238,69 @@
     "key": "tension-pneumothorax"
   },
   {
+    "title": "Trauma",
+    "section": "Emergencies",
+    "keywords": [
+      "hemorrhage",
+      "hemorrhagic shock"
+    ],
+    "key": "trauma"
+  },
+  {
+    "title": "Cerebral injury",
+    "section": "Neurological emergencies",
+    "keywords": [
+      "increased intracranial pressure",
+      "ICP",
+      "mannitol",
+      "hyperventilation"
+    ],
+    "key": "cerebral-injury"
+  },
+  {
+    "title": "Ischemic stroke",
+    "section": "Neurological emergencies",
+    "keywords": [
+      "acute ischemic stroke",
+      "cerebral infarction"
+    ],
+    "key": "ischemic-stroke"
+  },
+  {
+    "title": "Non-traumatic coma",
+    "section": "Neurological emergencies",
+    "keywords": [
+      "meningitis",
+      "encephalitis",
+      "tumor",
+      "intracranial hemorrhage",
+      "subarachnoid hemorrhage",
+      "hypoxic-ischemic brain injury"
+    ],
+    "key": "non-traumatic-coma"
+  },
+  {
+    "title": "Generalized status epilepticus",
+    "section": "Neurological emergencies",
+    "keywords": [
+      "seizure",
+      "convulsion",
+      "generalized tonic-clonic seizure",
+      "GTCS"
+    ],
+    "key": "status-epilepticus"
+  },
+  {
+    "title": "Traumatic brain injury",
+    "section": "Neurological emergencies",
+    "keywords": [
+      "TBI",
+      "head injury",
+      "intracranial hemorrhage"
+    ],
+    "key": "traumatic-brain-injury"
+  },
+  {
     "title": "Acute kidney injury",
     "section": "Renal",
     "keywords": [

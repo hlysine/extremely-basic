@@ -165,6 +165,28 @@
     "key": "naloxone"
   },
   {
+    "title": "Anti-epileptics",
+    "section": "Neurological emergencies",
+    "keywords": [
+      "lorazepam",
+      "phenytoin",
+      "diazepam",
+      "midazolam"
+    ],
+    "key": "antiepileptics"
+  },
+  {
+    "title": "Osmotherapy",
+    "section": "Neurological emergencies",
+    "keywords": [
+      "mannitol",
+      "hypertonic saline",
+      "cerebral edema",
+      "raised intracranial pressure"
+    ],
+    "key": "osmotherapy"
+  },
+  {
     "title": "Fluids",
     "section": "Shock",
     "keywords": [
