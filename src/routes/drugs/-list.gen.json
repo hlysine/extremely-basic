@@ -1,24 +1,5 @@
 [
   {
-    "title": "Empirical antibiotics",
-    "section": "Acute respiratory failure",
-    "keywords": [
-      "community-acquired pneumonia",
-      "nosocomial pneumonia",
-      "antibiotics",
-      "amoxicillin",
-      "amoxicillin-clavulanate",
-      "doxycycline",
-      "azithromycin",
-      "ceftriaxone",
-      "cefotaxime",
-      "piperacillin-tazobactam",
-      "meropenem",
-      "levofloxacin"
-    ],
-    "key": "antibiotics"
-  },
-  {
     "title": "Antiplatelet therapy",
     "section": "ACS and heart failure",
     "keywords": [
@@ -43,15 +24,6 @@
     "key": "antithrombotic"
   },
   {
-    "title": "Anti-arrhythmics for cardiac arrest",
-    "section": "Cardiocerebral resuscitation",
-    "keywords": [
-      "amiodarone",
-      "lignocaine"
-    ],
-    "key": "arrest-anti-arrhythmics"
-  },
-  {
     "title": "Beta-blocker",
     "section": "ACS and heart failure",
     "keywords": [
@@ -62,16 +34,47 @@
     "key": "beta-blocker"
   },
   {
-    "title": "Drugs for bradycardia",
-    "section": "Arrhythmia",
+    "title": "Morphine",
+    "section": "ACS and heart failure",
     "keywords": [
-      "atropine",
-      "isoprenaline",
-      "isoproterenol",
-      "epinephrine",
-      "adrenaline"
+      "opioid",
+      "analgesic",
+      "pain relief",
+      "myocardial infarction",
+      "acute coronary syndrome"
     ],
-    "key": "bradycardia"
+    "key": "morphine"
+  },
+  {
+    "title": "Nitrates",
+    "section": "ACS and heart failure",
+    "keywords": [
+      "GTN",
+      "TNG",
+      "angina",
+      "acute coronary syndrome",
+      "sublingual"
+    ],
+    "key": "nitrate"
+  },
+  {
+    "title": "Empirical antibiotics",
+    "section": "Acute respiratory failure",
+    "keywords": [
+      "community-acquired pneumonia",
+      "nosocomial pneumonia",
+      "antibiotics",
+      "amoxicillin",
+      "amoxicillin-clavulanate",
+      "doxycycline",
+      "azithromycin",
+      "ceftriaxone",
+      "cefotaxime",
+      "piperacillin-tazobactam",
+      "meropenem",
+      "levofloxacin"
+    ],
+    "key": "antibiotics"
   },
   {
     "title": "Bronchodilators",
@@ -99,28 +102,6 @@
     "key": "corticosteroids"
   },
   {
-    "title": "Epinephrine",
-    "section": "Cardiocerebral resuscitation",
-    "keywords": [
-      "adrenaline",
-      "vasopressors"
-    ],
-    "key": "epinephrine"
-  },
-  {
-    "title": "Fluids",
-    "section": "Shock",
-    "keywords": [
-      "crystalloids",
-      "normal saline",
-      "Hartmann's solution",
-      "lactated Ringer's solution",
-      "colloids",
-      "gelofusine"
-    ],
-    "key": "fluids"
-  },
-  {
     "title": "Magnesium sulphate",
     "section": "Acute respiratory failure",
     "keywords": [
@@ -131,38 +112,16 @@
     "key": "magnesium-sulphate"
   },
   {
-    "title": "Morphine",
-    "section": "ACS and heart failure",
+    "title": "Drugs for bradycardia",
+    "section": "Arrhythmia",
     "keywords": [
-      "opioid",
-      "analgesic",
-      "pain relief",
-      "myocardial infarction",
-      "acute coronary syndrome"
+      "atropine",
+      "isoprenaline",
+      "isoproterenol",
+      "epinephrine",
+      "adrenaline"
     ],
-    "key": "morphine"
-  },
-  {
-    "title": "Naloxone",
-    "section": "Cardiocerebral resuscitation",
-    "keywords": [
-      "opioid overdose",
-      "opioid antagonist",
-      "narcan"
-    ],
-    "key": "naloxone"
-  },
-  {
-    "title": "Nitrates",
-    "section": "ACS and heart failure",
-    "keywords": [
-      "GTN",
-      "TNG",
-      "angina",
-      "acute coronary syndrome",
-      "sublingual"
-    ],
-    "key": "nitrate"
+    "key": "bradycardia"
   },
   {
     "title": "Anti-arrhythmics for stable arrhythmias",
@@ -176,6 +135,47 @@
       "diltiazem"
     ],
     "key": "stable-anti-arrhythmics"
+  },
+  {
+    "title": "Anti-arrhythmics for cardiac arrest",
+    "section": "Cardiocerebral resuscitation",
+    "keywords": [
+      "amiodarone",
+      "lignocaine"
+    ],
+    "key": "arrest-anti-arrhythmics"
+  },
+  {
+    "title": "Epinephrine",
+    "section": "Cardiocerebral resuscitation",
+    "keywords": [
+      "adrenaline",
+      "vasopressors"
+    ],
+    "key": "epinephrine"
+  },
+  {
+    "title": "Naloxone",
+    "section": "Cardiocerebral resuscitation",
+    "keywords": [
+      "opioid overdose",
+      "opioid antagonist",
+      "narcan"
+    ],
+    "key": "naloxone"
+  },
+  {
+    "title": "Fluids",
+    "section": "Shock",
+    "keywords": [
+      "crystalloids",
+      "normal saline",
+      "Hartmann's solution",
+      "lactated Ringer's solution",
+      "colloids",
+      "gelofusine"
+    ],
+    "key": "fluids"
   },
   {
     "title": "Vasopressors",

@@ -62,15 +62,6 @@
     "key": "airway-management"
   },
   {
-    "title": "Anaphylaxis",
-    "section": "Emergencies",
-    "keywords": [
-      "anaphylactic shock",
-      "distributive shock"
-    ],
-    "key": "anaphylaxis"
-  },
-  {
     "title": "Asthma",
     "section": "Acute respiratory failure",
     "keywords": [
@@ -79,17 +70,6 @@
       "corticosteroids"
     ],
     "key": "asthma"
-  },
-  {
-    "title": "Bradycardia",
-    "section": "Arrhythmia",
-    "keywords": [
-      "complete heart block",
-      "third-degree AV block",
-      "bradyarrhythmia",
-      "AV dissociation"
-    ],
-    "key": "bradycardia"
   },
   {
     "title": "COPD",
@@ -103,29 +83,6 @@
       "corticosteroids"
     ],
     "key": "copd"
-  },
-  {
-    "title": "Hemodynamic monitoring",
-    "section": "Assessment",
-    "keywords": [
-      "tissue perfusion",
-      "urine output",
-      "blood pressure",
-      "passive leg raise"
-    ],
-    "key": "hemodynamic-monitoring"
-  },
-  {
-    "title": "In-hospital cardiocerebral resuscitation",
-    "section": "Cardiocerebral resuscitation",
-    "keywords": [
-      "chest compressions",
-      "CPR",
-      "defibrillation",
-      "advanced life support",
-      "ACLS"
-    ],
-    "key": "in-hospital-cardiocerebral-resuscitation"
   },
   {
     "title": "Community-acquired pneumonia",
@@ -161,6 +118,96 @@
     "key": "pneumonia-nosocomial"
   },
   {
+    "title": "Bradycardia",
+    "section": "Arrhythmia",
+    "keywords": [
+      "complete heart block",
+      "third-degree AV block",
+      "bradyarrhythmia",
+      "AV dissociation"
+    ],
+    "key": "bradycardia"
+  },
+  {
+    "title": "Stable narrow complex tachycardia",
+    "section": "Arrhythmia",
+    "keywords": [
+      "supraventricular tachycardia",
+      "re-entrant tachycardia",
+      "atrial fibrillation",
+      "atrial flutter",
+      "multifocal atrial tachycardia",
+      "atrial tachycardia"
+    ],
+    "key": "tachyarrhythmia-stable-narrow-complex"
+  },
+  {
+    "title": "Stable wide complex tachycardia",
+    "section": "Arrhythmia",
+    "keywords": [
+      "ventricular tachycardia",
+      "supraventricular tachycardia",
+      "accessory pathway"
+    ],
+    "key": "tachyarrhythmia-stable-wide-complex"
+  },
+  {
+    "title": "Unstable tachyarrhythmia",
+    "section": "Arrhythmia",
+    "keywords": [
+      "tachyarrhythmia",
+      "ventricular tachycardia",
+      "atrial fibrillation",
+      "atrial flutter",
+      "supraventricular tachycardia",
+      "ventricular fibrillation",
+      "cardioversion",
+      "anti-arrhythmics"
+    ],
+    "key": "tachyarrhythmia-unstable"
+  },
+  {
+    "title": "Hemodynamic monitoring",
+    "section": "Assessment",
+    "keywords": [
+      "tissue perfusion",
+      "urine output",
+      "blood pressure",
+      "passive leg raise"
+    ],
+    "key": "hemodynamic-monitoring"
+  },
+  {
+    "title": "Severe illness",
+    "section": "Assessment",
+    "keywords": [
+      "seriously ill",
+      "initial assessment"
+    ],
+    "key": "severe-illness"
+  },
+  {
+    "title": "In-hospital cardiocerebral resuscitation",
+    "section": "Cardiocerebral resuscitation",
+    "keywords": [
+      "chest compressions",
+      "CPR",
+      "defibrillation",
+      "advanced life support",
+      "ACLS"
+    ],
+    "key": "in-hospital-cardiocerebral-resuscitation"
+  },
+  {
+    "title": "Anaphylaxis",
+    "section": "Emergencies",
+    "keywords": [
+      "anaphylactic shock",
+      "distributive shock"
+    ],
+    "key": "anaphylaxis"
+  },
+  {
     "title": "Massive pulmonary embolism",
     "section": "Emergencies",
     "keywords": [
@@ -171,13 +218,38 @@
     "key": "pulmonary-embolism"
   },
   {
-    "title": "Severe illness",
-    "section": "Assessment",
+    "title": "Sepsis",
+    "section": "Emergencies",
     "keywords": [
-      "seriously ill",
-      "initial assessment"
+      "systemic inflammatory response syndrome (SIRS)",
+      "septic shock",
+      "infection"
     ],
-    "key": "severe-illness"
+    "key": "sepsis"
+  },
+  {
+    "title": "Tension pneumothorax",
+    "section": "Emergencies",
+    "keywords": [
+      "needle thoracostomy",
+      "chest tube",
+      "chest drain"
+    ],
+    "key": "tension-pneumothorax"
+  },
+  {
+    "title": "Acute kidney injury",
+    "section": "Renal",
+    "keywords": [
+      "AKI",
+      "acute kidney failure",
+      "renal replacement therapy",
+      "oliguria",
+      "anuria",
+      "hemodialysis",
+      "peritoneal dialysis"
+    ],
+    "key": "acute-kidney-injury"
   },
   {
     "title": "Shock",
@@ -228,53 +300,5 @@
       "massive pulmonary embolism"
     ],
     "key": "shock-obstructive"
-  },
-  {
-    "title": "Stable narrow complex tachycardia",
-    "section": "Arrhythmia",
-    "keywords": [
-      "supraventricular tachycardia",
-      "re-entrant tachycardia",
-      "atrial fibrillation",
-      "atrial flutter",
-      "multifocal atrial tachycardia",
-      "atrial tachycardia"
-    ],
-    "key": "tachyarrhythmia-stable-narrow-complex"
-  },
-  {
-    "title": "Stable wide complex tachycardia",
-    "section": "Arrhythmia",
-    "keywords": [
-      "ventricular tachycardia",
-      "supraventricular tachycardia",
-      "accessory pathway"
-    ],
-    "key": "tachyarrhythmia-stable-wide-complex"
-  },
-  {
-    "title": "Unstable tachyarrhythmia",
-    "section": "Arrhythmia",
-    "keywords": [
-      "tachyarrhythmia",
-      "ventricular tachycardia",
-      "atrial fibrillation",
-      "atrial flutter",
-      "supraventricular tachycardia",
-      "ventricular fibrillation",
-      "cardioversion",
-      "anti-arrhythmics"
-    ],
-    "key": "tachyarrhythmia-unstable"
-  },
-  {
-    "title": "Tension pneumothorax",
-    "section": "Emergencies",
-    "keywords": [
-      "needle thoracostomy",
-      "chest tube",
-      "chest drain"
-    ],
-    "key": "tension-pneumothorax"
   }
 ]

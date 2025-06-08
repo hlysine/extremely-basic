@@ -31,3 +31,9 @@ keywords:
     - Plasma-Lyte A
 - Large volume blood loss
   - Consider blood transfusion
+
+## Septic shock
+
+- 1000 ml crystalloid over 30 minutes
+  - Assess response with mental state and urine output
+  - **Disregard fluid in-out balance in the first 24 hours**
