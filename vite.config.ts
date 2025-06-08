@@ -41,8 +41,7 @@ export default defineConfig({
         theme_color: '#414558',
         background_color: '#edeff7',
         orientation: 'portrait',
-        display: 'fullscreen',
-        display_override: ['fullscreen', 'standalone', 'minimal-ui'],
+        display: 'standalone',
         icons: [
           {
             src: 'pwa-64x64.png',
