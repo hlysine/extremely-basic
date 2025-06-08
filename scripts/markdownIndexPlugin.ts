@@ -67,6 +67,7 @@ async function generateIndex(config: Config) {
         key,
       });
     }
+    entries.sort((a, b) => a.section.localeCompare(b.section));
 
     await Bun.write(
       path.resolve(process.cwd(), entry.output),
