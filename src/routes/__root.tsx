@@ -8,6 +8,7 @@ import { TanStackRouterDevtools } from '@tanstack/react-router-devtools';
 import PWAPrompt from '../components/PWAPrompt';
 import { FaBookMedical, FaCalculator, FaSyringe } from 'react-icons/fa';
 import ThemeToggle from '../components/ThemeToggle';
+import { useEffect } from 'react';
 
 const dockTabs = [
   {
@@ -29,6 +30,15 @@ const dockTabs = [
 
 function Dock() {
   const location = useRouterState({ select: state => state.location });
+
+  useEffect(() => {
+    const tab = dockTabs.find(tab => location.pathname.startsWith(tab.to));
+    if (tab) {
+      document.title = `Extremely Basic - ${tab.name}`;
+      localStorage.setItem('tab', tab.to);
+    }
+  }, [location]);
+
   return (
     <div className="dock static">
       {dockTabs.map(tab => (
