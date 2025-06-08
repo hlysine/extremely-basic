@@ -1,12 +1,12 @@
 ---
-title: Anti-arrhythmics
+title: Anti-arrhythmics for cardiac arrest
 section: Cardiocerebral resuscitation
 keywords:
   - amiodarone
   - lignocaine
 ---
 
-# Anti-arrhythmics
+# Anti-arrhythmics for cardiac arrest
 
 - **Indication** - Cardiac arrest with shockable rhythm (VF/VT)
 

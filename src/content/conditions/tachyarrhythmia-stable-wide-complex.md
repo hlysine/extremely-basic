@@ -13,25 +13,45 @@ keywords:
 
 ## Differential diagnosis
 
-- Wide complex SVT
-- VT
-  - Monomorphic
+- Monomorphic
+  - [Wide complex SVT](#wide-complex-svt)
+  - VT
     - [Sustained](#sustained-monomorphic-vt)
     - [Non-sustained](#non-sustained-monomorphic-vt)
-  - Polymorphic
+- Polymorphic
+  - VT
     - [Prolonged QTc](#torsades-de-pointes)
     - [Normal QTc](#polymorphic-vt-with-normal-qtc)
 
 ## General approach
 
+> **Assume VT over wide complex SVT unless proven otherwise**
+> - Fusion beats and capture beats suggests VT
+> - Polymorphic QRS suggests VT
+
 - Check electrolyte, acid-base and oxygenation status
 - Review ECG for QTc
-- Assume VT over wide complex SVT unless proven otherwise
-  - Fusion beats and capture beats suggests VT
 - Interventions when stable
-  - IV amiodarone
-  - IV lignocaine
-  - Cardioversion
+  - If suspect SVT
+    - Vagal maneuvers
+      - Valsalva maneuver
+      - Carotid sinus massage
+    - [Adenosine 6 mg IV bolus](../drugs/stable-anti-arrhythmics#adenosine)
+      - Avoid if delta wave in previous ECG
+  - Assume VT otherwise
+    - [IV amiodarone](../drugs/stable-anti-arrhythmics#amiodarone)
+    - [IV lignocaine](../drugs/stable-anti-arrhythmics#lignocaine)
+    - [IV procainamide](../drugs/stable-anti-arrhythmics#procainamide)
+  - [Cardioversion](tachyarrhythmia-unstable)
+
+## Wide complex SVT
+
+- Management
+  - [Adenosine 6 mg IV bolus](../drugs/stable-anti-arrhythmics#adenosine)
+    - Avoid if delta wave in previous ECG
+  - [IV procainamide](../drugs/stable-anti-arrhythmics#procainamide)
+    or [IV amiodarone](../drugs/stable-anti-arrhythmics#amiodarone)
+  - [Cardioversion](tachyarrhythmia-unstable)
 
 ## Non-sustained monomorphic VT
 
@@ -55,8 +75,8 @@ keywords:
 
 - Prompt [unsynchronized cardioversion](tachyarrhythmia-unstable)
 - Evaluate QTc when sinus
-  - Prolonged - Torsades de pointes
-  - Normal - assume ischemic cause
+  - Prolonged - [Torsades de pointes](#torsades-de-pointes)
+  - Normal - [assume ischemic cause](#polymorphic-vt-with-normal-qtc)
 
 ### Torsades de pointes
 

@@ -1,14 +1,5 @@
 [
   {
-    "title": "Anti-arrhythmics",
-    "section": "Cardiocerebral resuscitation",
-    "keywords": [
-      "amiodarone",
-      "lignocaine"
-    ],
-    "key": "anti-arrhythmics"
-  },
-  {
     "title": "Empirical antibiotics",
     "section": "Acute respiratory failure",
     "keywords": [
@@ -52,6 +43,15 @@
     "key": "antithrombotic"
   },
   {
+    "title": "Anti-arrhythmics for cardiac arrest",
+    "section": "Cardiocerebral resuscitation",
+    "keywords": [
+      "amiodarone",
+      "lignocaine"
+    ],
+    "key": "arrest-anti-arrhythmics"
+  },
+  {
     "title": "Beta-blocker",
     "section": "ACS and heart failure",
     "keywords": [
@@ -60,6 +60,18 @@
       "metoprolol tartrate"
     ],
     "key": "beta-blocker"
+  },
+  {
+    "title": "Drugs for bradycardia",
+    "section": "Arrhythmia",
+    "keywords": [
+      "atropine",
+      "isoprenaline",
+      "isoproterenol",
+      "epinephrine",
+      "adrenaline"
+    ],
+    "key": "bradycardia"
   },
   {
     "title": "Bronchodilators",
@@ -151,6 +163,19 @@
       "sublingual"
     ],
     "key": "nitrate"
+  },
+  {
+    "title": "Anti-arrhythmics for stable arrhythmias",
+    "section": "Arrhythmia",
+    "keywords": [
+      "amiodarone",
+      "lignocaine",
+      "procainamide",
+      "adenosine",
+      "verapamil",
+      "diltiazem"
+    ],
+    "key": "stable-anti-arrhythmics"
   },
   {
     "title": "Vasopressors",

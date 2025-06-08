@@ -81,6 +81,17 @@
     "key": "asthma"
   },
   {
+    "title": "Bradycardia",
+    "section": "Arrhythmia",
+    "keywords": [
+      "complete heart block",
+      "third-degree AV block",
+      "bradyarrhythmia",
+      "AV dissociation"
+    ],
+    "key": "bradycardia"
+  },
+  {
     "title": "COPD",
     "section": "Acute respiratory failure",
     "keywords": [
@@ -217,6 +228,19 @@
       "massive pulmonary embolism"
     ],
     "key": "shock-obstructive"
+  },
+  {
+    "title": "Stable narrow complex tachycardia",
+    "section": "Arrhythmia",
+    "keywords": [
+      "supraventricular tachycardia",
+      "re-entrant tachycardia",
+      "atrial fibrillation",
+      "atrial flutter",
+      "multifocal atrial tachycardia",
+      "atrial tachycardia"
+    ],
+    "key": "tachyarrhythmia-stable-narrow-complex"
   },
   {
     "title": "Stable wide complex tachycardia",

@@ -33,7 +33,7 @@ keywords:
 - [Epinephrine](../drugs/epinephrine)
   - 1 mg 1:10,000 IV every 3-5 minutes / every second cycle
   - Give immediate for non-shockable rhythms
-- [Anti-arrhythmics](../drugs/anti-arrhythmics)
+- [Anti-arrhythmics](../drugs/arrest-anti-arrhythmics)
   - **Amiodarone**
     - 300 mg IV bolus for refractory VF/VT
     - 150 mg IV bolus after 5th shock
@@ -112,7 +112,7 @@ keywords:
 - Swelling
   - DVT + PE
 - Necrosis
-  - Necrotising fasciitis
+  - Necrotizing fasciitis
 
 ## Post-resuscitation care
 
