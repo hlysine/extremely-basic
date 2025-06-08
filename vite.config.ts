@@ -40,6 +40,9 @@ export default defineConfig({
         description: 'Acute medicine quick reference',
         theme_color: '#414558',
         background_color: '#edeff7',
+        orientation: 'portrait',
+        display: 'fullscreen',
+        display_override: ['fullscreen', 'standalone', 'minimal-ui'],
         icons: [
           {
             src: 'pwa-64x64.png',
