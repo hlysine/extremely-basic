@@ -10,7 +10,9 @@ const MouseDownLink: LinkComponent<'a'> = ((props: LinkComponentProps) => {
   return (
     <Link
       {...props}
-      onMouseDown={async event => {
+      onPointerDown={async event => {
+        if (event.button !== 0) return;
+        if (event.ctrlKey || event.metaKey || event.shiftKey) return;
         event.preventDefault();
         await navigate({ to: props.to });
       }}
