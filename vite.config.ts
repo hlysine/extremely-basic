@@ -12,11 +12,11 @@ export default defineConfig({
     markdownIndex({
       entries: [
         {
-          folderPath: 'src/data/conditions',
+          folderPath: 'src/content/conditions',
           output: 'src/routes/conditions/-list.gen.json',
         },
         {
-          folderPath: 'src/data/drugs',
+          folderPath: 'src/content/drugs',
           output: 'src/routes/drugs/-list.gen.json',
         },
       ],

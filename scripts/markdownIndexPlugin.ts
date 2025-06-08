@@ -24,7 +24,7 @@ function stripExtension(path: string) {
   return path.split('.').slice(0, -1).join('.');
 }
 
-function parseMarkdownMetadata(markdown: string): FrontMatter | undefined {
+function parseFrontMatter(markdown: string): FrontMatter | undefined {
   const { attributes } = fm<FrontMatter>(markdown);
   if (
     !attributes ||
@@ -57,13 +57,13 @@ async function generateIndex(config: Config) {
 
       const key = stripExtension(file);
 
-      const metadata = parseMarkdownMetadata(markdown);
-      if (!metadata) {
-        console.warn(`⚠️  No metadata found in ${file}. Skipping...`);
+      const frontMatter = parseFrontMatter(markdown);
+      if (!frontMatter) {
+        console.warn(`⚠️  No front matter found in ${file}. Skipping...`);
         continue;
       }
       entries.push({
-        ...metadata,
+        ...frontMatter,
         key,
       });
     }

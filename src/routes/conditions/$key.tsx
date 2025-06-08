@@ -14,7 +14,7 @@ export const Route = createFileRoute('/conditions/$key')({
   component: Condition,
   loader: async ({ params }) => {
     const content = (
-      (await import(`../../data/conditions/${params.key}.md?raw`)) as {
+      (await import(`../../content/conditions/${params.key}.md?raw`)) as {
         default: string;
       }
     ).default;
