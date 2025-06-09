@@ -26,14 +26,23 @@ export default memo(function CalcNumberInput({
   suffix,
 }: CalcNumberInputProps) {
   const setValue = (newValue: number) => {
-    onChange(Math.max(min ?? -Infinity, Math.min(max ?? Infinity, newValue)));
+    if (isNaN(newValue)) {
+      return;
+    }
+    if (min !== undefined && newValue < min) {
+      return;
+    }
+    if (max !== undefined && newValue > max) {
+      return;
+    }
+    onChange(newValue);
   };
   return (
     <fieldset className="fieldset w-full">
       {topLabel && (
         <legend className="fieldset-legend opacity-80">{topLabel}</legend>
       )}
-      <label className="input w-full input-lg">
+      <label className="input w-full input-lg has-[:out-of-range]:bg-error/20">
         {prefix && <span className="shrink-0 block w-28">{prefix}</span>}
         <input
           type="number"

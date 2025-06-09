@@ -13,7 +13,7 @@ export default memo(function CalcOutputPanel({
   return (
     <div
       className={cn(
-        `flex flex-col gap-2 p-4 bg-secondary w-full rounded-lg shadow-md`,
+        `flex flex-col gap-2 p-4 bg-secondary w-full rounded-lg shadow-md sticky top-2 z-10`,
         className
       )}
     >

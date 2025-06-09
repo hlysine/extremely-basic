@@ -40,7 +40,7 @@ function Dock() {
   }, [location]);
 
   return (
-    <div className="dock static">
+    <div className="dock static hide-on-type">
       {dockTabs.map(tab => (
         <MouseDownLink
           key={tab.name}
@@ -59,7 +59,7 @@ export const Route = createRootRoute({
   component: () => (
     <div className="w-full h-full flex flex-col">
       <PWAPrompt />
-      <nav className="navbar py-0 bg-base-300 shadow-sm justify-between">
+      <nav className="navbar py-0 bg-base-300 shadow-sm justify-between hide-on-type">
         <div className="breadcrumbs text-sm ms-2">
           <ul>
             <li>
