@@ -80,14 +80,8 @@ keywords:
 
 ### Manage hyperkalemia and acid-base disturbances
 
-- Moderate hyperkalemia (5.5-6.5 mmol/L)
-  - Potassium restriction
-  - Glucose-insulin infusion
-- Severe hyperkalemia (>6.5 mmol/L or wide QRS)
-  - Calcium gluconate 10% 10 ml slow IV
-  - 10U insulin and 50 ml 50% glucose per hour
-  - Sodium bicarbonate if acidotic
-  - Inhaled beta-agonists
+**[Management of hyperkalemia](hyperkalemia#management)**
+
 - Acidosis
   - Bicarbonate infusion temporarily
   - Dialysis

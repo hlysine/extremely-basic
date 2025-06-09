@@ -1,6 +1,6 @@
 ---
 title: Acid-base disturbance
-section: Arterial blood gas
+section: Metabolic disturbances
 keywords:
   - ABG
   - acid-base balance
