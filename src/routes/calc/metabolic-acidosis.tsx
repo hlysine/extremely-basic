@@ -13,6 +13,7 @@ import CalcNumberInput from '../../components/calculator/CalcNumberInput';
 import CalcOutputPanel from '../../components/calculator/CalcOutputPanel';
 import CalcOutputEntry from '../../components/calculator/CalcOutputEntry';
 import CalcDivider from '../../components/calculator/CalcDivider';
+import CalcDescription from '../../components/calculator/CalcDescription';
 
 function MetabolicAcidosis() {
   const [unit, setUnit] = useState<PressureUnit>('kPa');
@@ -43,23 +44,7 @@ function MetabolicAcidosis() {
     <Calculator>
       <CalcHeader
         title="Metabolic acidosis"
-        description={
-          <>
-            <p className="pb-2">
-              If the primary abnormality is a metabolic acidosis the expected
-              PaCO2 can be calculated from Winters formula.
-            </p>
-            <p className="pb-2">If PaCO2 is measured in kPa</p>
-            <p className="pb-2">Expected PaCO2=[(1.5xHCO3)+8+-2]x0.133</p>
-            <p className="pb-2">If PaCO2 is measured in mm Hg</p>
-            <p className="pb-2">Expected PaCO2=1.5xHCO3+8+-2</p>
-            <p>
-              A lower than expected PaCO2 suggests a concurrent respiratory
-              alkalosis. A higher than expected PaCO2 suggests a concurrent
-              respiratory acidosis
-            </p>
-          </>
-        }
+        description={<CalcDescription descriptionKey="metabolic-acidosis" />}
       />
       <CalcTab
         options={PressureUnits}

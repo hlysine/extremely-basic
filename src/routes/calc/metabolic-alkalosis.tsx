@@ -8,6 +8,7 @@ import CalcNumberInput from '../../components/calculator/CalcNumberInput';
 import CalcOutputPanel from '../../components/calculator/CalcOutputPanel';
 import CalcOutputEntry from '../../components/calculator/CalcOutputEntry';
 import CalcDivider from '../../components/calculator/CalcDivider';
+import CalcDescription from '../../components/calculator/CalcDescription';
 
 function MetabolicAlkalosis() {
   const [unit, setUnit] = useState<PressureUnit>('kPa');
@@ -28,21 +29,7 @@ function MetabolicAlkalosis() {
     <Calculator>
       <CalcHeader
         title="Metabolic alkalosis"
-        description={
-          <>
-            <p className="pb-2">
-              If the primary abnormality is a metabolic alkalosis the PaCO2
-              normally rises by 0.1 kPa or 0.75 mm Hg for every 1 mmol/l rise in
-              bicarbonate concentration up to a maximum of approximately 8 kPa
-              or 60 mm Hg
-            </p>
-            <p>
-              A lower than expected PaCO2 suggests a concurrent respiratory
-              alkalosis. A higher than expected PaCO2 suggests a concurrent
-              respiratory acidosis
-            </p>
-          </>
-        }
+        description={<CalcDescription descriptionKey="metabolic-alkalosis" />}
       />
       <CalcTab
         options={PressureUnits}

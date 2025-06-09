@@ -13,16 +13,10 @@ function Condition() {
 export const Route = createFileRoute('/drugs/$key')({
   component: Condition,
   loader: async ({ params }) => {
-    const content = (
+    return (
       (await import(`../../content/drugs/${params.key}.md?raw`)) as {
         default: string;
       }
     ).default;
-    const metadataMatch = /^---\s*$.+^---\s*$(.*)/ms.exec(content);
-    if (!metadataMatch) {
-      return content;
-    }
-    const metadataStripped = metadataMatch[1];
-    return metadataStripped;
   },
 });

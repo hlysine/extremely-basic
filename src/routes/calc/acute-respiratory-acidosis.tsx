@@ -8,6 +8,7 @@ import CalcNumberInput from '../../components/calculator/CalcNumberInput';
 import CalcOutputPanel from '../../components/calculator/CalcOutputPanel';
 import CalcOutputEntry from '../../components/calculator/CalcOutputEntry';
 import CalcDivider from '../../components/calculator/CalcDivider';
+import CalcDescription from '../../components/calculator/CalcDescription';
 
 function AcuteRespiratoryAcidosis() {
   const [unit, setUnit] = useState<PressureUnit>('kPa');
@@ -29,18 +30,7 @@ function AcuteRespiratoryAcidosis() {
       <CalcHeader
         title="Acute respiratory acidosis"
         description={
-          <>
-            <p className="pb-2">
-              If the primary abnormality is an acute respiratory acidosis the
-              bicarbonate normally rises by 0.75 mmol/L for each kPa rise in
-              PaCO2 or 1 mmol/L for each 10 mm Hg up to a maximum of 30 mmol/L
-            </p>
-            <p>
-              A lower than expected bicarbonate suggests a concurrent metabolic
-              acidosis. Higher than expected bicarbonate suggests a concurrent
-              metabolic alkalosis
-            </p>
-          </>
+          <CalcDescription descriptionKey="acute-respiratory-acidosis" />
         }
       />
       <CalcTab

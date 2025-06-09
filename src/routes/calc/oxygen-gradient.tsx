@@ -13,6 +13,7 @@ import CalcNumberInput from '../../components/calculator/CalcNumberInput';
 import CalcOutputPanel from '../../components/calculator/CalcOutputPanel';
 import CalcOutputEntry from '../../components/calculator/CalcOutputEntry';
 import CalcDivider from '../../components/calculator/CalcDivider';
+import CalcDescription from '../../components/calculator/CalcDescription';
 
 function OxygenGradient() {
   const [unit, setUnit] = useState<PressureUnit>('kPa');
@@ -51,15 +52,7 @@ function OxygenGradient() {
     <Calculator>
       <CalcHeader
         title="A-a gradient"
-        description={
-          <>
-            <p className="pb-2">
-              This calculator assumes normal barometric pressure at sea level
-              and will give inaccurate results at altitude.
-            </p>
-            <p>A-a gradient = PAO2-PaO2</p>
-          </>
-        }
+        description={<CalcDescription descriptionKey="oxygen-gradient" />}
       />
       <CalcTab
         options={PressureUnits}
