@@ -167,6 +167,44 @@
     "key": "tachyarrhythmia-unstable"
   },
   {
+    "title": "Acid-base disturbance",
+    "section": "Arterial blood gas",
+    "keywords": [
+      "ABG",
+      "acid-base balance",
+      "respiratory acidosis",
+      "metabolic acidosis",
+      "respiratory alkalosis",
+      "metabolic alkalosis"
+    ],
+    "key": "acid-base"
+  },
+  {
+    "title": "Arterial blood gas",
+    "section": "Arterial blood gas",
+    "keywords": [
+      "ABG",
+      "hypoventilation",
+      "hyperventilation",
+      "hypercapnia",
+      "hypoxia"
+    ],
+    "key": "arterial-blood-gas"
+  },
+  {
+    "title": "Mixed acid-base disturbance",
+    "section": "Arterial blood gas",
+    "keywords": [
+      "ABG",
+      "acid-base balance",
+      "respiratory acidosis",
+      "metabolic acidosis",
+      "respiratory alkalosis",
+      "metabolic alkalosis"
+    ],
+    "key": "mixed-acid-base"
+  },
+  {
     "title": "Hemodynamic monitoring",
     "section": "Assessment",
     "keywords": [
