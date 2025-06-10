@@ -1,8 +1,10 @@
 export type PressureUnit = 'kPa' | 'mmHg';
 export type HeightUnit = 'cm' | 'inch';
+export type ElectrolyteUnit = 'mmol/L' | 'mg/dL';
 
 export const PressureUnits: PressureUnit[] = ['kPa', 'mmHg'];
 export const HeightUnits: HeightUnit[] = ['cm', 'inch'];
+export const ElectrolyteUnits: ElectrolyteUnit[] = ['mmol/L', 'mg/dL'];
 
 type ToNumber<T, Arr extends number[] = []> = T extends [unknown, ...infer Rest]
   ? ToNumber<Rest, [number, ...Arr]>

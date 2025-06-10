@@ -9,6 +9,13 @@ interface Calculator {
 }
 
 const calculators: Record<string, Calculator[]> = {
+  'Neurological emergencies': [
+    {
+      title: 'Glasgow Coma Scale',
+      badges: [],
+      path: '/calc/glasgow-coma-scale',
+    },
+  ],
   'Arterial blood gas': [
     {
       title: 'A-a gradient',
@@ -73,11 +80,11 @@ const calculators: Record<string, Calculator[]> = {
       path: '/calc/metabolic-alkalosis',
     },
   ],
-  'Neurological emergencies': [
+  'Metabolic disturbances': [
     {
-      title: 'Glasgow Coma Scale',
-      badges: [],
-      path: '/calc/glasgow-coma-scale',
+      title: 'Corrected Sodium',
+      badges: ['Sodium', 'Glucose'],
+      path: '/calc/corrected-sodium',
     },
   ],
   'Acute respiratory failure': [
@@ -91,7 +98,7 @@ const calculators: Record<string, Calculator[]> = {
 
 function CalcIndex() {
   return (
-    <div className="flex-1 w-full max-w-[1000px] self-center">
+    <div className="flex-1 w-full max-w-[1000px] self-center overflow-y-auto">
       <CollapsibleSections sections={calculators}>
         {entry => (
           <MouseDownLink

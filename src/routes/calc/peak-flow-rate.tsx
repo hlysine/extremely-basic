@@ -3,13 +3,7 @@ import CalcHeader from '../../components/calculator/CalcHeader';
 import Calculator from '../../components/calculator/Calculator';
 import CalcTab from '../../components/calculator/CalcTab';
 import { useState } from 'react';
-import {
-  HeightUnit,
-  HeightUnits,
-  PressureUnit,
-  PressureUnits,
-  safeCompute,
-} from '../../utils/types';
+import { HeightUnit, HeightUnits, safeCompute } from '../../utils/types';
 import CalcNumberInput from '../../components/calculator/CalcNumberInput';
 import CalcOutputPanel from '../../components/calculator/CalcOutputPanel';
 import CalcOutputEntry from '../../components/calculator/CalcOutputEntry';
