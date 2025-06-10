@@ -6,6 +6,7 @@ import { Charset, Document, DocumentData } from 'flexsearch';
 import { useEffect, useMemo, useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
 import MouseDownLink from '../components/MouseDownLink';
+import debounce from 'lodash/debounce';
 
 const drugsContent = Object.entries(
   import.meta.glob<true, string, string>('../content/drugs/*.md', {
@@ -98,6 +99,7 @@ function Search() {
     const searchResults = index.search(query, {
       limit: 20,
       enrich: true,
+      suggest: true,
     });
     const allResults: SearchEntry[] = [];
     const keywordResults = searchResults.find(r => r.field === 'keywords');
@@ -122,6 +124,18 @@ function Search() {
     localStorage.setItem('searchQuery', query);
   }, [query]);
 
+  const debounceInput = useMemo(
+    () =>
+      debounce(
+        (value: string) => {
+          setQuery(value);
+        },
+        100,
+        { leading: false, trailing: true }
+      ),
+    []
+  );
+
   return (
     <div className="flex-1 flex flex-col items-center justify-center gap-2 w-full mt-2 max-w-[1000px] self-center">
       <label className="input w-full max-w-[400px]">
@@ -133,7 +147,7 @@ function Search() {
           placeholder="Search"
           value={query}
           onFocus={e => e.target.select()}
-          onInput={e => setQuery(e.currentTarget.value)}
+          onInput={e => debounceInput(e.currentTarget.value)}
         />
       </label>
       <div className="flex-1 flex flex-col justify-start items-center overflow-y-auto pb-4 w-full">
