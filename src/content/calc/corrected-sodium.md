@@ -1,3 +1,8 @@
+---
+title: Corrected sodium
+section: Metabolic disturbances
+---
+
 Correct serum sodium level during hyperglycemia
 
 - `Corrected Na = Measured Na + 2.4 * (Glucose - 5.5) / 5.5` in mmol/L

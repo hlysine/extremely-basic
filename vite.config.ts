@@ -19,6 +19,10 @@ export default defineConfig({
           folderPath: 'src/content/drugs',
           output: 'src/routes/drugs/-list.gen.json',
         },
+        {
+          folderPath: 'src/content/calc',
+          output: 'src/routes/calc/-list.gen.json',
+        },
       ],
     }),
     million.vite({ auto: true, telemetry: false }),

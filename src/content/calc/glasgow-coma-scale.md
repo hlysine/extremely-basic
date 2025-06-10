@@ -1,3 +1,8 @@
+---
+title: Glasgow coma scale
+section: Neurological emergencies
+---
+
 - Check for barriers to assessment
   - Mark as Not Testable if needed
 - Painful stimulus

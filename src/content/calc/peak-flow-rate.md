@@ -1,3 +1,8 @@
+---
+title: Peak expiratory flow rate
+section: Acute respiratory failure
+---
+
 **Refer to [Assessment of asthma](../conditions/asthma)**
 
 - Severe asthma

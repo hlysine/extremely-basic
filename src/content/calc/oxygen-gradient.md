@@ -1,3 +1,8 @@
+---
+title: A-a gradient
+section: Arterial blood gas
+---
+
 > P<sub>A</sub>O<sub>2</sub> = FiO<sub>2</sub> x 94.5 - PaCO<sub>2</sub> x 1.25 (in kPa)
 >
 > P<sub>A</sub>O<sub>2</sub> = FiO<sub>2</sub> x 713 - PaCO<sub>2</sub> x 1.25 (in mmHg)
