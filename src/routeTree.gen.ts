@@ -8,6 +8,8 @@
 // You should NOT make any changes in this file as it will be overwritten.
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
+import { createFileRoute } from '@tanstack/react-router'
+
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
@@ -29,7 +31,17 @@ import { Route as CalcAnionGapImport } from './routes/calc/anion-gap'
 import { Route as CalcAcuteRespiratoryAlkalosisImport } from './routes/calc/acute-respiratory-alkalosis'
 import { Route as CalcAcuteRespiratoryAcidosisImport } from './routes/calc/acute-respiratory-acidosis'
 
+// Create Virtual Routes
+
+const SearchLazyImport = createFileRoute('/search')()
+
 // Create/Update Routes
+
+const SearchLazyRoute = SearchLazyImport.update({
+  id: '/search',
+  path: '/search',
+  getParentRoute: () => rootRoute,
+} as any).lazy(() => import('./routes/search.lazy').then((d) => d.Route))
 
 const IndexRoute = IndexImport.update({
   id: '/',
@@ -146,6 +158,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexImport
+      parentRoute: typeof rootRoute
+    }
+    '/search': {
+      id: '/search'
+      path: '/search'
+      fullPath: '/search'
+      preLoaderRoute: typeof SearchLazyImport
       parentRoute: typeof rootRoute
     }
     '/calc/acute-respiratory-acidosis': {
@@ -267,6 +286,7 @@ declare module '@tanstack/react-router' {
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/search': typeof SearchLazyRoute
   '/calc/acute-respiratory-acidosis': typeof CalcAcuteRespiratoryAcidosisRoute
   '/calc/acute-respiratory-alkalosis': typeof CalcAcuteRespiratoryAlkalosisRoute
   '/calc/anion-gap': typeof CalcAnionGapRoute
@@ -287,6 +307,7 @@ export interface FileRoutesByFullPath {
 
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/search': typeof SearchLazyRoute
   '/calc/acute-respiratory-acidosis': typeof CalcAcuteRespiratoryAcidosisRoute
   '/calc/acute-respiratory-alkalosis': typeof CalcAcuteRespiratoryAlkalosisRoute
   '/calc/anion-gap': typeof CalcAnionGapRoute
@@ -308,6 +329,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRoute
   '/': typeof IndexRoute
+  '/search': typeof SearchLazyRoute
   '/calc/acute-respiratory-acidosis': typeof CalcAcuteRespiratoryAcidosisRoute
   '/calc/acute-respiratory-alkalosis': typeof CalcAcuteRespiratoryAlkalosisRoute
   '/calc/anion-gap': typeof CalcAnionGapRoute
@@ -330,6 +352,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/search'
     | '/calc/acute-respiratory-acidosis'
     | '/calc/acute-respiratory-alkalosis'
     | '/calc/anion-gap'
@@ -349,6 +372,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/search'
     | '/calc/acute-respiratory-acidosis'
     | '/calc/acute-respiratory-alkalosis'
     | '/calc/anion-gap'
@@ -368,6 +392,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/search'
     | '/calc/acute-respiratory-acidosis'
     | '/calc/acute-respiratory-alkalosis'
     | '/calc/anion-gap'
@@ -389,6 +414,7 @@ export interface FileRouteTypes {
 
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  SearchLazyRoute: typeof SearchLazyRoute
   CalcAcuteRespiratoryAcidosisRoute: typeof CalcAcuteRespiratoryAcidosisRoute
   CalcAcuteRespiratoryAlkalosisRoute: typeof CalcAcuteRespiratoryAlkalosisRoute
   CalcAnionGapRoute: typeof CalcAnionGapRoute
@@ -409,6 +435,7 @@ export interface RootRouteChildren {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  SearchLazyRoute: SearchLazyRoute,
   CalcAcuteRespiratoryAcidosisRoute: CalcAcuteRespiratoryAcidosisRoute,
   CalcAcuteRespiratoryAlkalosisRoute: CalcAcuteRespiratoryAlkalosisRoute,
   CalcAnionGapRoute: CalcAnionGapRoute,
@@ -438,6 +465,7 @@ export const routeTree = rootRoute
       "filePath": "__root.tsx",
       "children": [
         "/",
+        "/search",
         "/calc/acute-respiratory-acidosis",
         "/calc/acute-respiratory-alkalosis",
         "/calc/anion-gap",
@@ -458,6 +486,9 @@ export const routeTree = rootRoute
     },
     "/": {
       "filePath": "index.tsx"
+    },
+    "/search": {
+      "filePath": "search.lazy.tsx"
     },
     "/calc/acute-respiratory-acidosis": {
       "filePath": "calc/acute-respiratory-acidosis.tsx"
