@@ -73,16 +73,32 @@ keywords:
 - Pupillary response
   - Unilateral fixed dilated pupil
     - 3rd nerve palsy
-    - Transtentorial herniation
-  - Bilateral fixed dilated pupils
+    - **Transtentorial herniation unless proven otherwise**
+  - Bilateral fixed mid-sized pupils
+    - Midbrain lesion
     - Brainstem death
   - Bilateral small pupils
     - Opioid overdose
     - Pontine lesion
-- Corneal reflex
-  - Absent in drug-induced coma or deep coma
+      - Sympathetic fibers blocked at pons
+      - Parasympathetic fibers intact in midbrain
+- Gaze
+  - Conjugate gaze deviation (both eyes look in same direction)
+    - Frontal lobe/internal capsule lesion
+      - Eyes look away from hemiplegia
+    - Pontine lesion
+      - Eyes look towards hemiplegia
 - Oculocephalic reflex
-  - Lost in pontine lesions
+  - Lost in pontine lesions or lesions to ascending reticular activating system
+  - Move head side to side if C-spine stable
+- Oculovestibular reflex
+  - Check for patent auditory canal first
+  - Inject ice water into ear canal
+  - Expect eyes deviating towards side with ice water
+- Corneal reflex
+  - Touch **cornea**, not conjunctiva
+  - Expect consensual blink response
+  - Absent in drug-induced coma or deep coma
 - Gag reflex
 - Motor signs - Tremors, myoclonus, flap, rigidity
 

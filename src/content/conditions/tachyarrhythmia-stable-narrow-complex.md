@@ -32,8 +32,12 @@ keywords:
     - Carotid sinus massage
       - If no carotid bruit and carotid stenosis
   - [IV adenosine or ATP](../drugs/stable-anti-arrhythmics#narrow-complex-svt)
+    - Confirms SVT if adenosine terminates tachycardia
+  - [IV amiodarone](../drugs/stable-anti-arrhythmics#amiodarone)
   - [IV verapamil or diltiazem](../drugs/stable-anti-arrhythmics#narrow-complex-svt)
+    - Diltiazem if poor LV function
   - [IV esmolol or metoprolol](../drugs/stable-anti-arrhythmics#narrow-complex-svt)
+    - If good LV function
   - DC cardioversion
 
 ## Atrial fibrillation
@@ -43,6 +47,7 @@ keywords:
   - Pharmacological cardioversion and ventricular rate control
     - [Amiodarone](../drugs/stable-anti-arrhythmics#atrial-fibrillation)
     - [Procainamide or ibutilide](../drugs/stable-anti-arrhythmics#atrial-fibrillation)
+  - Ventricular rate control only
     - [Digoxin, verapamil, diltiazem](../drugs/stable-anti-arrhythmics#atrial-fibrillation)
   - Anticoagulate if AF >48 hours
 

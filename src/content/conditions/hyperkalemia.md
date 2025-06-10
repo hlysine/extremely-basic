@@ -59,6 +59,8 @@ keywords:
 
 ### Moderate hyperkalemia
 
+> \>5.5 mmol/L or wide QRS
+
 - Loop diuretic
 - Potassium restriction
 - Insulin and glucose as above

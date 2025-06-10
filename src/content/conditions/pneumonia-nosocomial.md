@@ -22,7 +22,7 @@ keywords:
 
 ## Investigations
 
-Refer to [Community-acquired pneumonia](../conditions/community-acquired-pneumonia#investigations)
+Refer to [Community-acquired pneumonia](../conditions/pneumonia-community-acquired#investigations)
 
 - Assess risk of multi-drug resistance, hence need for broad-spectrum antibiotics
 
@@ -33,6 +33,6 @@ Refer to [Community-acquired pneumonia](../conditions/community-acquired-pneumon
 
 ## Management
 
-Refer to [Community-acquired pneumonia](../conditions/community-acquired-pneumonia#management)
+Refer to [Community-acquired pneumonia](../conditions/pneumonia-community-acquired#management)
 
 - [Empirical antibiotics](../drugs/antibiotics#nosocomial-pneumonia)

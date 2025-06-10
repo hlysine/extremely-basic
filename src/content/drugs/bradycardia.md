@@ -21,6 +21,7 @@ keywords:
 ## Isoprenaline (Isoproterenol)
 
 - **Type**: Beta-adrenergic agonist
+  - Avoid if in shock due to vasodilation
   - Use epinephrine if severely hypotensive
 - **Administration**:
   - **IV infusion**: 0.5-10 mcg/min

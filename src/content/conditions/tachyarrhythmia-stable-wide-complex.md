@@ -5,6 +5,7 @@ keywords:
   - ventricular tachycardia
   - supraventricular tachycardia
   - accessory pathway
+  - tosades de pointes
 ---
 
 # Stable wide complex tachycardia
@@ -100,6 +101,10 @@ keywords:
 ### Polymorphic VT with normal QTc
 
 - Management
+  - Withdraw catecholamines
   - Treat ischemia
     - Emergency coronary angiography
   - IV beta-blocker
+  - Intra-aortic balloon pump
+  - IV [amiodarone](../drugs/stable-anti-arrhythmics#amiodarone)
+    or [lignocaine](../drugs/stable-anti-arrhythmics#lignocaine) if above measures contraindicated
