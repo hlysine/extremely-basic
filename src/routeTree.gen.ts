@@ -25,6 +25,7 @@ import { Route as CalcGlasgowComaScaleImport } from './routes/calc/glasgow-coma-
 import { Route as CalcCorrectedSodiumImport } from './routes/calc/corrected-sodium'
 import { Route as CalcChronicRespiratoryAlkalosisImport } from './routes/calc/chronic-respiratory-alkalosis'
 import { Route as CalcChronicRespiratoryAcidosisImport } from './routes/calc/chronic-respiratory-acidosis'
+import { Route as CalcAnionGapImport } from './routes/calc/anion-gap'
 import { Route as CalcAcuteRespiratoryAlkalosisImport } from './routes/calc/acute-respiratory-alkalosis'
 import { Route as CalcAcuteRespiratoryAcidosisImport } from './routes/calc/acute-respiratory-acidosis'
 
@@ -116,6 +117,12 @@ const CalcChronicRespiratoryAcidosisRoute =
     getParentRoute: () => rootRoute,
   } as any)
 
+const CalcAnionGapRoute = CalcAnionGapImport.update({
+  id: '/calc/anion-gap',
+  path: '/calc/anion-gap',
+  getParentRoute: () => rootRoute,
+} as any)
+
 const CalcAcuteRespiratoryAlkalosisRoute =
   CalcAcuteRespiratoryAlkalosisImport.update({
     id: '/calc/acute-respiratory-alkalosis',
@@ -153,6 +160,13 @@ declare module '@tanstack/react-router' {
       path: '/calc/acute-respiratory-alkalosis'
       fullPath: '/calc/acute-respiratory-alkalosis'
       preLoaderRoute: typeof CalcAcuteRespiratoryAlkalosisImport
+      parentRoute: typeof rootRoute
+    }
+    '/calc/anion-gap': {
+      id: '/calc/anion-gap'
+      path: '/calc/anion-gap'
+      fullPath: '/calc/anion-gap'
+      preLoaderRoute: typeof CalcAnionGapImport
       parentRoute: typeof rootRoute
     }
     '/calc/chronic-respiratory-acidosis': {
@@ -255,6 +269,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/calc/acute-respiratory-acidosis': typeof CalcAcuteRespiratoryAcidosisRoute
   '/calc/acute-respiratory-alkalosis': typeof CalcAcuteRespiratoryAlkalosisRoute
+  '/calc/anion-gap': typeof CalcAnionGapRoute
   '/calc/chronic-respiratory-acidosis': typeof CalcChronicRespiratoryAcidosisRoute
   '/calc/chronic-respiratory-alkalosis': typeof CalcChronicRespiratoryAlkalosisRoute
   '/calc/corrected-sodium': typeof CalcCorrectedSodiumRoute
@@ -274,6 +289,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/calc/acute-respiratory-acidosis': typeof CalcAcuteRespiratoryAcidosisRoute
   '/calc/acute-respiratory-alkalosis': typeof CalcAcuteRespiratoryAlkalosisRoute
+  '/calc/anion-gap': typeof CalcAnionGapRoute
   '/calc/chronic-respiratory-acidosis': typeof CalcChronicRespiratoryAcidosisRoute
   '/calc/chronic-respiratory-alkalosis': typeof CalcChronicRespiratoryAlkalosisRoute
   '/calc/corrected-sodium': typeof CalcCorrectedSodiumRoute
@@ -294,6 +310,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/calc/acute-respiratory-acidosis': typeof CalcAcuteRespiratoryAcidosisRoute
   '/calc/acute-respiratory-alkalosis': typeof CalcAcuteRespiratoryAlkalosisRoute
+  '/calc/anion-gap': typeof CalcAnionGapRoute
   '/calc/chronic-respiratory-acidosis': typeof CalcChronicRespiratoryAcidosisRoute
   '/calc/chronic-respiratory-alkalosis': typeof CalcChronicRespiratoryAlkalosisRoute
   '/calc/corrected-sodium': typeof CalcCorrectedSodiumRoute
@@ -315,6 +332,7 @@ export interface FileRouteTypes {
     | '/'
     | '/calc/acute-respiratory-acidosis'
     | '/calc/acute-respiratory-alkalosis'
+    | '/calc/anion-gap'
     | '/calc/chronic-respiratory-acidosis'
     | '/calc/chronic-respiratory-alkalosis'
     | '/calc/corrected-sodium'
@@ -333,6 +351,7 @@ export interface FileRouteTypes {
     | '/'
     | '/calc/acute-respiratory-acidosis'
     | '/calc/acute-respiratory-alkalosis'
+    | '/calc/anion-gap'
     | '/calc/chronic-respiratory-acidosis'
     | '/calc/chronic-respiratory-alkalosis'
     | '/calc/corrected-sodium'
@@ -351,6 +370,7 @@ export interface FileRouteTypes {
     | '/'
     | '/calc/acute-respiratory-acidosis'
     | '/calc/acute-respiratory-alkalosis'
+    | '/calc/anion-gap'
     | '/calc/chronic-respiratory-acidosis'
     | '/calc/chronic-respiratory-alkalosis'
     | '/calc/corrected-sodium'
@@ -371,6 +391,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   CalcAcuteRespiratoryAcidosisRoute: typeof CalcAcuteRespiratoryAcidosisRoute
   CalcAcuteRespiratoryAlkalosisRoute: typeof CalcAcuteRespiratoryAlkalosisRoute
+  CalcAnionGapRoute: typeof CalcAnionGapRoute
   CalcChronicRespiratoryAcidosisRoute: typeof CalcChronicRespiratoryAcidosisRoute
   CalcChronicRespiratoryAlkalosisRoute: typeof CalcChronicRespiratoryAlkalosisRoute
   CalcCorrectedSodiumRoute: typeof CalcCorrectedSodiumRoute
@@ -390,6 +411,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   CalcAcuteRespiratoryAcidosisRoute: CalcAcuteRespiratoryAcidosisRoute,
   CalcAcuteRespiratoryAlkalosisRoute: CalcAcuteRespiratoryAlkalosisRoute,
+  CalcAnionGapRoute: CalcAnionGapRoute,
   CalcChronicRespiratoryAcidosisRoute: CalcChronicRespiratoryAcidosisRoute,
   CalcChronicRespiratoryAlkalosisRoute: CalcChronicRespiratoryAlkalosisRoute,
   CalcCorrectedSodiumRoute: CalcCorrectedSodiumRoute,
@@ -418,6 +440,7 @@ export const routeTree = rootRoute
         "/",
         "/calc/acute-respiratory-acidosis",
         "/calc/acute-respiratory-alkalosis",
+        "/calc/anion-gap",
         "/calc/chronic-respiratory-acidosis",
         "/calc/chronic-respiratory-alkalosis",
         "/calc/corrected-sodium",
@@ -441,6 +464,9 @@ export const routeTree = rootRoute
     },
     "/calc/acute-respiratory-alkalosis": {
       "filePath": "calc/acute-respiratory-alkalosis.tsx"
+    },
+    "/calc/anion-gap": {
+      "filePath": "calc/anion-gap.tsx"
     },
     "/calc/chronic-respiratory-acidosis": {
       "filePath": "calc/chronic-respiratory-acidosis.tsx"

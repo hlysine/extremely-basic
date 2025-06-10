@@ -25,7 +25,7 @@ keywords:
 | PaCO2             | Normal or low                     | >6 kPa                           |
 | Peak flow rate    | <100 L/min or 33-50% of predicted | <60 L/min or <33% of predicted   |
 
-`TODO: add peak flow rate calculator`
+**[Calculate peak flow rate](../calc/peak-flow-rate)**
 
 ## Management
 

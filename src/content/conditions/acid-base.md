@@ -38,6 +38,8 @@ keywords:
 
 `Anion gap = Na - Cl - HCO3`
 
+**[Calculate anion gap](../calc/anion-gap)**
+
 Normal anion gap: 8-16 mmol/L
 
 | High anion gap                                                                                                                                                                               | Normal anion gap                                                                                                                                                                                                                                                        |
@@ -92,5 +94,3 @@ Normal anion gap: 8-16 mmol/L
 
 - Causes tetany by direct enhancement of neuromuscular excitability in alkalosis
 - Causes confusion by cerebral vasospasm in severe alkalosis
-
-

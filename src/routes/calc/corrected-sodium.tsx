@@ -51,7 +51,7 @@ function CorrectedSodium() {
           topLabel="Corrected value of"
           prefix="Sodium"
           value={correctedSodium}
-          suffix={unit}
+          suffix={'mmol/L'}
         />
       </CalcOutputPanel>
       <CalcDivider>Inputs</CalcDivider>
@@ -60,6 +60,7 @@ function CorrectedSodium() {
         onChange={value => setSodium(value)}
         min={0}
         prefix={'Sodium'}
+        suffix={'mmol/L'}
       />
       <CalcNumberInput
         value={glucose}

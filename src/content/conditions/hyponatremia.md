@@ -66,7 +66,7 @@ keywords:
   - From hyperlipidemia or hyperproteinemia
   - Not at risk of cerebral edema
 - Excess effective osmoles
-  - Correct sodium level with formula `TODO: link to calculator`
+  - [Correct sodium level with formula](../calc/corrected-sodium)
     - `Corrected Na = Measured Na + 2.4 * (Glucose - 5.5) / 5.5` in mmol/L
     - `Corrected Na = Measured Na + 2.4 * (Glucose - 100) / 100` in mg/dL
   - Not at risk of cerebral edema

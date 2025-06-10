@@ -82,6 +82,11 @@ const calculators: Record<string, Calculator[]> = {
   ],
   'Metabolic disturbances': [
     {
+      title: 'Anion gap',
+      badges: ['Sodium', 'Chloride', 'Bicarbonate'],
+      path: '/calc/anion-gap',
+    },
+    {
       title: 'Corrected Sodium',
       badges: ['Sodium', 'Glucose'],
       path: '/calc/corrected-sodium',
