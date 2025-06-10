@@ -3,7 +3,7 @@ import drugsIndex from './drugs/-list.gen.json';
 import conditionsIndex from './conditions/-list.gen.json';
 import calcIndex from './calc/-list.gen.json';
 import { Charset, Document, DocumentData } from 'flexsearch';
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
 import MouseDownLink from '../components/MouseDownLink';
 
@@ -92,7 +92,7 @@ searchIndex.forEach(entry => {
 });
 
 function Search() {
-  const [query, setQuery] = useState('');
+  const [query, setQuery] = useState(localStorage.getItem('searchQuery') ?? '');
   const results = useMemo(() => {
     if (query.length === 0) return searchIndex;
     const searchResults = index.search(query, {
@@ -118,6 +118,10 @@ function Search() {
     return allResults;
   }, [query]);
 
+  useEffect(() => {
+    localStorage.setItem('searchQuery', query);
+  }, [query]);
+
   return (
     <div className="flex-1 flex flex-col items-center justify-center gap-2 w-full mt-2 max-w-[1000px] self-center">
       <label className="input w-full max-w-[400px]">
@@ -125,8 +129,10 @@ function Search() {
         <input
           type="search"
           className="grow"
+          autoFocus={true}
           placeholder="Search"
           value={query}
+          onFocus={e => e.target.select()}
           onInput={e => setQuery(e.currentTarget.value)}
         />
       </label>
