@@ -17,6 +17,7 @@ import { Route as ConditionsIndexImport } from './routes/conditions/index'
 import { Route as CalcIndexImport } from './routes/calc/index'
 import { Route as DrugsKeyImport } from './routes/drugs/$key'
 import { Route as ConditionsKeyImport } from './routes/conditions/$key'
+import { Route as CalcPeakFlowRateImport } from './routes/calc/peak-flow-rate'
 import { Route as CalcOxygenGradientImport } from './routes/calc/oxygen-gradient'
 import { Route as CalcMetabolicAlkalosisImport } from './routes/calc/metabolic-alkalosis'
 import { Route as CalcMetabolicAcidosisImport } from './routes/calc/metabolic-acidosis'
@@ -61,6 +62,12 @@ const DrugsKeyRoute = DrugsKeyImport.update({
 const ConditionsKeyRoute = ConditionsKeyImport.update({
   id: '/conditions/$key',
   path: '/conditions/$key',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const CalcPeakFlowRateRoute = CalcPeakFlowRateImport.update({
+  id: '/calc/peak-flow-rate',
+  path: '/calc/peak-flow-rate',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -183,6 +190,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CalcOxygenGradientImport
       parentRoute: typeof rootRoute
     }
+    '/calc/peak-flow-rate': {
+      id: '/calc/peak-flow-rate'
+      path: '/calc/peak-flow-rate'
+      fullPath: '/calc/peak-flow-rate'
+      preLoaderRoute: typeof CalcPeakFlowRateImport
+      parentRoute: typeof rootRoute
+    }
     '/conditions/$key': {
       id: '/conditions/$key'
       path: '/conditions/$key'
@@ -233,6 +247,7 @@ export interface FileRoutesByFullPath {
   '/calc/metabolic-acidosis': typeof CalcMetabolicAcidosisRoute
   '/calc/metabolic-alkalosis': typeof CalcMetabolicAlkalosisRoute
   '/calc/oxygen-gradient': typeof CalcOxygenGradientRoute
+  '/calc/peak-flow-rate': typeof CalcPeakFlowRateRoute
   '/conditions/$key': typeof ConditionsKeyRoute
   '/drugs/$key': typeof DrugsKeyRoute
   '/calc': typeof CalcIndexRoute
@@ -250,6 +265,7 @@ export interface FileRoutesByTo {
   '/calc/metabolic-acidosis': typeof CalcMetabolicAcidosisRoute
   '/calc/metabolic-alkalosis': typeof CalcMetabolicAlkalosisRoute
   '/calc/oxygen-gradient': typeof CalcOxygenGradientRoute
+  '/calc/peak-flow-rate': typeof CalcPeakFlowRateRoute
   '/conditions/$key': typeof ConditionsKeyRoute
   '/drugs/$key': typeof DrugsKeyRoute
   '/calc': typeof CalcIndexRoute
@@ -268,6 +284,7 @@ export interface FileRoutesById {
   '/calc/metabolic-acidosis': typeof CalcMetabolicAcidosisRoute
   '/calc/metabolic-alkalosis': typeof CalcMetabolicAlkalosisRoute
   '/calc/oxygen-gradient': typeof CalcOxygenGradientRoute
+  '/calc/peak-flow-rate': typeof CalcPeakFlowRateRoute
   '/conditions/$key': typeof ConditionsKeyRoute
   '/drugs/$key': typeof DrugsKeyRoute
   '/calc/': typeof CalcIndexRoute
@@ -287,6 +304,7 @@ export interface FileRouteTypes {
     | '/calc/metabolic-acidosis'
     | '/calc/metabolic-alkalosis'
     | '/calc/oxygen-gradient'
+    | '/calc/peak-flow-rate'
     | '/conditions/$key'
     | '/drugs/$key'
     | '/calc'
@@ -303,6 +321,7 @@ export interface FileRouteTypes {
     | '/calc/metabolic-acidosis'
     | '/calc/metabolic-alkalosis'
     | '/calc/oxygen-gradient'
+    | '/calc/peak-flow-rate'
     | '/conditions/$key'
     | '/drugs/$key'
     | '/calc'
@@ -319,6 +338,7 @@ export interface FileRouteTypes {
     | '/calc/metabolic-acidosis'
     | '/calc/metabolic-alkalosis'
     | '/calc/oxygen-gradient'
+    | '/calc/peak-flow-rate'
     | '/conditions/$key'
     | '/drugs/$key'
     | '/calc/'
@@ -337,6 +357,7 @@ export interface RootRouteChildren {
   CalcMetabolicAcidosisRoute: typeof CalcMetabolicAcidosisRoute
   CalcMetabolicAlkalosisRoute: typeof CalcMetabolicAlkalosisRoute
   CalcOxygenGradientRoute: typeof CalcOxygenGradientRoute
+  CalcPeakFlowRateRoute: typeof CalcPeakFlowRateRoute
   ConditionsKeyRoute: typeof ConditionsKeyRoute
   DrugsKeyRoute: typeof DrugsKeyRoute
   CalcIndexRoute: typeof CalcIndexRoute
@@ -354,6 +375,7 @@ const rootRouteChildren: RootRouteChildren = {
   CalcMetabolicAcidosisRoute: CalcMetabolicAcidosisRoute,
   CalcMetabolicAlkalosisRoute: CalcMetabolicAlkalosisRoute,
   CalcOxygenGradientRoute: CalcOxygenGradientRoute,
+  CalcPeakFlowRateRoute: CalcPeakFlowRateRoute,
   ConditionsKeyRoute: ConditionsKeyRoute,
   DrugsKeyRoute: DrugsKeyRoute,
   CalcIndexRoute: CalcIndexRoute,
@@ -380,6 +402,7 @@ export const routeTree = rootRoute
         "/calc/metabolic-acidosis",
         "/calc/metabolic-alkalosis",
         "/calc/oxygen-gradient",
+        "/calc/peak-flow-rate",
         "/conditions/$key",
         "/drugs/$key",
         "/calc/",
@@ -413,6 +436,9 @@ export const routeTree = rootRoute
     },
     "/calc/oxygen-gradient": {
       "filePath": "calc/oxygen-gradient.tsx"
+    },
+    "/calc/peak-flow-rate": {
+      "filePath": "calc/peak-flow-rate.tsx"
     },
     "/conditions/$key": {
       "filePath": "conditions/$key.tsx"

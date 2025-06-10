@@ -147,7 +147,8 @@
     "keywords": [
       "ventricular tachycardia",
       "supraventricular tachycardia",
-      "accessory pathway"
+      "accessory pathway",
+      "tosades de pointes"
     ],
     "key": "tachyarrhythmia-stable-wide-complex"
   },
@@ -245,6 +246,37 @@
       "hemorrhagic shock"
     ],
     "key": "trauma"
+  },
+  {
+    "title": "In-hospital transport",
+    "section": "Logistics",
+    "keywords": [
+      "patient transport",
+      "transport of acutely ill patients"
+    ],
+    "key": "in-hospital-transport"
+  },
+  {
+    "title": "Infection control",
+    "section": "Logistics",
+    "keywords": [
+      "standard precautions",
+      "contact precautions",
+      "droplet precautions",
+      "airborne precautions"
+    ],
+    "key": "infection-control"
+  },
+  {
+    "title": "Occupational safety",
+    "section": "Logistics",
+    "keywords": [
+      "sharps injury",
+      "needle stick injury",
+      "HIV, HBV, HCV",
+      "personal protective equipment"
+    ],
+    "key": "occupational-safety"
   },
   {
     "title": "Mixed acid-base disturbance",

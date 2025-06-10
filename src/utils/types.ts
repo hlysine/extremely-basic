@@ -1,6 +1,8 @@
 export type PressureUnit = 'kPa' | 'mmHg';
+export type HeightUnit = 'cm' | 'inch';
 
 export const PressureUnits: PressureUnit[] = ['kPa', 'mmHg'];
+export const HeightUnits: HeightUnit[] = ['cm', 'inch'];
 
 type ToNumber<T, Arr extends number[] = []> = T extends [unknown, ...infer Rest]
   ? ToNumber<Rest, [number, ...Arr]>

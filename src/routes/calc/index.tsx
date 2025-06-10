@@ -80,6 +80,13 @@ const calculators: Record<string, Calculator[]> = {
       path: '/calc/glasgow-coma-scale',
     },
   ],
+  'Acute respiratory failure': [
+    {
+      title: 'Peak expiratory flow rate',
+      badges: ['Age', 'Height', 'Ethnicity'],
+      path: '/calc/peak-flow-rate',
+    },
+  ],
 };
 
 function CalcIndex() {
