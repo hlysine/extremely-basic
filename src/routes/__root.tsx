@@ -5,7 +5,12 @@ import {
 } from '@tanstack/react-router';
 import { TanStackRouterDevtools } from '@tanstack/react-router-devtools';
 import PWAPrompt from '../components/PWAPrompt';
-import { FaBookMedical, FaCalculator, FaSyringe } from 'react-icons/fa';
+import {
+  FaBookMedical,
+  FaCalculator,
+  FaSearch,
+  FaSyringe,
+} from 'react-icons/fa';
 import ThemeToggle from '../components/ThemeToggle';
 import { useEffect } from 'react';
 import MouseDownLink from '../components/MouseDownLink';
@@ -25,6 +30,11 @@ const dockTabs = [
     name: 'Drugs',
     icon: <FaSyringe />,
     to: '/drugs',
+  },
+  {
+    name: 'Search',
+    icon: <FaSearch />,
+    to: '/search',
   },
 ];
 
