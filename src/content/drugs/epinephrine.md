@@ -17,3 +17,4 @@ keywords:
 
 - Administer every second cycle of CPR
 - Administer immediately for non-shockable rhythms
+- Give epinephrine for life-threatening shock when systolic BP <50 mmHg
