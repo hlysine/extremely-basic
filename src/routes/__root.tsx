@@ -8,20 +8,17 @@ import PWAPrompt from '../components/PWAPrompt';
 import ThemeToggle from '../components/ThemeToggle';
 import { useEffect } from 'react';
 import MouseDownLink from '../components/MouseDownLink';
-import { useSettings } from '../components/SettingsContext';
 import { dockTabs, tabs } from './-tabs';
 
 function Dock() {
   const location = useRouterState({ select: state => state.location });
-  const [, setActiveTab] = useSettings('activeTab');
 
   useEffect(() => {
     const tab = tabs.find(tab => location.pathname.startsWith(tab.to));
     if (tab) {
       document.title = `Extremely Basic - ${tab.name}`;
-      if (tab.dock) setActiveTab(tab.to);
     }
-  }, [location, setActiveTab]);
+  }, [location]);
 
   if (location.pathname === '/') {
     return null; // Hide dock on the home page
