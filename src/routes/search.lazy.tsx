@@ -143,7 +143,6 @@ function Search() {
         <input
           type="search"
           className="grow"
-          autoFocus={true}
           placeholder="Search"
           value={query}
           onFocus={e => e.target.select()}
