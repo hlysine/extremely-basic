@@ -51,7 +51,7 @@ Mean arterial pressure determines tissue perfusion
 
 | Type             | Causes                                                       | Heart rate                                                                                            | JVP         | Peripheries |
 |------------------|--------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|-------------|-------------|
-| **Cardiogenic**  | Myocardial infarction<br>Arrhythmia                          | **Herat failure**<br>Moderate&nbsp;tachycardia<br>**Arrhythmia**<br>Severe bradycardia or tachycardia | High/normal | Cold        |
+| **Cardiogenic**  | Myocardial infarction<br>Arrhythmia                          | **Heart failure**<br>Moderate&nbsp;tachycardia<br>**Arrhythmia**<br>Severe bradycardia or tachycardia | High/normal | Cold        |
 | **Hypovolemic**  | Hemorrhage<br>Dehydration                                    | Moderate tachycardia                                                                                  | Low         | Cold        |
 | **Distributive** | Sepsis<br>Anaphylaxis                                        | Moderate tachycardia                                                                                  | Low         | Warm        |
 | **Obstructive**  | Massive PE<br>Cardiac tamponade<br>Tension&nbsp;pneumothorax | Moderate tachycardia                                                                                  | Very high   | Cold        |

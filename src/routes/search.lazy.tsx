@@ -6,7 +6,10 @@ import { useEffect, useMemo, useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
 import MouseDownLink from '../components/MouseDownLink';
 import debounce from 'lodash/debounce';
-import MiniSearch from 'minisearch';
+import MiniSearch, { SearchResult } from 'minisearch';
+import { markdownToText } from '../utils/markdownUtils';
+
+console.time('Search Indexing');
 
 const drugsContent = Object.entries(
   import.meta.glob<true, string, string>('../content/drugs/*.md', {
@@ -55,7 +58,7 @@ function addToSearchStore(
   const searchEntry: SearchEntry = {
     ...entry,
     id,
-    content,
+    content: markdownToText(content),
   };
   searchIndex.push(searchEntry);
 }
@@ -81,12 +84,31 @@ const miniSearch = new MiniSearch({
 });
 miniSearch.addAll(searchIndex);
 
+interface PageResult extends Omit<SearchResult, 'id'>, SearchEntry {
+  preview: string;
+  terms: string[];
+}
+
+const defaultResult = searchIndex.map(entry => ({
+  ...entry,
+  preview: '',
+}));
+
+console.timeEnd('Search Indexing');
+
 function Search() {
   const [query, setQuery] = useState(localStorage.getItem('searchQuery') ?? '');
   const results = useMemo(() => {
-    if (query.length === 0) return searchIndex;
-    const searchResults = miniSearch.search(query);
-    return searchResults as unknown as SearchEntry[];
+    if (query.length === 0) return defaultResult;
+    const searchResults = miniSearch.search(query) as unknown as PageResult[];
+    const entries = searchResults.map(result => ({
+      ...result,
+      preview:
+        new RegExp(`^.*${result.terms[0]}.*$`, 'mi').exec(
+          result.content
+        )?.[0] ?? '',
+    }));
+    return entries;
   }, [query]);
 
   useEffect(() => {
@@ -125,13 +147,16 @@ function Search() {
             key={result.id}
             className="shrink-0 flex flex-col gap-1 w-96 bg-base-200 text-base border-b border-neutral/30 py-3 px-6 hover:bg-base-300 transition-all cursor-pointer"
           >
-            <div className="breadcrumbs text-xs py-0 opacity-70">
+            <div className="breadcrumbs text-xs py-0 opacity-60">
               <ul>
                 <li className="capitalize">{result.id.split('/')[0]}</li>
                 <li>{result.section}</li>
               </ul>
             </div>
             {result.title}
+            <div className="opacity-60 text-xs max-h-6 text-ellipsis overflow-hidden whitespace-nowrap">
+              {result.preview}
+            </div>
           </MouseDownLink>
         ))}
       </div>

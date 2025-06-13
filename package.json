@@ -16,6 +16,7 @@
     "clsx": "^2.1.1",
     "lodash": "^4.17.21",
     "markdown-to-jsx": "^7.7.6",
+    "marked": "^15.0.12",
     "million": "^3.1.11",
     "minisearch": "^7.1.2",
     "react": "^18.2.0",
