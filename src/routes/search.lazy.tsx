@@ -2,11 +2,11 @@ import { createLazyFileRoute } from '@tanstack/react-router';
 import drugsIndex from './drugs/-list.gen.json';
 import conditionsIndex from './conditions/-list.gen.json';
 import calcIndex from './calc/-list.gen.json';
-import { Charset, Document, DocumentData } from 'flexsearch';
 import { useEffect, useMemo, useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
 import MouseDownLink from '../components/MouseDownLink';
 import debounce from 'lodash/debounce';
+import MiniSearch from 'minisearch';
 
 const drugsContent = Object.entries(
   import.meta.glob<true, string, string>('../content/drugs/*.md', {
@@ -70,54 +70,23 @@ calcIndex.forEach(entry => {
   addToSearchStore('calc', calcContent, entry);
 });
 
-const index = new Document({
-  document: {
-    id: 'id',
-    store: true,
-    index: [
-      {
-        field: 'content',
-        tokenize: 'forward',
-        encoder: Charset.LatinBalance,
-      },
-      {
-        field: 'keywords',
-        tokenize: 'forward',
-        encoder: Charset.LatinBalance,
-      },
-    ],
+const miniSearch = new MiniSearch({
+  fields: ['title', 'section', 'keywords', 'content'],
+  storeFields: ['id', 'title', 'section', 'keywords', 'content', 'key'],
+  searchOptions: {
+    boost: { title: 2, section: 1.5, keywords: 1.2 },
+    fuzzy: 0.2,
+    prefix: true,
   },
 });
-searchIndex.forEach(entry => {
-  index.add(entry as unknown as DocumentData);
-});
+miniSearch.addAll(searchIndex);
 
 function Search() {
   const [query, setQuery] = useState(localStorage.getItem('searchQuery') ?? '');
   const results = useMemo(() => {
     if (query.length === 0) return searchIndex;
-    const searchResults = index.search(query, {
-      limit: 20,
-      enrich: true,
-      suggest: true,
-    });
-    const allResults: SearchEntry[] = [];
-    const keywordResults = searchResults.find(r => r.field === 'keywords');
-    if (keywordResults) {
-      allResults.push(
-        ...keywordResults.result.map(r => r.doc as unknown as SearchEntry)
-      );
-    }
-    const contentResults = searchResults.find(r => r.field === 'content');
-    if (contentResults) {
-      contentResults.result.forEach(r => {
-        const doc = r.doc as unknown as SearchEntry;
-        if (!allResults.some(res => res.id === doc.id)) {
-          allResults.push(doc);
-        }
-      });
-    }
-    return allResults;
+    const searchResults = miniSearch.search(query);
+    return searchResults as unknown as SearchEntry[];
   }, [query]);
 
   useEffect(() => {
