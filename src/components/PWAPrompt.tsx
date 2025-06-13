@@ -13,7 +13,7 @@ export default memo(function PWAPrompt() {
     >
       <FiAlertCircle />
       <span>Update available. Apply update now?</span>
-      <div>
+      <div className="flex gap-2">
         <button
           type="button"
           className="btn btn-sm"
