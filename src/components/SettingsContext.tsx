@@ -4,6 +4,7 @@ import { z } from 'zod';
 export const SiteSettingsSchema = z.object({
   isDark: z.boolean().default(false),
   activeTab: z.string().default('/'),
+  searchQuery: z.string().default(''),
 });
 
 export type SiteSettings = z.infer<typeof SiteSettingsSchema>;

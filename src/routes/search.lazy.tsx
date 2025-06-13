@@ -8,6 +8,7 @@ import MouseDownLink from '../components/MouseDownLink';
 import debounce from 'lodash/debounce';
 import MiniSearch, { SearchResult } from 'minisearch';
 import { markdownToText } from '../utils/markdownUtils';
+import { useSettings } from '../components/SettingsContext';
 
 console.time('Search Indexing');
 
@@ -111,8 +112,12 @@ function createTextFragment(target: string) {
 console.timeEnd('Search Indexing');
 
 function Search() {
-  const [query, setQuery] = useState('');
+  const [savedQuery, setSavedQuery] = useSettings('searchQuery');
+  const [query, setQuery] = useState(savedQuery);
   const results = useMemo(() => {
+    if (query !== savedQuery) {
+      setSavedQuery(query);
+    }
     if (query.length === 0) return defaultResult;
     const searchResults = miniSearch.search(query) as unknown as PageResult[];
     return searchResults.map(result => ({
@@ -122,7 +127,7 @@ function Search() {
           result.content
         )?.[0] ?? '',
     }));
-  }, [query]);
+  }, [query, savedQuery, setSavedQuery]);
 
   const debounceInput = useMemo(
     () =>
