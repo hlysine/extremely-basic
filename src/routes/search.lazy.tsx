@@ -92,7 +92,21 @@ interface PageResult extends Omit<SearchResult, 'id'>, SearchEntry {
 const defaultResult = searchIndex.map(entry => ({
   ...entry,
   preview: '',
+  terms: [],
 }));
+
+const textFragmentRegex = /^(.*?)[^\w\s].*[^\w\s](.*?)$/s;
+
+function createTextFragment(target: string) {
+  target = target.trim();
+  const match = textFragmentRegex.exec(target);
+  if (!match) return encodeURIComponent(target);
+  return (
+    encodeURIComponent(match[1].trim()) +
+    ',' +
+    encodeURIComponent(match[2].trim())
+  );
+}
 
 console.timeEnd('Search Indexing');
 
@@ -101,14 +115,13 @@ function Search() {
   const results = useMemo(() => {
     if (query.length === 0) return defaultResult;
     const searchResults = miniSearch.search(query) as unknown as PageResult[];
-    const entries = searchResults.map(result => ({
+    return searchResults.map(result => ({
       ...result,
       preview:
         new RegExp(`^.*${result.terms[0]}.*$`, 'mi').exec(
           result.content
         )?.[0] ?? '',
     }));
-    return entries;
   }, [query]);
 
   useEffect(() => {
@@ -143,7 +156,9 @@ function Search() {
       <div className="flex-1 flex flex-col justify-start items-center overflow-y-auto pb-4 w-full">
         {results.map(result => (
           <MouseDownLink
-            to={'/' + result.id}
+            to={
+              '/' + result.id + '#:~:text=' + createTextFragment(result.preview)
+            }
             key={result.id}
             className="shrink-0 flex flex-col gap-1 w-96 bg-base-200 text-base border-b border-neutral/30 py-3 px-6 hover:bg-base-300 transition-all cursor-pointer"
           >

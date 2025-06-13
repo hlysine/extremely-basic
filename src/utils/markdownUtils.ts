@@ -34,7 +34,7 @@ class TextRenderer extends Renderer {
   }
 
   listitem({ text }: Tokens.ListItem) {
-    return `- ${markdownToText(text).trim()}`;
+    return `  ${markdownToText(text).trim()}`;
   }
 
   checkbox() {
@@ -46,8 +46,8 @@ class TextRenderer extends Renderer {
   }
 
   table(tokens: Tokens.Table) {
-    return `${tokens.header.map(cell => this.tablecell(cell)).join(' | ')}\n${tokens.rows
-      .map(row => row.map(cell => this.tablecell(cell)).join(' | '))
+    return `${tokens.header.map(cell => this.tablecell(cell)).join('\n')}\n${tokens.rows
+      .map(row => row.map(cell => this.tablecell(cell)).join('\n'))
       .join('\n')}\n`;
   }
 
@@ -56,7 +56,7 @@ class TextRenderer extends Renderer {
   }
 
   tablecell({ text }: Tokens.TableCell) {
-    return markdownToText(text).trim() + '\n';
+    return markdownToText(text).trim();
   }
 
   strong({ text }: Tokens.Strong) {

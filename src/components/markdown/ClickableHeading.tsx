@@ -17,7 +17,7 @@ export default function makeClickableHeading(Element: React.ElementType) {
         id={id}
         className={cn(className, 'cursor-pointer hover:underline')}
         {...rest}
-        onClick={() => navigate({ hash: id })}
+        onClick={() => navigate({ hash: id, replace: true })}
       />
     );
   };
