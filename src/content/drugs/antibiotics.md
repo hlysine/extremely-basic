@@ -32,7 +32,7 @@ keywords:
 Same as community-acquired pneumonia, but with additional options for resistant organisms:
 
 - Recent antibiotic use within 90 days or high risk of mortality
-  - **Antipseudomonal cephalosporin / BLBLI** - cefepime, piperacillin-tazobactam
-- Low risk of mortality
   - **Antipseudomonal carbapenem** - meropenem, imipenem
   - **MRSA coverage** - Linezolid or vancomycin
+- Low risk of mortality
+  - **Antipseudomonal cephalosporin / BLBLI** - cefepime, piperacillin-tazobactam
