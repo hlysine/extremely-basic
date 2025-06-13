@@ -20,10 +20,6 @@ function Dock() {
     }
   }, [location]);
 
-  if (location.pathname === '/') {
-    return null; // Hide dock on the home page
-  }
-
   return (
     <div className="dock static hide-on-type">
       {dockTabs.map(tab => (
