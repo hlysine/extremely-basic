@@ -6,7 +6,7 @@ function Condition() {
   const data = useLoaderData({ from: '/conditions/$key' });
   useTextFragment();
   return (
-    <div className="flex-1 p-2 overflow-y-auto self-center w-full max-w-[1000px]">
+    <div className="flex-1 p-4 pt-0 overflow-y-auto self-center w-full max-w-[1000px]">
       <StyledMarkdown>{data}</StyledMarkdown>
     </div>
   );

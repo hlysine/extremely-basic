@@ -31,12 +31,12 @@ keywords:
       - With legs elevated
     - Carotid sinus massage
       - If no carotid bruit and carotid stenosis
-  - [IV adenosine or ATP](../drugs/stable-anti-arrhythmics#narrow-complex-svt)
+  - [IV adenosine or ATP](../treatments/stable-anti-arrhythmics#narrow-complex-svt)
     - Confirms SVT if adenosine terminates tachycardia
-  - [IV amiodarone](../drugs/stable-anti-arrhythmics#amiodarone)
-  - [IV verapamil or diltiazem](../drugs/stable-anti-arrhythmics#narrow-complex-svt)
+  - [IV amiodarone](../treatments/stable-anti-arrhythmics#amiodarone)
+  - [IV verapamil or diltiazem](../treatments/stable-anti-arrhythmics#narrow-complex-svt)
     - Diltiazem if poor LV function
-  - [IV esmolol or metoprolol](../drugs/stable-anti-arrhythmics#narrow-complex-svt)
+  - [IV esmolol or metoprolol](../treatments/stable-anti-arrhythmics#narrow-complex-svt)
     - If good LV function
   - DC cardioversion
 
@@ -45,10 +45,10 @@ keywords:
 - Management
   - Correct hypokalemia and hypomagnesemia
   - Pharmacological cardioversion and ventricular rate control
-    - [Amiodarone](../drugs/stable-anti-arrhythmics#atrial-fibrillation)
-    - [Procainamide or ibutilide](../drugs/stable-anti-arrhythmics#atrial-fibrillation)
+    - [Amiodarone](../treatments/stable-anti-arrhythmics#atrial-fibrillation)
+    - [Procainamide or ibutilide](../treatments/stable-anti-arrhythmics#atrial-fibrillation)
   - Ventricular rate control only
-    - [Digoxin, verapamil, diltiazem](../drugs/stable-anti-arrhythmics#atrial-fibrillation)
+    - [Digoxin, verapamil, diltiazem](../treatments/stable-anti-arrhythmics#atrial-fibrillation)
   - Anticoagulate if AF >48 hours
 
 ## Multifocal atrial tachycardia
@@ -65,5 +65,5 @@ keywords:
   - **Does not respond to DC cardioversion**
   - Treat precipitating factors
   - Specific treatment usually not required
-    - [Amiodarone](../drugs/stable-anti-arrhythmics#atrial-fibrillation)
-    - [Verapamil](../drugs/stable-anti-arrhythmics#atrial-fibrillation)
+    - [Amiodarone](../treatments/stable-anti-arrhythmics#atrial-fibrillation)
+    - [Verapamil](../treatments/stable-anti-arrhythmics#atrial-fibrillation)

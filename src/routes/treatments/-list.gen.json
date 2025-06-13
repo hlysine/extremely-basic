@@ -146,6 +146,16 @@
     "key": "arrest-anti-arrhythmics"
   },
   {
+    "title": "Cardioversion / defibrillation",
+    "section": "Cardiocerebral resuscitation",
+    "keywords": [
+      "synchronized cardioversion",
+      "unsynchronized cardioversion",
+      "defibrillation"
+    ],
+    "key": "cardioversion-defibrillation"
+  },
+  {
     "title": "Epinephrine",
     "section": "Cardiocerebral resuscitation",
     "keywords": [

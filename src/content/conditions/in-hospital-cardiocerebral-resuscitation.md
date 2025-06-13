@@ -25,15 +25,15 @@ keywords:
 
 ## Defibrillation
 
-- **Biphasic defibrillation** - 150-200 J
-- **Monophasic defibrillation** - 360 J
+- [**Biphasic defibrillation** - 150-200 J](../treatments/cardioversion-defibrillation)
+- [**Monophasic defibrillation** - 360 J](../treatments/cardioversion-defibrillation)
 
 ## Medications
 
-- [Epinephrine](../drugs/epinephrine)
+- [Epinephrine](../treatments/epinephrine)
   - 1 mg 1:10,000 IV every 3-5 minutes / every second cycle
   - Give immediate for non-shockable rhythms
-- [Anti-arrhythmics](../drugs/arrest-anti-arrhythmics)
+- [Anti-arrhythmics](../treatments/arrest-anti-arrhythmics)
   - **Amiodarone**
     - 300 mg IV bolus for refractory VF/VT
     - 150 mg IV bolus after 5th shock
@@ -66,7 +66,7 @@ keywords:
   - Hypothermia
 - Pinpoint pupils
   - Opioid intoxication
-  - [**1.2mg IV naloxone**](../drugs/naloxone)
+  - [**1.2mg IV naloxone**](../treatments/naloxone)
 - Unequal pupils
   - Intracranial bleed/stroke
 - Blood in mouth
@@ -105,7 +105,7 @@ keywords:
   - Aortic rupture
 - Femoral vein pits
   - IVDU
-  - [**Empirical naloxone**](../drugs/naloxone)
+  - [**Empirical naloxone**](../treatments/naloxone)
 
 #### Lower limbs
 

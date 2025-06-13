@@ -50,7 +50,7 @@ keywords:
 ### Antiepileptic drugs
 
 - If IV access available
-  - [Lorazepam](../drugs/antiepileptics#lorazepam)
-  - [Diazepam + Phenytoin](../drugs/antiepileptics#diazepam--phenytoin)
+  - [Lorazepam](../treatments/antiepileptics#lorazepam)
+  - [Diazepam + Phenytoin](../treatments/antiepileptics#diazepam--phenytoin)
 - IF no IV access
-  - [Midazolam](../drugs/antiepileptics#midazolam)
+  - [Midazolam](../treatments/antiepileptics#midazolam)

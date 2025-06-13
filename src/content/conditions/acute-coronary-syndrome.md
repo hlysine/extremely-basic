@@ -37,12 +37,12 @@ keywords:
 - **Oxygen** if desaturated or in respiratory distress
 - **Analgesia** - IV morphine
 - Dual antiplatelet therapy
-  - [**Chewable aspirin**](../drugs/antiplatelet) 80-325 mg
-  - [**P2Y<sub>12</sub> inhibitor**](../drugs/antiplatelet) - ticagrelor, prasugrel, clopidogrel
-- [**Sublingual nitroglycerin**](../drugs/nitroglycerin) every 5 minutes for 3 doses
+  - [**Chewable aspirin**](../treatments/antiplatelet) 80-325 mg
+  - [**P2Y<sub>12</sub> inhibitor**](../treatments/antiplatelet) - ticagrelor, prasugrel, clopidogrel
+- [**Sublingual nitroglycerin**](../treatments/nitroglycerin) every 5 minutes for 3 doses
   - Contraindicated in recent PDE inhibitor use, hypotension
-- [**Antithrombotic**](../drugs/antithrombotic) - unfractionated heparin, enoxaparin, fondaparinux, bivalirudin
-- [**Beta-blocker**](../drugs/beta-blocker) in first 24 hours
+- [**Antithrombotic**](../treatments/antithrombotic) - unfractionated heparin, enoxaparin, fondaparinux, bivalirudin
+- [**Beta-blocker**](../treatments/beta-blocker) in first 24 hours
   - Contraindicated in heart failure, bradycardia, AV block, hypotension
 - **ACE inhibitor**
 - **Statin**

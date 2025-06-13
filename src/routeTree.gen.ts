@@ -14,10 +14,11 @@ import { createFileRoute } from '@tanstack/react-router'
 
 import { Route as rootRoute } from './routes/__root'
 import { Route as IndexImport } from './routes/index'
-import { Route as DrugsIndexImport } from './routes/drugs/index'
+import { Route as TreatmentsIndexImport } from './routes/treatments/index'
 import { Route as ConditionsIndexImport } from './routes/conditions/index'
 import { Route as CalcIndexImport } from './routes/calc/index'
-import { Route as DrugsKeyImport } from './routes/drugs/$key'
+import { Route as TreatmentsKeyImport } from './routes/treatments/$key'
+import { Route as DrugsSplatImport } from './routes/drugs.$'
 import { Route as ConditionsKeyImport } from './routes/conditions/$key'
 import { Route as CalcPeakFlowRateImport } from './routes/calc/peak-flow-rate'
 import { Route as CalcOxygenGradientImport } from './routes/calc/oxygen-gradient'
@@ -33,9 +34,16 @@ import { Route as CalcAcuteRespiratoryAcidosisImport } from './routes/calc/acute
 
 // Create Virtual Routes
 
+const SettingsLazyImport = createFileRoute('/settings')()
 const SearchLazyImport = createFileRoute('/search')()
 
 // Create/Update Routes
+
+const SettingsLazyRoute = SettingsLazyImport.update({
+  id: '/settings',
+  path: '/settings',
+  getParentRoute: () => rootRoute,
+} as any).lazy(() => import('./routes/settings.lazy').then((d) => d.Route))
 
 const SearchLazyRoute = SearchLazyImport.update({
   id: '/search',
@@ -49,9 +57,9 @@ const IndexRoute = IndexImport.update({
   getParentRoute: () => rootRoute,
 } as any)
 
-const DrugsIndexRoute = DrugsIndexImport.update({
-  id: '/drugs/',
-  path: '/drugs/',
+const TreatmentsIndexRoute = TreatmentsIndexImport.update({
+  id: '/treatments/',
+  path: '/treatments/',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -67,9 +75,15 @@ const CalcIndexRoute = CalcIndexImport.update({
   getParentRoute: () => rootRoute,
 } as any)
 
-const DrugsKeyRoute = DrugsKeyImport.update({
-  id: '/drugs/$key',
-  path: '/drugs/$key',
+const TreatmentsKeyRoute = TreatmentsKeyImport.update({
+  id: '/treatments/$key',
+  path: '/treatments/$key',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const DrugsSplatRoute = DrugsSplatImport.update({
+  id: '/drugs/$',
+  path: '/drugs/$',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -167,6 +181,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SearchLazyImport
       parentRoute: typeof rootRoute
     }
+    '/settings': {
+      id: '/settings'
+      path: '/settings'
+      fullPath: '/settings'
+      preLoaderRoute: typeof SettingsLazyImport
+      parentRoute: typeof rootRoute
+    }
     '/calc/acute-respiratory-acidosis': {
       id: '/calc/acute-respiratory-acidosis'
       path: '/calc/acute-respiratory-acidosis'
@@ -251,11 +272,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ConditionsKeyImport
       parentRoute: typeof rootRoute
     }
-    '/drugs/$key': {
-      id: '/drugs/$key'
-      path: '/drugs/$key'
-      fullPath: '/drugs/$key'
-      preLoaderRoute: typeof DrugsKeyImport
+    '/drugs/$': {
+      id: '/drugs/$'
+      path: '/drugs/$'
+      fullPath: '/drugs/$'
+      preLoaderRoute: typeof DrugsSplatImport
+      parentRoute: typeof rootRoute
+    }
+    '/treatments/$key': {
+      id: '/treatments/$key'
+      path: '/treatments/$key'
+      fullPath: '/treatments/$key'
+      preLoaderRoute: typeof TreatmentsKeyImport
       parentRoute: typeof rootRoute
     }
     '/calc/': {
@@ -272,11 +300,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ConditionsIndexImport
       parentRoute: typeof rootRoute
     }
-    '/drugs/': {
-      id: '/drugs/'
-      path: '/drugs'
-      fullPath: '/drugs'
-      preLoaderRoute: typeof DrugsIndexImport
+    '/treatments/': {
+      id: '/treatments/'
+      path: '/treatments'
+      fullPath: '/treatments'
+      preLoaderRoute: typeof TreatmentsIndexImport
       parentRoute: typeof rootRoute
     }
   }
@@ -287,6 +315,7 @@ declare module '@tanstack/react-router' {
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/search': typeof SearchLazyRoute
+  '/settings': typeof SettingsLazyRoute
   '/calc/acute-respiratory-acidosis': typeof CalcAcuteRespiratoryAcidosisRoute
   '/calc/acute-respiratory-alkalosis': typeof CalcAcuteRespiratoryAlkalosisRoute
   '/calc/anion-gap': typeof CalcAnionGapRoute
@@ -299,15 +328,17 @@ export interface FileRoutesByFullPath {
   '/calc/oxygen-gradient': typeof CalcOxygenGradientRoute
   '/calc/peak-flow-rate': typeof CalcPeakFlowRateRoute
   '/conditions/$key': typeof ConditionsKeyRoute
-  '/drugs/$key': typeof DrugsKeyRoute
+  '/drugs/$': typeof DrugsSplatRoute
+  '/treatments/$key': typeof TreatmentsKeyRoute
   '/calc': typeof CalcIndexRoute
   '/conditions': typeof ConditionsIndexRoute
-  '/drugs': typeof DrugsIndexRoute
+  '/treatments': typeof TreatmentsIndexRoute
 }
 
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/search': typeof SearchLazyRoute
+  '/settings': typeof SettingsLazyRoute
   '/calc/acute-respiratory-acidosis': typeof CalcAcuteRespiratoryAcidosisRoute
   '/calc/acute-respiratory-alkalosis': typeof CalcAcuteRespiratoryAlkalosisRoute
   '/calc/anion-gap': typeof CalcAnionGapRoute
@@ -320,16 +351,18 @@ export interface FileRoutesByTo {
   '/calc/oxygen-gradient': typeof CalcOxygenGradientRoute
   '/calc/peak-flow-rate': typeof CalcPeakFlowRateRoute
   '/conditions/$key': typeof ConditionsKeyRoute
-  '/drugs/$key': typeof DrugsKeyRoute
+  '/drugs/$': typeof DrugsSplatRoute
+  '/treatments/$key': typeof TreatmentsKeyRoute
   '/calc': typeof CalcIndexRoute
   '/conditions': typeof ConditionsIndexRoute
-  '/drugs': typeof DrugsIndexRoute
+  '/treatments': typeof TreatmentsIndexRoute
 }
 
 export interface FileRoutesById {
   __root__: typeof rootRoute
   '/': typeof IndexRoute
   '/search': typeof SearchLazyRoute
+  '/settings': typeof SettingsLazyRoute
   '/calc/acute-respiratory-acidosis': typeof CalcAcuteRespiratoryAcidosisRoute
   '/calc/acute-respiratory-alkalosis': typeof CalcAcuteRespiratoryAlkalosisRoute
   '/calc/anion-gap': typeof CalcAnionGapRoute
@@ -342,10 +375,11 @@ export interface FileRoutesById {
   '/calc/oxygen-gradient': typeof CalcOxygenGradientRoute
   '/calc/peak-flow-rate': typeof CalcPeakFlowRateRoute
   '/conditions/$key': typeof ConditionsKeyRoute
-  '/drugs/$key': typeof DrugsKeyRoute
+  '/drugs/$': typeof DrugsSplatRoute
+  '/treatments/$key': typeof TreatmentsKeyRoute
   '/calc/': typeof CalcIndexRoute
   '/conditions/': typeof ConditionsIndexRoute
-  '/drugs/': typeof DrugsIndexRoute
+  '/treatments/': typeof TreatmentsIndexRoute
 }
 
 export interface FileRouteTypes {
@@ -353,6 +387,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/search'
+    | '/settings'
     | '/calc/acute-respiratory-acidosis'
     | '/calc/acute-respiratory-alkalosis'
     | '/calc/anion-gap'
@@ -365,14 +400,16 @@ export interface FileRouteTypes {
     | '/calc/oxygen-gradient'
     | '/calc/peak-flow-rate'
     | '/conditions/$key'
-    | '/drugs/$key'
+    | '/drugs/$'
+    | '/treatments/$key'
     | '/calc'
     | '/conditions'
-    | '/drugs'
+    | '/treatments'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/search'
+    | '/settings'
     | '/calc/acute-respiratory-acidosis'
     | '/calc/acute-respiratory-alkalosis'
     | '/calc/anion-gap'
@@ -385,14 +422,16 @@ export interface FileRouteTypes {
     | '/calc/oxygen-gradient'
     | '/calc/peak-flow-rate'
     | '/conditions/$key'
-    | '/drugs/$key'
+    | '/drugs/$'
+    | '/treatments/$key'
     | '/calc'
     | '/conditions'
-    | '/drugs'
+    | '/treatments'
   id:
     | '__root__'
     | '/'
     | '/search'
+    | '/settings'
     | '/calc/acute-respiratory-acidosis'
     | '/calc/acute-respiratory-alkalosis'
     | '/calc/anion-gap'
@@ -405,16 +444,18 @@ export interface FileRouteTypes {
     | '/calc/oxygen-gradient'
     | '/calc/peak-flow-rate'
     | '/conditions/$key'
-    | '/drugs/$key'
+    | '/drugs/$'
+    | '/treatments/$key'
     | '/calc/'
     | '/conditions/'
-    | '/drugs/'
+    | '/treatments/'
   fileRoutesById: FileRoutesById
 }
 
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   SearchLazyRoute: typeof SearchLazyRoute
+  SettingsLazyRoute: typeof SettingsLazyRoute
   CalcAcuteRespiratoryAcidosisRoute: typeof CalcAcuteRespiratoryAcidosisRoute
   CalcAcuteRespiratoryAlkalosisRoute: typeof CalcAcuteRespiratoryAlkalosisRoute
   CalcAnionGapRoute: typeof CalcAnionGapRoute
@@ -427,15 +468,17 @@ export interface RootRouteChildren {
   CalcOxygenGradientRoute: typeof CalcOxygenGradientRoute
   CalcPeakFlowRateRoute: typeof CalcPeakFlowRateRoute
   ConditionsKeyRoute: typeof ConditionsKeyRoute
-  DrugsKeyRoute: typeof DrugsKeyRoute
+  DrugsSplatRoute: typeof DrugsSplatRoute
+  TreatmentsKeyRoute: typeof TreatmentsKeyRoute
   CalcIndexRoute: typeof CalcIndexRoute
   ConditionsIndexRoute: typeof ConditionsIndexRoute
-  DrugsIndexRoute: typeof DrugsIndexRoute
+  TreatmentsIndexRoute: typeof TreatmentsIndexRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   SearchLazyRoute: SearchLazyRoute,
+  SettingsLazyRoute: SettingsLazyRoute,
   CalcAcuteRespiratoryAcidosisRoute: CalcAcuteRespiratoryAcidosisRoute,
   CalcAcuteRespiratoryAlkalosisRoute: CalcAcuteRespiratoryAlkalosisRoute,
   CalcAnionGapRoute: CalcAnionGapRoute,
@@ -448,10 +491,11 @@ const rootRouteChildren: RootRouteChildren = {
   CalcOxygenGradientRoute: CalcOxygenGradientRoute,
   CalcPeakFlowRateRoute: CalcPeakFlowRateRoute,
   ConditionsKeyRoute: ConditionsKeyRoute,
-  DrugsKeyRoute: DrugsKeyRoute,
+  DrugsSplatRoute: DrugsSplatRoute,
+  TreatmentsKeyRoute: TreatmentsKeyRoute,
   CalcIndexRoute: CalcIndexRoute,
   ConditionsIndexRoute: ConditionsIndexRoute,
-  DrugsIndexRoute: DrugsIndexRoute,
+  TreatmentsIndexRoute: TreatmentsIndexRoute,
 }
 
 export const routeTree = rootRoute
@@ -466,6 +510,7 @@ export const routeTree = rootRoute
       "children": [
         "/",
         "/search",
+        "/settings",
         "/calc/acute-respiratory-acidosis",
         "/calc/acute-respiratory-alkalosis",
         "/calc/anion-gap",
@@ -478,10 +523,11 @@ export const routeTree = rootRoute
         "/calc/oxygen-gradient",
         "/calc/peak-flow-rate",
         "/conditions/$key",
-        "/drugs/$key",
+        "/drugs/$",
+        "/treatments/$key",
         "/calc/",
         "/conditions/",
-        "/drugs/"
+        "/treatments/"
       ]
     },
     "/": {
@@ -489,6 +535,9 @@ export const routeTree = rootRoute
     },
     "/search": {
       "filePath": "search.lazy.tsx"
+    },
+    "/settings": {
+      "filePath": "settings.lazy.tsx"
     },
     "/calc/acute-respiratory-acidosis": {
       "filePath": "calc/acute-respiratory-acidosis.tsx"
@@ -526,8 +575,11 @@ export const routeTree = rootRoute
     "/conditions/$key": {
       "filePath": "conditions/$key.tsx"
     },
-    "/drugs/$key": {
-      "filePath": "drugs/$key.tsx"
+    "/drugs/$": {
+      "filePath": "drugs.$.tsx"
+    },
+    "/treatments/$key": {
+      "filePath": "treatments/$key.tsx"
     },
     "/calc/": {
       "filePath": "calc/index.tsx"
@@ -535,8 +587,8 @@ export const routeTree = rootRoute
     "/conditions/": {
       "filePath": "conditions/index.tsx"
     },
-    "/drugs/": {
-      "filePath": "drugs/index.tsx"
+    "/treatments/": {
+      "filePath": "treatments/index.tsx"
     }
   }
 }

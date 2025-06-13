@@ -1,29 +1,19 @@
 ---
-title: Unstable tachyarrhythmia
-section: Arrhythmia
+title: Cardioversion / defibrillation
+section: Cardiocerebral resuscitation
 keywords:
-  - tachyarrhythmia
-  - ventricular tachycardia
-  - atrial fibrillation
-  - atrial flutter
-  - supraventricular tachycardia
-  - ventricular fibrillation
-  - cardioversion
-  - anti-arrhythmics
+  - synchronized cardioversion
+  - unsynchronized cardioversion
+  - defibrillation
 ---
 
-# Unstable tachyarrhythmia
+# Cardioversion / defibrillation
 
-## Management
+> **Pulse present?**
+> - **Yes** - cardioversion, synchronize if possible
+> - **No** - defibrillation, always unsynchronized
 
-> **Is shock due to arrhythmia?**
->
-> - **Yes** - DC cardioversion
-> - **No** - Treat shock, pulmonary edema or angina
-
-### DC cardioversion
-
-**Refer to [Cardioversion / defibrillation](../treatments/cardioversion-defibrillation)**
+## DC cardioversion
 
 | Indication               | Monophasic energy | Biphasic energy | Synchronized |
 |--------------------------|-------------------|-----------------|--------------|
@@ -32,3 +22,9 @@ keywords:
 | Atrial fibrillation      | 200 J             | 120-200 J       | Yes          |
 | Wide complex tachycardia | 100 J             | 100 J           | Yes          |
 | Polymorphic VT           | 360 J             | 150-360 J       | **No**       |
+
+## Defibrillation
+
+- **Indication**: Ventricular fibrillation or pulseless VT
+- **Biphasic defibrillation** - 150-200 J
+- **Monophasic defibrillation** - 360 J

@@ -16,8 +16,8 @@ export default defineConfig({
           output: 'src/routes/conditions/-list.gen.json',
         },
         {
-          folderPath: 'src/content/drugs',
-          output: 'src/routes/drugs/-list.gen.json',
+          folderPath: 'src/content/treatments',
+          output: 'src/routes/treatments/-list.gen.json',
         },
         {
           folderPath: 'src/content/calc',

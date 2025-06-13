@@ -1,14 +1,10 @@
-import { memo, useEffect, useState } from 'react';
+import { memo } from 'react';
 import { FaRegMoon } from 'react-icons/fa';
 import { IoSunnyOutline } from 'react-icons/io5';
+import { useSettings } from './SettingsContext';
 
 export default memo(function ThemeToggle() {
-  const [isDark, setIsDark] = useState<boolean>(
-    (localStorage.getItem('isDark') ?? 'false').toLowerCase() === 'true'
-  );
-  useEffect(() => {
-    localStorage.setItem('isDark', JSON.stringify(isDark));
-  }, [isDark]);
+  const [isDark, setIsDark] = useSettings('isDark');
   return (
     <label className="swap swap-rotate">
       <input

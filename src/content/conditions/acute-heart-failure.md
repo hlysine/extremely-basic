@@ -32,7 +32,7 @@ keywords:
 
 ### Nitrates
 
-- [IV glyceryl trinitrate](../drugs/nitrate)
+- [IV glyceryl trinitrate](../treatments/nitrate)
   - Reduces preload and myocardial ischemia
   - Titrate against blood pressure
 

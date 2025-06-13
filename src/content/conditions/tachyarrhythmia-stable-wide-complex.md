@@ -37,21 +37,21 @@ keywords:
     - Vagal maneuvers
       - Valsalva maneuver
       - Carotid sinus massage
-    - [Adenosine 6 mg IV bolus](../drugs/stable-anti-arrhythmics#adenosine)
+    - [Adenosine 6 mg IV bolus](../treatments/stable-anti-arrhythmics#adenosine)
       - Avoid if delta wave in previous ECG
   - Assume VT otherwise
-    - [IV amiodarone](../drugs/stable-anti-arrhythmics#amiodarone)
-    - [IV lignocaine](../drugs/stable-anti-arrhythmics#lignocaine)
-    - [IV procainamide](../drugs/stable-anti-arrhythmics#procainamide)
+    - [IV amiodarone](../treatments/stable-anti-arrhythmics#amiodarone)
+    - [IV lignocaine](../treatments/stable-anti-arrhythmics#lignocaine)
+    - [IV procainamide](../treatments/stable-anti-arrhythmics#procainamide)
   - [Cardioversion](tachyarrhythmia-unstable)
 
 ## Wide complex SVT
 
 - Management
-  - [Adenosine 6 mg IV bolus](../drugs/stable-anti-arrhythmics#adenosine)
+  - [Adenosine 6 mg IV bolus](../treatments/stable-anti-arrhythmics#adenosine)
     - Avoid if delta wave in previous ECG
-  - [IV procainamide](../drugs/stable-anti-arrhythmics#procainamide)
-    or [IV amiodarone](../drugs/stable-anti-arrhythmics#amiodarone)
+  - [IV procainamide](../treatments/stable-anti-arrhythmics#procainamide)
+    or [IV amiodarone](../treatments/stable-anti-arrhythmics#amiodarone)
   - [Cardioversion](tachyarrhythmia-unstable)
 
 ## Non-sustained monomorphic VT
@@ -106,5 +106,5 @@ keywords:
     - Emergency coronary angiography
   - IV beta-blocker
   - Intra-aortic balloon pump
-  - IV [amiodarone](../drugs/stable-anti-arrhythmics#amiodarone)
-    or [lignocaine](../drugs/stable-anti-arrhythmics#lignocaine) if above measures contraindicated
+  - IV [amiodarone](../treatments/stable-anti-arrhythmics#amiodarone)
+    or [lignocaine](../treatments/stable-anti-arrhythmics#lignocaine) if above measures contraindicated

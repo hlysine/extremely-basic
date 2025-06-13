@@ -5,49 +5,27 @@ import {
 } from '@tanstack/react-router';
 import { TanStackRouterDevtools } from '@tanstack/react-router-devtools';
 import PWAPrompt from '../components/PWAPrompt';
-import {
-  FaBookMedical,
-  FaCalculator,
-  FaSearch,
-  FaSyringe,
-} from 'react-icons/fa';
 import ThemeToggle from '../components/ThemeToggle';
 import { useEffect } from 'react';
 import MouseDownLink from '../components/MouseDownLink';
-
-const dockTabs = [
-  {
-    name: 'Calculators',
-    icon: <FaCalculator />,
-    to: '/calc',
-  },
-  {
-    name: 'Conditions',
-    icon: <FaBookMedical />,
-    to: '/conditions',
-  },
-  {
-    name: 'Drugs',
-    icon: <FaSyringe />,
-    to: '/drugs',
-  },
-  {
-    name: 'Search',
-    icon: <FaSearch />,
-    to: '/search',
-  },
-];
+import { useSettings } from '../components/SettingsContext';
+import { dockTabs, tabs } from './-tabs';
 
 function Dock() {
   const location = useRouterState({ select: state => state.location });
+  const [, setActiveTab] = useSettings('activeTab');
 
   useEffect(() => {
-    const tab = dockTabs.find(tab => location.pathname.startsWith(tab.to));
+    const tab = tabs.find(tab => location.pathname.startsWith(tab.to));
     if (tab) {
       document.title = `Extremely Basic - ${tab.name}`;
-      localStorage.setItem('tab', tab.to);
+      if (tab.dock) setActiveTab(tab.to);
     }
-  }, [location]);
+  }, [location, setActiveTab]);
+
+  if (location.pathname === '/') {
+    return null; // Hide dock on the home page
+  }
 
   return (
     <div className="dock static hide-on-type">
@@ -57,7 +35,7 @@ function Dock() {
           to={tab.to}
           className={location.pathname.startsWith(tab.to) ? 'dock-active' : ''}
         >
-          {tab.icon}
+          <tab.icon />
           <span className="dock-label">{tab.name}</span>
         </MouseDownLink>
       ))}

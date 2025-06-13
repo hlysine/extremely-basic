@@ -35,4 +35,4 @@ Refer to [Community-acquired pneumonia](../conditions/pneumonia-community-acquir
 
 Refer to [Community-acquired pneumonia](../conditions/pneumonia-community-acquired#management)
 
-- [Empirical antibiotics](../drugs/antibiotics#nosocomial-pneumonia)
+- [Empirical antibiotics](../treatments/antibiotics#nosocomial-pneumonia)

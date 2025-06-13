@@ -1,8 +1,8 @@
 import { createLazyFileRoute } from '@tanstack/react-router';
-import drugsIndex from './drugs/-list.gen.json';
+import treatmentsIndex from './treatments/-list.gen.json';
 import conditionsIndex from './conditions/-list.gen.json';
 import calcIndex from './calc/-list.gen.json';
-import { useEffect, useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
 import MouseDownLink from '../components/MouseDownLink';
 import debounce from 'lodash/debounce';
@@ -11,8 +11,8 @@ import { markdownToText } from '../utils/markdownUtils';
 
 console.time('Search Indexing');
 
-const drugsContent = Object.entries(
-  import.meta.glob<true, string, string>('../content/drugs/*.md', {
+const treatmentsContent = Object.entries(
+  import.meta.glob<true, string, string>('../content/treatments/*.md', {
     query: '?raw',
     import: 'default',
     eager: true,
@@ -63,8 +63,8 @@ function addToSearchStore(
   searchIndex.push(searchEntry);
 }
 
-drugsIndex.forEach(entry => {
-  addToSearchStore('drugs', drugsContent, entry);
+treatmentsIndex.forEach(entry => {
+  addToSearchStore('treatments', treatmentsContent, entry);
 });
 conditionsIndex.forEach(entry => {
   addToSearchStore('conditions', conditionsContent, entry);
@@ -111,7 +111,7 @@ function createTextFragment(target: string) {
 console.timeEnd('Search Indexing');
 
 function Search() {
-  const [query, setQuery] = useState(localStorage.getItem('searchQuery') ?? '');
+  const [query, setQuery] = useState('');
   const results = useMemo(() => {
     if (query.length === 0) return defaultResult;
     const searchResults = miniSearch.search(query) as unknown as PageResult[];
@@ -122,10 +122,6 @@ function Search() {
           result.content
         )?.[0] ?? '',
     }));
-  }, [query]);
-
-  useEffect(() => {
-    localStorage.setItem('searchQuery', query);
   }, [query]);
 
   const debounceInput = useMemo(
@@ -169,9 +165,11 @@ function Search() {
               </ul>
             </div>
             {result.title}
-            <div className="opacity-60 text-xs max-h-6 text-ellipsis overflow-hidden whitespace-nowrap">
-              {result.preview}
-            </div>
+            {result.preview.length > 0 ? (
+              <div className="opacity-60 text-xs max-h-6 text-ellipsis overflow-hidden whitespace-nowrap">
+                {result.preview}
+              </div>
+            ) : null}
           </MouseDownLink>
         ))}
       </div>

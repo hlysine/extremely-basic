@@ -21,13 +21,13 @@ keywords:
 
 - Adequate oxygen saturation
 - Adequate tissue perfusion
-  - High volume fluid resuscitation - [1000 ml crystalloid over 30 minutes](../drugs/fluids#septic-shock)
+  - High volume fluid resuscitation - [1000 ml crystalloid over 30 minutes](../treatments/fluids#septic-shock)
     - Assess response with mental state and urine output
     - **Disregard fluid in-out balance in the first 24 hours**
-  - [Vasopressors](../drugs/vasopressors#norepinephrine) if hypotensive despite fluids
+  - [Vasopressors](../treatments/vasopressors#norepinephrine) if hypotensive despite fluids
     - Prefer norepinephrine, otherwise epinephrine or dopamine
     - Target MAP 65 mmHg
-  - [Dobutamine](../drugs/vasopressors#dobutamine) if low perfusion despite adequate MAP
+  - [Dobutamine](../treatments/vasopressors#dobutamine) if low perfusion despite adequate MAP
 
 ### Early antibiotics
 

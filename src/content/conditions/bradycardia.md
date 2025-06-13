@@ -39,8 +39,8 @@ keywords:
 
 ### Medications
 
-- [IV atropine 0.6 mg](../drugs/bradycardia)
-- [IV isoproterenol 0.5-10 mcg/min](../drugs/bradycardia)
+- [IV atropine 0.6 mg](../treatments/bradycardia)
+- [IV isoproterenol 0.5-10 mcg/min](../treatments/bradycardia)
   - Avoid if in shock due to vasodilation
 - IV epinephrine if severely hypotensive
 

@@ -41,9 +41,9 @@ keywords:
 
 ### Treat expiratory obstruction
 
-- [Bronchodilators](../drugs/bronchodilators)
-- [Corticosteroids](../drugs/corticosteroids)
-- [Magnesium sulphate](../drugs/magnesium-sulphate)
+- [Bronchodilators](../treatments/bronchodilators)
+- [Corticosteroids](../treatments/corticosteroids)
+- [Magnesium sulphate](../treatments/magnesium-sulphate)
 
 ### Remove trigger of the exacerbation
 

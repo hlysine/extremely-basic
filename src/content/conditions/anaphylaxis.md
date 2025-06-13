@@ -31,7 +31,7 @@ keywords:
 
 - Call for help for airway obstruction
 - Supplemental oxygen
-- [Epinephrine](../drugs/vasopressors#epinephrine)
+- [Epinephrine](../treatments/vasopressors#epinephrine)
   - **0.3-0.5 mg** of **1:1,000** solution IM
   - Repeat every 5-15 minutes if needed
 - Fluid resuscitation
@@ -39,4 +39,3 @@ keywords:
   - Antihistamines
   - Corticosteroids
 - Observer for 24 hours
-
