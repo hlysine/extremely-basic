@@ -8,7 +8,6 @@ import MouseDownLink from '../components/MouseDownLink';
 import debounce from 'lodash/debounce';
 import MiniSearch, { SearchResult } from 'minisearch';
 import { markdownToText } from '../utils/markdownUtils';
-import { useSettings } from '../components/SettingsContext';
 
 console.time('Search Indexing');
 
@@ -109,14 +108,16 @@ function createTextFragment(target: string) {
   );
 }
 
+// Savedd query is stored as a variable to persist across re-renders but not across app restarts.
+let savedQuery = '';
+
 console.timeEnd('Search Indexing');
 
 function Search() {
-  const [savedQuery, setSavedQuery] = useSettings('searchQuery');
   const [query, setQuery] = useState(savedQuery);
   const results = useMemo(() => {
     if (query !== savedQuery) {
-      setSavedQuery(query);
+      savedQuery = query;
     }
     if (query.length === 0) return defaultResult;
     const searchResults = miniSearch.search(query) as unknown as PageResult[];
@@ -127,7 +128,7 @@ function Search() {
           result.content
         )?.[0] ?? '',
     }));
-  }, [query, savedQuery, setSavedQuery]);
+  }, [query]);
 
   const debounceInput = useMemo(
     () =>
