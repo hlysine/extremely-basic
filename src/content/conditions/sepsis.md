@@ -9,7 +9,46 @@ keywords:
 
 # Sepsis
 
+## Assessment
+
+### SIRS Criteria
+
+- **Temperature** - <36°C or >38°C
+- **Heart rate** - >90 bpm
+- **Respiratory rate** one of
+  - <20 breaths per minute
+  - PaCO<sub>2</sub> <32 mmHg
+- **White blood cell count** one of
+  - <4x10<sup>9</sup>/L
+  - \>12x10<sup>9</sup>/L
+  - \>10% immature neutrophils
+
+> Two or more items + Suspected infection = Sepsis
+
+### qSOFA Score
+
+- **Altered mental status** - GCS <15
+- **Respiratory rate** - ≥22 breaths per minute
+- **Systolic blood pressure** - ≤100 mmHg
+
+> Two or more items indicate high risk of poor outcome from infection
+
+### Septic shock
+
+- Persistent hypotension despite adequate fluid resuscitation
+  - Systolic blood pressure <90 mmHg or MAP <65 mmHg
+  - Requires vasopressors to maintain MAP ≥65 mmHg
+- Serum lactate >2 mmol/L or >18 mg/dL
+
 ## Management
+
+> **Sepsis 6**
+> - Call for senior help
+> - Oxygen if required
+> - IV access, take bloods
+> - Empirical antibiotics
+> - IV fluids
+> - Continuous monitoring
 
 ### Early recognition
 
