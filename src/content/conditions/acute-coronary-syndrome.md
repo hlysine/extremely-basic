@@ -45,7 +45,7 @@ keywords:
   - [**P2Y<sub>12</sub> inhibitor**](../treatments/antiplatelet) - ticagrelor, prasugrel, clopidogrel
 - [**Sublingual nitroglycerin**](../treatments/nitroglycerin) every 5 minutes for 3 doses
   - Contraindicated in recent PDE inhibitor use, hypotension
-- [**Antithrombotic**](../treatments/antithrombotic) - unfractionated heparin, enoxaparin, fondaparinux, bivalirudin
+- [**Anticoagulation**](../treatments/anticoagulant) - unfractionated heparin, enoxaparin, fondaparinux, bivalirudin
 - [**Beta-blocker**](../treatments/beta-blocker) in first 24 hours
   - Contraindicated in heart failure, bradycardia, AV block, hypotension
 - **ACE inhibitor**

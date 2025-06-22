@@ -1,5 +1,5 @@
 ---
-title: Antithrombotic therapy
+title: Anticoagulation
 section: ACS and heart failure
 keywords:
   - unfractionated heparin
@@ -9,7 +9,7 @@ keywords:
   - bivalirudin
 ---
 
-# Antithrombotic therapy
+# Anticoagulation
 
 - **Indication** - acute coronary syndrome
 

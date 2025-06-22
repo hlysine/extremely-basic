@@ -1,5 +1,17 @@
 [
   {
+    "title": "Anticoagulation",
+    "section": "ACS and heart failure",
+    "keywords": [
+      "unfractionated heparin",
+      "low molecular weight heparin (LMWH)",
+      "enoxaparin",
+      "fondaparinux",
+      "bivalirudin"
+    ],
+    "key": "anticoagulant"
+  },
+  {
     "title": "Antiplatelet therapy",
     "section": "ACS and heart failure",
     "keywords": [
@@ -10,18 +22,6 @@
       "acute coronary syndrome"
     ],
     "key": "antiplatelet"
-  },
-  {
-    "title": "Antithrombotic therapy",
-    "section": "ACS and heart failure",
-    "keywords": [
-      "unfractionated heparin",
-      "low molecular weight heparin (LMWH)",
-      "enoxaparin",
-      "fondaparinux",
-      "bivalirudin"
-    ],
-    "key": "antithrombotic"
   },
   {
     "title": "Beta-blocker",
