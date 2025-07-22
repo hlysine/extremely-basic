@@ -24,3 +24,8 @@ dist-ssr
 *.sw?
 
 dist
+
+.env
+/output
+/public/media
+/.notion-to-md

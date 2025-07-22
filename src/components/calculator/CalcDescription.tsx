@@ -14,7 +14,7 @@ export default memo(function CalcDescription({
     void (async () => {
       try {
         const response = (await import(
-          `../../content/calc/${descriptionKey}.md?raw`
+          `../../../output/calc/${descriptionKey}.md?raw`
         )) as {
           default: string;
         };
