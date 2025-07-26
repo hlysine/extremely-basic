@@ -60,6 +60,12 @@ keywords:
 - **Administration**
   - **IV** - 2.5-15 mg IV bolus over 2 mins
 
+### Sotalol
+
+- **Type** - Beta-blocker
+- **Administration**
+  - **IV** - 112.5 mg IV once/twice daily
+
 ## VT / wide complex SVT
 
 ### Amiodarone

@@ -33,11 +33,11 @@ keywords:
       - If no carotid bruit and carotid stenosis
   - [IV adenosine or ATP](../treatments/stable-anti-arrhythmics#narrow-complex-svt)
     - Confirms SVT if adenosine terminates tachycardia
-  - [IV amiodarone](../treatments/stable-anti-arrhythmics#amiodarone)
   - [IV verapamil or diltiazem](../treatments/stable-anti-arrhythmics#narrow-complex-svt)
     - Diltiazem if poor LV function
   - [IV esmolol or metoprolol](../treatments/stable-anti-arrhythmics#narrow-complex-svt)
     - If good LV function
+  - [IV amiodarone](../treatments/stable-anti-arrhythmics#amiodarone)
   - DC cardioversion
 
 ## Atrial fibrillation

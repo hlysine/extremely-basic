@@ -66,7 +66,7 @@ keywords:
   - High risk of recurrence
 - If unstable - [synchronized cardioversion](tachyarrhythmia-unstable)
 - If stable:
-  - Amiodarone, sotalol, procainamide
+  - [IV amiodarone](../treatments/stable-anti-arrhythmics#amiodarone), [sotalol](../treatments/stable-anti-arrhythmics#sotalol), [procainamide](../treatments/stable-anti-arrhythmics#procainamide)
   - Anti-arrhythmia pacing
   - Refer to cardiology for ICD implantation
 
