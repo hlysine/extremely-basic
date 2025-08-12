@@ -49,12 +49,15 @@ keywords:
 > \>6.5 mmol/L or wide QRS
 
 - Calcium gluconate 10% 10 ml slow IV
+  - Repeat every 5 minutes if no normalization of ECG
 - IV insulin and glucose
-  - 10 U insulin
-  - 50 ml 50% dextrose
-- Sodium bicarbonate
+  - 10 U insulin (Actrapid HM)
+  - 50 ml 50% dextrose (D50)
+  - Repeat every 4-6 hours as needed
+- Sodium bicarbonate 8.4% 100-150 ml over 30-60 minutes
   - If acidotic
-- Inhaled beta-2 agonist
+- Inhaled beta-2 agonist (Salbutamol)
+- Diuretics (furosemide 40-80 mg IV bolus)
 - Renal replacement therapy
 
 ### Moderate hyperkalemia
