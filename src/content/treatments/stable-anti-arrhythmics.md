@@ -72,7 +72,7 @@ keywords:
 
 - **Administration**
   - **IV**
-    - 150 mg IV bolus over 10 mins
+    - 150 mg IV bolus in 100 ml D5 over 10 mins
     - 360 mg maintenance infusion over 6 hours
 
 ### Lignocaine
