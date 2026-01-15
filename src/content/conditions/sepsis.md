@@ -49,6 +49,18 @@ keywords:
 > - Empirical antibiotics
 > - IV fluids
 > - Continuous monitoring
+>
+> -----------------------
+>
+> **Give 3**
+> - Antibiotics
+> - Oxygen
+> - Fluids
+>
+> **Take 3**
+> - Lactate
+> - Urine output
+> - Blood culture
 
 ### Early recognition
 
