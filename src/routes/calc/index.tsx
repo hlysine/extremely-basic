@@ -92,9 +92,9 @@ const calculators: Record<string, Calculator[]> = {
       path: '/calc/corrected-sodium',
     },
     {
-      title: 'Fluid Volume',
+      title: 'Fluid Prescription',
       badges: ['Body Weight', 'Deficit %', 'Ongoing Losses'],
-      path: '/calc/fluid-volume',
+      path: '/calc/fluid-prescription',
     },
   ],
   'Acute respiratory failure': [

@@ -27,7 +27,7 @@ export default memo(function CalcNumberInput({
 }: CalcNumberInputProps) {
   const setValue = (newValue: number) => {
     if (isNaN(newValue)) {
-      return;
+      onChange(newValue);
     }
     if (min !== undefined && newValue < min) {
       return;
@@ -53,15 +53,11 @@ export default memo(function CalcNumberInput({
           value={Number.isNaN(value) ? '' : value}
           onInput={e => {
             const newValue = parseFloat(e.currentTarget.value);
-            if (!isNaN(newValue)) {
-              setValue(newValue);
-            }
+            setValue(newValue);
           }}
           onBlur={e => {
             const newValue = parseFloat(e.currentTarget.value);
-            if (!isNaN(newValue)) {
-              setValue(newValue);
-            }
+            setValue(newValue);
           }}
           placeholder={placeholder}
         />
