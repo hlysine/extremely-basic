@@ -25,7 +25,7 @@ Calculate daily fluid requirement with maintenance, deficit and ongoing loss
   | 10-15%    | Semicoma  | Parched        | Decreased    | Sunken | Low    | High   | Decreased |
   | >15%      | Coma      | Parched        | Cold and dry | Sunken | Low    | Weak   | Absent    |
 
- Ongoing loss
+- Ongoing loss
   - Sodium and potassium loss factored into daily requirement
 
   | Fluid       | Na      | K     |
