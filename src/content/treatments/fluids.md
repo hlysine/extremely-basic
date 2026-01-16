@@ -78,7 +78,7 @@ keywords:
      - 4-2-1 rule
 
      | Weight   | Rate         |
-        |----------|--------------|
+     |----------|--------------|
      | 0-10 kg  | 4 ml/kg/hour |
      | 10-20 kg | 2 ml/kg/hour |
      | >20 kg   | 1 ml/kg/hour |
@@ -86,7 +86,7 @@ keywords:
      - 100-50-20 rule
 
      | Weight   | Rate          |
-        |----------|---------------|
+     |----------|---------------|
      | 0-10 kg  | 100 ml/kg/day |
      | 10-20 kg | 50 ml/kg/day  |
      | >20 kg   | 20 ml/kg/day  |
