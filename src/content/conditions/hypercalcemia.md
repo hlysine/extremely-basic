@@ -20,6 +20,21 @@ keywords:
   - Thiazide diuretics
   - Vitamin A
 
+## Features
+
+- Acute
+  - Polyuria, polydipsia
+  - Constipation
+  - Nausea, vomiting
+  - Fatigue, weakness
+  - Confusion
+  - Convulsion
+- Chronic
+  - Bone - pain
+  - Moans - weakness, confusion
+  - Groans - abdominal pain, constipation
+  - Stones - renal stones
+
 ## Investigations
 
 - Serum ionized calcium
@@ -30,6 +45,10 @@ keywords:
 - Thyroid function test
 - 24-hour urine calcium
 - ECG
+  - QT shortening
+  - J waves if severe
+
+![ECG changes](https://0xygaj8b07.ufs.sh/f/USMw46GisEiDbNAwLl3NMsDuUwZSTVkQcjhWv1OaBpP024rI)
 
 ## Management
 
@@ -44,5 +63,7 @@ keywords:
 - Hydrocortisone 50 mg IV every 8 hours
   - Then prednisolone 40-60 mg daily
 - Denosumab for malignant hypercalcemia
+  - RANKL inhibitor against osteoclastic activity
 - Cinacalcet for secondary / tertiary hyperparathyroidism
+  - Calcimimetic
 - Hemodialysis with zero / low calcium dialysate

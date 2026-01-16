@@ -369,6 +369,17 @@
     "key": "hyperosmolar-nonketotic-coma"
   },
   {
+    "title": "Hypocalcemia",
+    "section": "Metabolic disturbances",
+    "keywords": [
+      "calcium",
+      "hypoparathyroidism",
+      "PTH",
+      "vitamin D deficiency"
+    ],
+    "key": "hypocalcemia"
+  },
+  {
     "title": "Hypoglycemia",
     "section": "Metabolic disturbances",
     "keywords": [
