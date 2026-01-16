@@ -325,6 +325,18 @@
     "key": "diabetic-ketoacidosis"
   },
   {
+    "title": "Hypercalcemia",
+    "section": "Metabolic disturbances",
+    "keywords": [
+      "calcium",
+      "hyperparathyroidism",
+      "vitamin D",
+      "malignancy",
+      "renal failure"
+    ],
+    "key": "hypercalcemia"
+  },
+  {
     "title": "Hyperkalemia",
     "section": "Metabolic disturbances",
     "keywords": [

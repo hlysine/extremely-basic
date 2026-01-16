@@ -36,9 +36,12 @@
   @apply text-sm my-1;
 }
 
-.markdown ul,
-.markdown ol {
+.markdown ul {
   @apply list-outside list-disc my-1 ps-8 flex flex-col gap-1;
+}
+
+.markdown ol {
+  @apply list-outside list-decimal my-1 ps-8 flex flex-col gap-1;
 }
 
 .markdown img {

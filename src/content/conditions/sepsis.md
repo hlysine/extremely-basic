@@ -42,53 +42,41 @@ keywords:
 
 ## Management
 
-> **Sepsis 6**
-> - Call for senior help
-> - Oxygen if required
-> - IV access, take bloods
-> - Empirical antibiotics
-> - IV fluids
-> - Continuous monitoring
->
-> -----------------------
->
-> **Give 3**
-> - Antibiotics
-> - Oxygen
-> - Fluids
->
-> **Take 3**
-> - Lactate
-> - Urine output
-> - Blood culture
-
 ### Early recognition
 
 - Consider sepsis in all patients with acute organ dysfunction / altered mental status
 - Signs of systemic inflammation may not be present
   - Consider occult sepsis in organ dysfunction or high lactate
+- Consult seniors
+- Continuous monitoring
 
-### Early resuscitation
+### Hour-1 bundle
 
-- Adequate oxygen saturation
-- Adequate tissue perfusion
-  - High volume fluid resuscitation - [1000 ml crystalloid over 30 minutes](../treatments/fluids#septic-shock)
+> **Take 3** and **Give 3**
+
+- **Serum lactate**
+  - Remeasure if initial lactate >2 mmol/L
+- **Urine**
+  - Monitor urine output
+  - Urine dipstick and culture
+- **Blood culture** for 2 sets before antibiotics
+  - Do not delay antibiotics if blood cultures not immediately available
+  - Additional culture in 24 hours
+  - Also obtain sputum culture and chest X-ray
+
+- **Antibiotics**
+  - Empirical IV broad-spectrum antibiotics
+- **Oxygen**
+  - Step up to ventilator with low tidal volume in ARDS
+- **Fluid resuscitation**
+  - 30-by-3 crystalloid - [30ml/kg crystalloid over 3 hours](../treatments/fluids#septic-shock)
     - Assess response with mental state and urine output
+    - Consider 30-by-6 for patients with congestive heart failure
     - **Disregard fluid in-out balance in the first 24 hours**
   - [Vasopressors](../treatments/vasopressors#norepinephrine) if hypotensive despite fluids
-    - Prefer norepinephrine, otherwise epinephrine or dopamine
+    - Prefer norepinephrine, otherwise dopamine or epinephrine
     - Target MAP 65 mmHg
   - [Dobutamine](../treatments/vasopressors#dobutamine) if low perfusion despite adequate MAP
-
-### Early antibiotics
-
-- Start antibiotics within 1 hour of sepsis recognition
-- 2 sets of blood cultures before antibiotics if possible
-  - Start antibiotics before cultures if delay is expected
-  - Additional culture in 24 hours
-- Urine dipstick and culture
-- Sputum culture
-- Chest X-ray
 
 ### Early source control
 
