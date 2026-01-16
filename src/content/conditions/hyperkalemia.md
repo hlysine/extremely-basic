@@ -48,22 +48,29 @@ keywords:
 
 > \>6.5 mmol/L or wide QRS
 
-- Calcium gluconate 10% 10 ml slow IV
+- **If hemodynamically unstable**
+  - Calcium gluconate 10% IV 10-30 ml over 2-5 mins
+  - Or calcium chloride 10% IV 5-10 ml over 2-5 mins
   - Repeat every 5 minutes if no normalization of ECG
-- IV insulin and glucose
+- **If hemodynamically stable**
+  - Calcium gluconate 10% IV 10-30 ml in 100 ml NS over 1 hour
+  - Or calcium chloride 10% IV 5-10 ml in 100 ml NS over 1 hour
+- IV insulin and glucose over 1 hour
   - 10 U insulin (Actrapid HM)
-  - 50 ml 50% dextrose (D50)
+  - Dextrose 50% (D50) IV 50 ml or dextrose 10% (D10) IV 250 ml
   - Repeat every 4-6 hours as needed
 - Sodium bicarbonate 8.4% 100-150 ml over 30-60 minutes
   - If acidotic
-- Inhaled beta-2 agonist (Salbutamol)
-- Diuretics (furosemide 40-80 mg IV bolus)
+- Resonium A/C PO 15-60g
+  - 1g resonium binds 1 mmol of K
+- Nebulized salbutamol 10-20 mg in 3 ml NS
+- Furosemide IV 40-80 mg bolus
 - Renal replacement therapy
 
 ### Moderate hyperkalemia
 
 > \>5.5 mmol/L or wide QRS
 
-- Loop diuretic
-- Potassium restriction
+- Low K diet <2g/day
+- Loop diuretic - furosemide / thiazide
 - Insulin and glucose as above
