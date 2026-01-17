@@ -116,40 +116,44 @@ export default function BookmarkList() {
       coordinateGetter: sortableKeyboardCoordinates,
     })
   );
+  const itemLinks = useMemo(
+    () => bookmarks.map(bookmark => bookmark.link),
+    [bookmarks]
+  );
 
   return (
     <div className="w-full max-w-250 flex flex-wrap items-center justify-center">
-      <DndContext
-        sensors={sensors}
-        collisionDetection={closestCenter}
-        onDragEnd={event => {
-          const { active, over } = event;
-          if (!over) return;
-          if (active.id !== over.id) {
-            const oldIndex = bookmarks.findIndex(
-              item => item.link === active.id
-            );
-            const newIndex = bookmarks.findIndex(item => item.link === over.id);
-            setBookmarks(arrayMove(bookmarks, oldIndex, newIndex));
-          }
-        }}
-      >
-        <SortableContext
-          items={useMemo(
-            () => bookmarks.map(bookmark => bookmark.link),
-            [bookmarks]
-          )}
-          strategy={rectSortingStrategy}
+      {bookmarks.length > 0 ? (
+        <DndContext
+          sensors={sensors}
+          collisionDetection={closestCenter}
+          onDragEnd={event => {
+            const { active, over } = event;
+            if (!over) return;
+            if (active.id !== over.id) {
+              const oldIndex = bookmarks.findIndex(
+                item => item.link === active.id
+              );
+              const newIndex = bookmarks.findIndex(
+                item => item.link === over.id
+              );
+              setBookmarks(arrayMove(bookmarks, oldIndex, newIndex));
+            }
+          }}
         >
-          {bookmarks.map(bookmark => (
-            <BookmarkItem
-              key={bookmark.link}
-              link={bookmark.link}
-              title={bookmark.title}
-            />
-          ))}
-        </SortableContext>
-      </DndContext>
+          <SortableContext items={itemLinks} strategy={rectSortingStrategy}>
+            {bookmarks.map(bookmark => (
+              <BookmarkItem
+                key={bookmark.link}
+                link={bookmark.link}
+                title={bookmark.title}
+              />
+            ))}
+          </SortableContext>
+        </DndContext>
+      ) : (
+        <p className="text-sm opacity-60">Add bookmarks to see them here</p>
+      )}
     </div>
   );
 }

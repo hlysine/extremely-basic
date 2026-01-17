@@ -81,8 +81,8 @@ function Search() {
   );
 
   return (
-    <div className="flex-1 flex flex-col items-center justify-center gap-2 w-full mt-2 max-w-[1000px] self-center">
-      <label className="input w-full max-w-[400px]">
+    <div className="flex-1 flex flex-col items-center justify-center gap-2 w-full mt-2 max-w-250 self-center">
+      <label className="input w-full max-w-100">
         <FaSearch />
         <input
           type="search"
