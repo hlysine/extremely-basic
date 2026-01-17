@@ -12,6 +12,7 @@ function SearchResults({ results }: { results: PageResult[] }) {
   const virtualizer = useVirtualizer({
     count: results.length,
     getScrollElement: () => parentRef.current,
+    getItemKey: index => results[index].id,
     estimateSize: index => (results[index].preview.length > 0 ? 89 : 69),
     overscan: 3,
   });
