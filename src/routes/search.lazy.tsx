@@ -73,7 +73,7 @@ function Search() {
         (value: string) => {
           setQuery(value);
         },
-        100,
+        10,
         { leading: false, trailing: true }
       ),
     []
