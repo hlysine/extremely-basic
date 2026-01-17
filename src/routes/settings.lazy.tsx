@@ -1,6 +1,8 @@
 import { createLazyFileRoute } from '@tanstack/react-router';
 import { SiteSettings, useSettings } from '../components/SettingsContext';
 import { cn } from '../utils/uiUtils';
+import { useMemo } from 'react';
+import { useRegisterSW } from 'virtual:pwa-register/react';
 
 function SettingsToggle({
   settingsKey,
@@ -68,15 +70,39 @@ function ClearBookmarks() {
 }
 
 function Settings() {
+  const isPWA = useMemo(() => {
+    return ['fullscreen', 'standalone', 'minimal-ui'].some(
+      displayMode =>
+        window.matchMedia('(display-mode: ' + displayMode + ')').matches
+    );
+  }, []);
+  const {
+    offlineReady: [offlineReady],
+    needRefresh: [needRefresh],
+  } = useRegisterSW();
   return (
     <div className="flex-1 flex p-4 flex-col gap-2 w-full mt-2 max-w-250 self-center">
       <h1 className="text-4xl font-bold">Extremely Basic</h1>
       <p className="text-xl">Acute medicine quick reference</p>
       <div className="divider" />
-      <p>
-        Install this site as a Progressive Web App for quick access. Select{' '}
-        <b>Add to Home Screen</b> in your browser menu to get started.
-      </p>
+      {isPWA ? (
+        <p>Successfully installed as a Progressive Web App.</p>
+      ) : (
+        <p>
+          Install this site as a Progressive Web App for quick access. Select{' '}
+          <b>Add to Home Screen</b> in your browser menu to get started.
+        </p>
+      )}
+      {offlineReady ? (
+        <p className="text-sm">- Ready to use offline</p>
+      ) : (
+        <p className="text-sm">- Offline use not available</p>
+      )}
+      {needRefresh ? (
+        <p className="text-sm">- Update available. Please refresh the page</p>
+      ) : (
+        <p className="text-sm">- Up to date</p>
+      )}
       <div className="divider" />
       <div className="flex flex-col gap-4 w-full max-w-100 self-center">
         <h2 className="text-2xl font-bold">Settings</h2>
