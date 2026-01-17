@@ -1,134 +1,70 @@
 import { createLazyFileRoute } from '@tanstack/react-router';
-import treatmentsIndex from './treatments/-list.gen.json';
-import conditionsIndex from './conditions/-list.gen.json';
-import calcIndex from './calc/-list.gen.json';
-import { useMemo, useState } from 'react';
+import { useVirtualizer } from '@tanstack/react-virtual';
+import { useMemo, useRef, useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
 import MouseDownLink from '../components/MouseDownLink';
 import debounce from 'lodash/debounce';
-import MiniSearch, { SearchResult } from 'minisearch';
-import { markdownToText } from '../utils/markdownUtils';
+import { PageResult, savedQuery, search } from './-search';
 
-console.time('Search Indexing');
+function SearchResults({ results }: { results: PageResult[] }) {
+  const parentRef = useRef<HTMLDivElement>(null);
 
-const treatmentsContent = Object.entries(
-  import.meta.glob<true, string, string>('../content/treatments/*.md', {
-    query: '?raw',
-    import: 'default',
-    eager: true,
-  })
-);
-const conditionsContent = Object.entries(
-  import.meta.glob<true, string, string>('../content/conditions/*.md', {
-    query: '?raw',
-    import: 'default',
-    eager: true,
-  })
-);
-const calcContent = Object.entries(
-  import.meta.glob<true, string, string>('../content/calc/*.md', {
-    query: '?raw',
-    import: 'default',
-    eager: true,
-  })
-);
+  const virtualizer = useVirtualizer({
+    count: results.length,
+    getScrollElement: () => parentRef.current,
+    estimateSize: index => (results[index].preview.length > 0 ? 89 : 69),
+    overscan: 3,
+  });
 
-interface PageEntry {
-  title: string;
-  section: string;
-  keywords: string[];
-  key: string;
-}
-
-interface SearchEntry extends PageEntry {
-  id: string;
-  content: string;
-}
-
-const searchIndex: SearchEntry[] = [];
-
-function addToSearchStore(
-  type: string,
-  contentList: [string, string][],
-  entry: PageEntry
-) {
-  const id = `${type}/${entry.key}`;
-  const content =
-    contentList.find(([key]) => key.endsWith(`${entry.key}.md`))?.[1] ?? '';
-  const searchEntry: SearchEntry = {
-    ...entry,
-    id,
-    content: markdownToText(content),
-  };
-  searchIndex.push(searchEntry);
-}
-
-treatmentsIndex.forEach(entry => {
-  addToSearchStore('treatments', treatmentsContent, entry);
-});
-conditionsIndex.forEach(entry => {
-  addToSearchStore('conditions', conditionsContent, entry);
-});
-calcIndex.forEach(entry => {
-  addToSearchStore('calc', calcContent, entry);
-});
-
-const miniSearch = new MiniSearch({
-  fields: ['title', 'section', 'keywords', 'content'],
-  storeFields: ['id', 'title', 'section', 'keywords', 'content', 'key'],
-  searchOptions: {
-    boost: { title: 2, section: 1.5, keywords: 1.2 },
-    fuzzy: 0.2,
-    prefix: true,
-  },
-});
-miniSearch.addAll(searchIndex);
-
-interface PageResult extends Omit<SearchResult, 'id'>, SearchEntry {
-  preview: string;
-  terms: string[];
-}
-
-const defaultResult = searchIndex.map(entry => ({
-  ...entry,
-  preview: '',
-  terms: [],
-}));
-
-const textFragmentRegex = /^(.*?)[^\w\s].*[^\w\s](.*?)$/s;
-
-function createTextFragment(target: string) {
-  target = target.trim();
-  const match = textFragmentRegex.exec(target);
-  if (!match) return encodeURIComponent(target);
   return (
-    encodeURIComponent(match[1].trim()) +
-    ',' +
-    encodeURIComponent(match[2].trim())
+    <div ref={parentRef} className="flex-1 overflow-y-auto pb-4 w-full">
+      <div
+        style={{
+          height: `${virtualizer.getTotalSize()}px`,
+          width: '100%',
+          position: 'relative',
+        }}
+      >
+        {virtualizer.getVirtualItems().map(virtualRow => {
+          const result = results[virtualRow.index];
+          return (
+            <MouseDownLink
+              to={result.link}
+              preload="intent"
+              key={result.id}
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: `${virtualRow.size}px`,
+                transform: `translateY(${virtualRow.start}px)`,
+              }}
+              className="flex flex-col gap-1 w-96 bg-base-200 text-base border-b border-neutral/30 py-3 px-6 hover:bg-base-300 transition-all cursor-pointer"
+            >
+              <div className="breadcrumbs text-xs py-0 opacity-60">
+                <ul>
+                  <li className="capitalize">{result.id.split('/')[0]}</li>
+                  <li>{result.section}</li>
+                </ul>
+              </div>
+              {result.title}
+              {result.preview.length > 0 ? (
+                <div className="opacity-60 text-xs max-h-6 text-ellipsis overflow-hidden whitespace-nowrap">
+                  {result.preview}
+                </div>
+              ) : null}
+            </MouseDownLink>
+          );
+        })}
+      </div>
+    </div>
   );
 }
 
-// Savedd query is stored as a variable to persist across re-renders but not across app restarts.
-let savedQuery = '';
-
-console.timeEnd('Search Indexing');
-
 function Search() {
   const [query, setQuery] = useState(savedQuery);
-  const results = useMemo(() => {
-    if (query !== savedQuery) {
-      savedQuery = query;
-    }
-    if (query.length === 0) return defaultResult;
-    const searchResults = miniSearch.search(query) as unknown as PageResult[];
-    return searchResults.map(result => ({
-      ...result,
-      preview:
-        new RegExp(`^.*${result.terms[0]}.*$`, 'mi').exec(
-          result.content
-        )?.[0] ?? '',
-    }));
-  }, [query]);
+  const results = useMemo(() => search(query), [query]);
 
   const debounceInput = useMemo(
     () =>
@@ -155,30 +91,7 @@ function Search() {
           onInput={e => debounceInput(e.currentTarget.value)}
         />
       </label>
-      <div className="flex-1 flex flex-col justify-start items-center overflow-y-auto pb-4 w-full">
-        {results.map(result => (
-          <MouseDownLink
-            to={
-              '/' + result.id + '#:~:text=' + createTextFragment(result.preview)
-            }
-            key={result.id}
-            className="shrink-0 flex flex-col gap-1 w-96 bg-base-200 text-base border-b border-neutral/30 py-3 px-6 hover:bg-base-300 transition-all cursor-pointer"
-          >
-            <div className="breadcrumbs text-xs py-0 opacity-60">
-              <ul>
-                <li className="capitalize">{result.id.split('/')[0]}</li>
-                <li>{result.section}</li>
-              </ul>
-            </div>
-            {result.title}
-            {result.preview.length > 0 ? (
-              <div className="opacity-60 text-xs max-h-6 text-ellipsis overflow-hidden whitespace-nowrap">
-                {result.preview}
-              </div>
-            ) : null}
-          </MouseDownLink>
-        ))}
-      </div>
+      <SearchResults results={results} />
     </div>
   );
 }
