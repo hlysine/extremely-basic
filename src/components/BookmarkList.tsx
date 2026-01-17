@@ -86,7 +86,7 @@ function BookmarkItem({ link, title }: { link: string; title: string }) {
       to={link}
       key={link}
       className={cn(
-        'w-96 bg-base-200 text-base flex items-center gap-2 border-b border-neutral/30 py-3 px-6 hover:bg-base-300 transition-all cursor-pointer',
+        'w-96 bg-base-200 text-base flex items-center gap-2 border-b border-neutral/30 py-3 px-6 hover:bg-base-300 transition-all cursor-pointer touch-none',
         isDragging && 'pointer-events-none'
       )}
     >
