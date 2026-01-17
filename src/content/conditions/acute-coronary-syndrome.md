@@ -31,7 +31,7 @@ keywords:
   - Note **Wellen's Syndrome**
     - Biphasic or deeply inverted T waves in V2-3 with resolved chest pain
     - Unstable angina with high risk of STEMI due to critical stenosis of LAD
-    ![Wellen's Syndrome](https://litfl.com/wp-content/uploads/2018/08/Evolution-of-T-wave-inversion-A-D-after-coronary-reperfusion-in-STEMI-reperfusion-and-in-Wellens-syndrome-NSTEMI.png)
+    ![Wellen's Syndrome](https://0xygaj8b07.ufs.sh/f/USMw46GisEiDGP2VJcNnJMXpZfgPczQR8Ft569A0DiVKCwLr)
 - Serial high-sensitivity cardiac troponin I or T
 
 ## Management
