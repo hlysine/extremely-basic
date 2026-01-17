@@ -2,73 +2,109 @@
   {
     "title": "Peak expiratory flow rate",
     "section": "Acute respiratory failure",
-    "keywords": [],
+    "keywords": [
+      "Age",
+      "Height",
+      "Ethnicity"
+    ],
     "key": "peak-flow-rate"
   },
   {
     "title": "Acute respiratory acidosis",
     "section": "Arterial blood gas",
-    "keywords": [],
+    "keywords": [
+      "PaCO2"
+    ],
     "key": "acute-respiratory-acidosis"
   },
   {
     "title": "Acute respiratory alkalosis",
     "section": "Arterial blood gas",
-    "keywords": [],
+    "keywords": [
+      "PaCO2"
+    ],
     "key": "acute-respiratory-alkalosis"
   },
   {
     "title": "Chronic respiratory acidosis",
     "section": "Arterial blood gas",
-    "keywords": [],
+    "keywords": [
+      "PaCO2"
+    ],
     "key": "chronic-respiratory-acidosis"
   },
   {
     "title": "Chronic respiratory alkalosis",
     "section": "Arterial blood gas",
-    "keywords": [],
+    "keywords": [
+      "PaCO2"
+    ],
     "key": "chronic-respiratory-alkalosis"
   },
   {
     "title": "Metabolic acidosis",
     "section": "Arterial blood gas",
-    "keywords": [],
+    "keywords": [
+      "Bicarbonate"
+    ],
     "key": "metabolic-acidosis"
   },
   {
     "title": "Metabolic alkalosis",
     "section": "Arterial blood gas",
-    "keywords": [],
+    "keywords": [
+      "Bicarbonate"
+    ],
     "key": "metabolic-alkalosis"
   },
   {
     "title": "A-a gradient",
     "section": "Arterial blood gas",
-    "keywords": [],
+    "keywords": [
+      "PaO2",
+      "FiO2",
+      "PaCO2",
+      "Age"
+    ],
     "key": "oxygen-gradient"
   },
   {
     "title": "Anion gap",
     "section": "Metabolic disturbances",
-    "keywords": [],
+    "keywords": [
+      "Sodium",
+      "Chloride",
+      "Bicarbonate"
+    ],
     "key": "anion-gap"
   },
   {
     "title": "Corrected sodium",
     "section": "Metabolic disturbances",
-    "keywords": [],
+    "keywords": [
+      "Sodium",
+      "Glucose"
+    ],
     "key": "corrected-sodium"
   },
   {
     "title": "Fluid prescription",
     "section": "Metabolic disturbances",
-    "keywords": [],
+    "keywords": [
+      "Body weight",
+      "% deficit",
+      "Ongoing loss"
+    ],
     "key": "fluid-prescription"
   },
   {
     "title": "Glasgow coma scale",
     "section": "Neurological emergencies",
-    "keywords": [],
+    "keywords": [
+      "Eye",
+      "Verbal",
+      "Motor"
+    ],
     "key": "glasgow-coma-scale"
   }
 ]

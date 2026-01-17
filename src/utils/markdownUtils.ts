@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-use-before-define */
 import { marked, Renderer, Tokens } from 'marked';
+import { r } from 'readable-regexp';
 
 class TextRenderer extends Renderer {
   code(tokens: Tokens.Code) {
@@ -98,7 +99,21 @@ const renderer = new TextRenderer({
   breaks: true,
 });
 
-const frontMatterRegex = /^---\s*$.*?^---\s*$(.*)/ms;
+const frontMatterRegex = r
+  .match(
+    r.lineStart,
+    r.exactly`---`,
+    r.zeroOrMore.whitespace,
+    r.lineEnd,
+    r.zeroOrMoreLazily.char,
+    r.lineStart,
+    r.exactly`---`,
+    r.zeroOrMore.whitespace,
+    r.lineEnd,
+    r.capture.zeroOrMore.char
+  )
+  .toRegExp('ms');
+
 const options = {
   renderer: renderer as Renderer,
   async: false,

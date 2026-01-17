@@ -1,6 +1,10 @@
 ---
 title: Peak expiratory flow rate
 section: Acute respiratory failure
+keywords:
+  - Age
+  - Height
+  - Ethnicity
 ---
 
 **Refer to [Assessment of asthma](../conditions/asthma)**

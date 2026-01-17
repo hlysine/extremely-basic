@@ -1,6 +1,10 @@
 ---
 title: Glasgow coma scale
 section: Neurological emergencies
+keywords:
+  - Eye
+  - Verbal
+  - Motor
 ---
 
 - Check for barriers to assessment

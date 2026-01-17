@@ -1,6 +1,10 @@
 ---
 title: Fluid prescription
 section: Metabolic disturbances
+keywords:
+  - Body weight
+  - "% deficit"
+  - Ongoing loss
 ---
 
 Calculate daily fluid requirement with maintenance, deficit and ongoing loss

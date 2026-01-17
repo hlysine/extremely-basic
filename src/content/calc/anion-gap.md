@@ -1,6 +1,10 @@
 ---
 title: Anion gap
 section: Metabolic disturbances
+keywords:
+  - Sodium
+  - Chloride
+  - Bicarbonate
 ---
 
 Anion gap = Sodium - Chloride - Bicarbonate

@@ -7,11 +7,13 @@ import MouseDownLink from './MouseDownLink';
 export interface SearchableIndexProps {
   entries: WikiPage[];
   routeBase: string;
+  showKeywords?: boolean;
 }
 
 export default memo(function SearchableIndex({
   entries: allEntries,
   routeBase,
+  showKeywords = false,
 }: SearchableIndexProps) {
   const [searchString, setSearchString] = useState('');
 
@@ -54,7 +56,22 @@ export default memo(function SearchableIndex({
             key={entry.title}
             className="w-96 bg-base-200 text-base border-b border-neutral/30 py-3 px-6 hover:bg-base-300 transition-all cursor-pointer"
           >
-            {entry.title}
+            {showKeywords ? (
+              <>
+                <h2 className="">{entry.title}</h2>
+                {entry.keywords.length > 0 && (
+                  <div className="flex flex-wrap gap-2">
+                    {entry.keywords.map((keyword, idx) => (
+                      <div key={idx} className="badge badge-secondary badge-sm">
+                        {keyword}
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </>
+            ) : (
+              entry.title
+            )}
           </MouseDownLink>
         )}
       </CollapsibleSections>

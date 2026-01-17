@@ -1,6 +1,11 @@
 ---
 title: A-a gradient
 section: Arterial blood gas
+keywords:
+  - PaO2
+  - FiO2
+  - PaCO2
+  - Age
 ---
 
 > P<sub>A</sub>O<sub>2</sub> = FiO<sub>2</sub> x 94.5 - PaCO<sub>2</sub> x 1.25 (in kPa)

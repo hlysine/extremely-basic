@@ -1,6 +1,9 @@
 ---
 title: Corrected sodium
 section: Metabolic disturbances
+keywords:
+  - Sodium
+  - Glucose
 ---
 
 Correct serum sodium level during hyperglycemia
