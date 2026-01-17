@@ -13,7 +13,7 @@ function Treatment() {
   const params = useParams({ from: '/treatments/$key' });
   useTextFragment();
   return (
-    <div className="flex-1 p-4 overflow-y-auto self-center w-full max-w-[1000px]">
+    <div className="flex-1 p-4 overflow-y-auto self-center w-full max-w-250">
       <AddToBookmark
         link={`/treatments/${params.key}`}
         title={allEntries.find(entry => entry.key === params.key)?.title ?? ''}

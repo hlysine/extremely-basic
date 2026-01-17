@@ -107,14 +107,18 @@ function BookmarkItem({ link, title }: { link: string; title: string }) {
 export default function BookmarkList() {
   const [bookmarks, setBookmarks] = useSettings('bookmarks');
   const sensors = useSensors(
-    useSensor(PointerSensor),
+    useSensor(PointerSensor, {
+      activationConstraint: {
+        distance: 5,
+      },
+    }),
     useSensor(KeyboardSensor, {
       coordinateGetter: sortableKeyboardCoordinates,
     })
   );
 
   return (
-    <div className="w-full max-w-[1000px] flex flex-wrap items-center justify-center">
+    <div className="w-full max-w-250 flex flex-wrap items-center justify-center">
       <DndContext
         sensors={sensors}
         collisionDetection={closestCenter}

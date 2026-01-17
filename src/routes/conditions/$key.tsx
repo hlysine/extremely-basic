@@ -13,7 +13,7 @@ function Condition() {
   const params = useParams({ from: '/conditions/$key' });
   useTextFragment();
   return (
-    <div className="flex-1 p-4 pt-0 overflow-y-auto self-center w-full max-w-[1000px]">
+    <div className="flex-1 p-4 pt-0 overflow-y-auto self-center w-full max-w-250">
       <AddToBookmark
         link={`/conditions/${params.key}`}
         title={allEntries.find(entry => entry.key === params.key)?.title ?? ''}
