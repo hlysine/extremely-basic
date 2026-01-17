@@ -93,11 +93,6 @@ function Settings() {
           <b>Add to Home Screen</b> in your browser menu to get started.
         </p>
       )}
-      {offlineReady ? (
-        <p className="text-sm">- Ready to use offline</p>
-      ) : (
-        <p className="text-sm">- Offline use not available</p>
-      )}
       {needRefresh ? (
         <p className="text-sm">- Update available. Please refresh the page</p>
       ) : (
