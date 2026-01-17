@@ -6,7 +6,6 @@ import CalcOutputPanel from '../../components/calculator/CalcOutputPanel';
 import CalcOutputEntry from '../../components/calculator/CalcOutputEntry';
 import CalcDivider from '../../components/calculator/CalcDivider';
 import CalcRadioInput from '../../components/calculator/CalcRadioInput';
-import CalcDescription from '../../components/calculator/CalcDescription';
 
 function GlasgowComaScale() {
   const [motor, setMotor] = useState<number>(Number.NaN);
@@ -26,10 +25,7 @@ function GlasgowComaScale() {
 
   return (
     <Calculator>
-      <CalcHeader
-        title="Glasgow Coma Scale"
-        description={<CalcDescription descriptionKey="glasgow-coma-scale" />}
-      />
+      <CalcHeader title="Glasgow Coma Scale" id="glasgow-coma-scale" />
       <CalcDivider>Result</CalcDivider>
       <CalcOutputPanel>
         <CalcOutputEntry prefix="GCS" value={totalComputed} />

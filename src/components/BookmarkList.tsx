@@ -1,11 +1,10 @@
-import MouseDownLink from './MouseDownLink';
 import { settingsStore, useSettings } from './SettingsContext';
 import {
   useSortable,
   arrayMove,
   SortableContext,
   sortableKeyboardCoordinates,
-  verticalListSortingStrategy,
+  rectSortingStrategy,
 } from '@dnd-kit/sortable';
 import { CSS } from '@dnd-kit/utilities';
 import {
@@ -17,6 +16,14 @@ import {
   useSensors,
 } from '@dnd-kit/core';
 import { useMemo } from 'react';
+import { Link } from '@tanstack/react-router';
+import { cn } from '../utils/uiUtils';
+import {
+  FaBookMedical,
+  FaCalculator,
+  FaSearch,
+  FaSyringe,
+} from 'react-icons/fa';
 
 if (settingsStore.get('bookmarks').length > 0) {
   Promise.all([
@@ -57,24 +64,43 @@ if (settingsStore.get('bookmarks').length > 0) {
 }
 
 function BookmarkItem({ link, title }: { link: string; title: string }) {
-  const { attributes, listeners, setNodeRef, transform, transition } =
-    useSortable({ id: link });
+  const {
+    attributes,
+    listeners,
+    setNodeRef,
+    transform,
+    transition,
+    isDragging,
+  } = useSortable({ id: link });
   const style = {
     transform: CSS.Transform.toString(transform),
     transition,
   };
   return (
-    <MouseDownLink
+    <Link
       ref={setNodeRef}
+      preload="viewport"
       {...attributes}
       {...listeners}
       style={style}
       to={link}
       key={link}
-      className="w-96 bg-base-200 text-base border-b border-neutral/30 py-3 px-6 hover:bg-base-300 transition-all cursor-pointer"
+      className={cn(
+        'w-96 bg-base-200 text-base flex items-center gap-2 border-b border-neutral/30 py-3 px-6 hover:bg-base-300 transition-all cursor-pointer',
+        isDragging && 'pointer-events-none'
+      )}
     >
+      {link.startsWith('/calc') ? (
+        <FaCalculator />
+      ) : link.startsWith('/conditions') ? (
+        <FaBookMedical />
+      ) : link.startsWith('/treatments') ? (
+        <FaSyringe />
+      ) : (
+        <FaSearch />
+      )}
       {title}
-    </MouseDownLink>
+    </Link>
   );
 }
 
@@ -88,34 +114,38 @@ export default function BookmarkList() {
   );
 
   return (
-    <DndContext
-      sensors={sensors}
-      collisionDetection={closestCenter}
-      onDragEnd={event => {
-        const { active, over } = event;
-        if (!over) return;
-        if (active.id !== over.id) {
-          const oldIndex = bookmarks.findIndex(item => item.link === active.id);
-          const newIndex = bookmarks.findIndex(item => item.link === over.id);
-          setBookmarks(arrayMove(bookmarks, oldIndex, newIndex));
-        }
-      }}
-    >
-      <SortableContext
-        items={useMemo(
-          () => bookmarks.map(bookmark => bookmark.link),
-          [bookmarks]
-        )}
-        strategy={verticalListSortingStrategy}
+    <div className="w-full max-w-[1000px] flex flex-wrap items-center justify-center">
+      <DndContext
+        sensors={sensors}
+        collisionDetection={closestCenter}
+        onDragEnd={event => {
+          const { active, over } = event;
+          if (!over) return;
+          if (active.id !== over.id) {
+            const oldIndex = bookmarks.findIndex(
+              item => item.link === active.id
+            );
+            const newIndex = bookmarks.findIndex(item => item.link === over.id);
+            setBookmarks(arrayMove(bookmarks, oldIndex, newIndex));
+          }
+        }}
       >
-        {bookmarks.map(bookmark => (
-          <BookmarkItem
-            key={bookmark.link}
-            link={bookmark.link}
-            title={bookmark.title}
-          />
-        ))}
-      </SortableContext>
-    </DndContext>
+        <SortableContext
+          items={useMemo(
+            () => bookmarks.map(bookmark => bookmark.link),
+            [bookmarks]
+          )}
+          strategy={rectSortingStrategy}
+        >
+          {bookmarks.map(bookmark => (
+            <BookmarkItem
+              key={bookmark.link}
+              link={bookmark.link}
+              title={bookmark.title}
+            />
+          ))}
+        </SortableContext>
+      </DndContext>
+    </div>
   );
 }

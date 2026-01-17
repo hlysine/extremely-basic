@@ -8,7 +8,6 @@ import CalcNumberInput from '../../components/calculator/CalcNumberInput';
 import CalcOutputPanel from '../../components/calculator/CalcOutputPanel';
 import CalcOutputEntry from '../../components/calculator/CalcOutputEntry';
 import CalcDivider from '../../components/calculator/CalcDivider';
-import CalcDescription from '../../components/calculator/CalcDescription';
 
 type Ethnicity = 'chinese' | 'other';
 const Ethnicities = ['chinese', 'other'] as Ethnicity[];
@@ -52,10 +51,7 @@ function PeakFlowRate() {
 
   return (
     <Calculator>
-      <CalcHeader
-        title="Peak expiratory flow rate"
-        description={<CalcDescription descriptionKey="peak-flow-rate" />}
-      />
+      <CalcHeader title="Peak expiratory flow rate" id="peak-flow-rate" />
       <CalcTab
         options={HeightUnits}
         selected={unit}

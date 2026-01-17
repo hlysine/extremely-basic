@@ -8,7 +8,6 @@ import CalcNumberInput from '../../components/calculator/CalcNumberInput';
 import CalcOutputPanel from '../../components/calculator/CalcOutputPanel';
 import CalcOutputEntry from '../../components/calculator/CalcOutputEntry';
 import CalcDivider from '../../components/calculator/CalcDivider';
-import CalcDescription from '../../components/calculator/CalcDescription';
 
 function AcuteRespiratoryAlkalosis() {
   const [unit, setUnit] = useState<PressureUnit>('kPa');
@@ -29,9 +28,7 @@ function AcuteRespiratoryAlkalosis() {
     <Calculator>
       <CalcHeader
         title="Acute respiratory alkalosis"
-        description={
-          <CalcDescription descriptionKey="acute-respiratory-alkalosis" />
-        }
+        id="acute-respiratory-alkalosis"
       />
       <CalcTab
         options={PressureUnits}

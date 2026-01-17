@@ -7,7 +7,6 @@ import CalcNumberInput from '../../components/calculator/CalcNumberInput';
 import CalcOutputPanel from '../../components/calculator/CalcOutputPanel';
 import CalcOutputEntry from '../../components/calculator/CalcOutputEntry';
 import CalcDivider from '../../components/calculator/CalcDivider';
-import CalcDescription from '../../components/calculator/CalcDescription';
 
 function FluidPrescription() {
   const [bodyWeight, setBodyWeight] = useState<number>(Number.NaN);
@@ -60,10 +59,7 @@ function FluidPrescription() {
 
   return (
     <Calculator>
-      <CalcHeader
-        title="Fluid Prescription"
-        description={<CalcDescription descriptionKey="fluid-prescription" />}
-      />
+      <CalcHeader title="Fluid Prescription" id="fluid-prescription" />
       <CalcDivider>Results</CalcDivider>
       <CalcOutputPanel>
         <CalcOutputEntry

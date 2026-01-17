@@ -8,7 +8,6 @@ import CalcNumberInput from '../../components/calculator/CalcNumberInput';
 import CalcOutputPanel from '../../components/calculator/CalcOutputPanel';
 import CalcOutputEntry from '../../components/calculator/CalcOutputEntry';
 import CalcDivider from '../../components/calculator/CalcDivider';
-import CalcDescription from '../../components/calculator/CalcDescription';
 
 function AcuteRespiratoryAcidosis() {
   const [unit, setUnit] = useState<PressureUnit>('kPa');
@@ -29,9 +28,7 @@ function AcuteRespiratoryAcidosis() {
     <Calculator>
       <CalcHeader
         title="Acute respiratory acidosis"
-        description={
-          <CalcDescription descriptionKey="acute-respiratory-acidosis" />
-        }
+        id="acute-respiratory-acidosis"
       />
       <CalcTab
         options={PressureUnits}

@@ -8,7 +8,6 @@ import CalcNumberInput from '../../components/calculator/CalcNumberInput';
 import CalcOutputPanel from '../../components/calculator/CalcOutputPanel';
 import CalcOutputEntry from '../../components/calculator/CalcOutputEntry';
 import CalcDivider from '../../components/calculator/CalcDivider';
-import CalcDescription from '../../components/calculator/CalcDescription';
 
 function MetabolicAlkalosis() {
   const [unit, setUnit] = useState<PressureUnit>('kPa');
@@ -27,10 +26,7 @@ function MetabolicAlkalosis() {
 
   return (
     <Calculator>
-      <CalcHeader
-        title="Metabolic alkalosis"
-        description={<CalcDescription descriptionKey="metabolic-alkalosis" />}
-      />
+      <CalcHeader title="Metabolic alkalosis" id="metabolic-alkalosis" />
       <CalcTab
         options={PressureUnits}
         selected={unit}

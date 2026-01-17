@@ -13,7 +13,6 @@ import CalcNumberInput from '../../components/calculator/CalcNumberInput';
 import CalcOutputPanel from '../../components/calculator/CalcOutputPanel';
 import CalcOutputEntry from '../../components/calculator/CalcOutputEntry';
 import CalcDivider from '../../components/calculator/CalcDivider';
-import CalcDescription from '../../components/calculator/CalcDescription';
 
 function OxygenGradient() {
   const [unit, setUnit] = useState<PressureUnit>('kPa');
@@ -50,10 +49,7 @@ function OxygenGradient() {
 
   return (
     <Calculator>
-      <CalcHeader
-        title="A-a gradient"
-        description={<CalcDescription descriptionKey="oxygen-gradient" />}
-      />
+      <CalcHeader title="A-a gradient" id="oxygen-gradient" />
       <CalcTab
         options={PressureUnits}
         selected={unit}

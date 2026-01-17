@@ -7,7 +7,6 @@ import CalcNumberInput from '../../components/calculator/CalcNumberInput';
 import CalcOutputPanel from '../../components/calculator/CalcOutputPanel';
 import CalcOutputEntry from '../../components/calculator/CalcOutputEntry';
 import CalcDivider from '../../components/calculator/CalcDivider';
-import CalcDescription from '../../components/calculator/CalcDescription';
 
 function AnionGap() {
   const [sodium, setSodium] = useState<number>(Number.NaN);
@@ -23,10 +22,7 @@ function AnionGap() {
 
   return (
     <Calculator>
-      <CalcHeader
-        title="Anion Gap"
-        description={<CalcDescription descriptionKey="anion-gap" />}
-      />
+      <CalcHeader title="Anion Gap" id="anion-gap" />
       <CalcDivider>Results</CalcDivider>
       <CalcOutputPanel>
         <CalcOutputEntry
