@@ -5,7 +5,9 @@ function SettingsToggle({
   settingsKey,
   label,
 }: {
-  settingsKey: keyof SiteSettings;
+  settingsKey: keyof {
+    [T in keyof SiteSettings as SiteSettings[T] extends boolean ? T : never]: T;
+  };
   label: string;
 }) {
   const [value, setValue] = useSettings(settingsKey);
@@ -15,7 +17,7 @@ function SettingsToggle({
       <input
         type="checkbox"
         className="toggle"
-        checked={value as boolean}
+        checked={value}
         onChange={e => setValue(e.target.checked)}
       />
     </label>

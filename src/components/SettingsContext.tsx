@@ -2,7 +2,16 @@ import { useCallback, useSyncExternalStore } from 'react';
 import { z } from 'zod';
 
 export const SiteSettingsSchema = z.object({
-  isDark: z.boolean().default(false),
+  isDark: z.boolean().default(false).catch(false),
+  bookmarks: z
+    .array(
+      z.object({
+        link: z.string(),
+        title: z.string(),
+      })
+    )
+    .default([])
+    .catch([]),
 });
 
 export type SiteSettings = z.infer<typeof SiteSettingsSchema>;

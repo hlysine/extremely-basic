@@ -1,6 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router';
 import { pinnedTabs, Tab, tabs } from './-tabs';
 import MouseDownLink from '../components/MouseDownLink';
+import BookmarkList from '../components/BookmarkList';
 
 function HomePageIcon({ tab }: { tab: Tab }) {
   return (
@@ -36,6 +37,7 @@ function HomePage() {
           <HomePageIcon key={tab.name} tab={tab} />
         ))}
       </IconGroup>
+      <BookmarkList />
     </div>
   );
 }
