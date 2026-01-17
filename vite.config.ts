@@ -1,4 +1,3 @@
-import million from 'million/compiler';
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { TanStackRouterVite } from '@tanstack/router-plugin/vite';
@@ -25,8 +24,11 @@ export default defineConfig({
         },
       ],
     }),
-    million.vite({ auto: true, telemetry: false }),
-    react(),
+    react({
+      babel: {
+        plugins: ['babel-plugin-react-compiler'],
+      },
+    }),
     tailwindcss(),
     TanStackRouterVite({
       routesDirectory: './src/routes',

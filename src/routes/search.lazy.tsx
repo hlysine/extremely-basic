@@ -9,6 +9,7 @@ import { PageResult, savedQuery, search } from './-search';
 function SearchResults({ results }: { results: PageResult[] }) {
   const parentRef = useRef<HTMLDivElement>(null);
 
+  // eslint-disable-next-line react-hooks/incompatible-library
   const virtualizer = useVirtualizer({
     count: results.length,
     getScrollElement: () => parentRef.current,

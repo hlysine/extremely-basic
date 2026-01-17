@@ -7,7 +7,13 @@
     "moduleResolution": "bundler",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
     "strict": true
   },
-  "include": ["vite.config.ts", ".eslintrc.cjs", "scripts"]
+  "include": [
+    "eslint.config.ts",
+    "vite.config.ts",
+    "postcss.config.ts",
+    "scripts"
+  ]
 }
