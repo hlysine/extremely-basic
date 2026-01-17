@@ -77,7 +77,6 @@ function Settings() {
     );
   }, []);
   const {
-    offlineReady: [offlineReady],
     needRefresh: [needRefresh],
   } = useRegisterSW();
   return (
