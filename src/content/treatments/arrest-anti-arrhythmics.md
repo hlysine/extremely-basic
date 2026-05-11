@@ -14,12 +14,19 @@ keywords:
 
 - **Administration**
   - **IV**
-    - 300 mg IV bolus for refractory VF/VT
+    - 300 mg IV bolus after 3rd shock
     - 150 mg IV bolus after 5th shock
 
 ## Lignocaine
 
 - **Administration**
   - **IV**
-    - 100 mg IV bolus for refractory VF/VT
-    - 50 mg IV bolus after 5th shock
+    - 1-1.5 mg/kg IV bolus after 3rd shock
+    - 0.5-0.75 mg/kg IV bolus every 5-10 minutes until maximum dose of 3 mg/kg
+
+## Magnesium sulfate
+
+- **Indication** - Cardiac arrest with torsades de pointes
+- **Administration**
+  - **IV**
+    - 1-2 g IV bolus in 10 ml NS/D5 over 20 minutes

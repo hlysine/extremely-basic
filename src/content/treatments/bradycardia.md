@@ -16,7 +16,8 @@ keywords:
 - **Type**: Anticholinergic
 - **Indication**: Symptomatic bradycardia, not effective in complete heart block
 - **Administration**:
-  - **IV bolus**: 0.6 mg every 3-5 minutes, maximum total dose of 3 mg
+  - **IV bolus**: 1 mg every 3-5 minutes, maximum total dose of 3 mg
+- **Contraindication**: heart transplant
 
 ## Isoprenaline (Isoproterenol)
 

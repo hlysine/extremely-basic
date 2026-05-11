@@ -20,7 +20,7 @@ keywords:
 
 | Indication             | Dose                              | Route         |
 |------------------------|-----------------------------------|---------------|
-| Shock                  | 0.05 mcg/kg/min                   | Continuous IV |
+| Shock                  | 2-10 mcg/min                      | Continuous IV |
 | Life-threatening shock | **0.1 mg** / 1 ml of **1:10,000** | Bolus IV      |
 | Cardiac arrest         | **1 mg** / 10 ml of **1:10,000**  | Bolus IV      |
 | Anaphylaxis            | **0.3-0.5 mg** of **1:1,000**     | IM            |
@@ -30,7 +30,7 @@ keywords:
 
 ## Norepinephrine
 
-- 0.05mcg/kg/min
+- 0.1-0.5 mcg/kg/min
   - **Require** central venous access
 - Potent vasoconstrictor
 - First line for **septic shock**
@@ -38,7 +38,7 @@ keywords:
 
 ## Dopamine
 
-- 5 mcg/kg/min
+- 5-20 mcg/kg/min
   - Prefer central venous access
 - Ionotropic, chronotropic, vasoconstrictor
 - Increases urine output

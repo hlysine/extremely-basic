@@ -41,10 +41,10 @@ keywords:
 - **Oxygen** if desaturated or in respiratory distress
 - **Analgesia** - IV morphine
 - Dual antiplatelet therapy
-  - [**Chewable aspirin**](../treatments/antiplatelet) 80-325 mg
+  - [**Chewable aspirin**](../treatments/antiplatelet) 162-325 mg
   - [**P2Y<sub>12</sub> inhibitor**](../treatments/antiplatelet) - ticagrelor, prasugrel, clopidogrel
 - [**Sublingual nitroglycerin**](../treatments/nitroglycerin) every 5 minutes for 3 doses
-  - Contraindicated in recent PDE inhibitor use, hypotension
+  - Contraindicated in recent PDE inhibitor use, hypotension, RV infarction
 - [**Anticoagulation**](../treatments/anticoagulant) - unfractionated heparin, enoxaparin, fondaparinux, bivalirudin
 - [**Beta-blocker**](../treatments/beta-blocker) in first 24 hours
   - Contraindicated in heart failure, bradycardia, AV block, hypotension
@@ -54,9 +54,11 @@ keywords:
 ### STEMI
 
 - Primary percutaneous coronary intervention (PCI)
-  - IV glycoprotein IIb/IIIa inhibitor
+  - IV glycoprotein IIb/IIIa inhibitor as pre-medication
+  - Target first medical contact to balloon time <90 minutes
 - Thrombolysis with tenecteplase or alteplase
   - If PCI not available within 120 minutes
+  - Target ED door to needle time <30 minutes
 
 ### NSTEMI
 

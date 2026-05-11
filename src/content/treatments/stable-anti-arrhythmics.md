@@ -21,7 +21,7 @@ keywords:
 - **Administration**
   - **IV**
     - 6 mg rapid IV bolus
-    - If no response, 12-18 mg rapid IV bolus after 1-2 mins
+    - If no response, 12 mg rapid IV bolus after 1-2 mins
 
 ### Adenosine triphosphate
 
@@ -73,7 +73,7 @@ keywords:
 - **Administration**
   - **IV**
     - 150 mg IV bolus in 100 ml D5 over 10 mins
-    - 360 mg maintenance infusion over 6 hours
+    - 1 mg/min IV maintenance infusion for 6 hours
 
 ### Lignocaine
 
@@ -86,8 +86,9 @@ keywords:
 
 - **Administration**
   - **IV**
-    - 15-18 mg/kg IV over 25-30 minutes for wide complex tachycardia
-    - Maintenance infusion of 1-4 mg/min
+    - 20-50 mg/min IV for wide complex tachycardia
+      - Until arrhythmia suppressed, hypotension ensues, QRS duration increases by >50%, or maximum dose of 17 mg/kg is given
+    - Maintenance infusion of 1-4 mg/min IV
 
 ## Atrial fibrillation
 

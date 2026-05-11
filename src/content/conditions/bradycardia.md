@@ -39,7 +39,9 @@ keywords:
 
 ### Medications
 
-- [IV atropine 0.6 mg](../treatments/bradycardia)
+- [IV atropine 1 mg IV](../treatments/bradycardia)
+  - Repeat every 3-5 minutes up to a maximum of 3 mg
+  - Contraindicated in heart transplant
 - [IV isoproterenol 0.5-10 mcg/min](../treatments/bradycardia)
   - Avoid if in shock due to vasodilation
 - IV epinephrine if severely hypotensive
