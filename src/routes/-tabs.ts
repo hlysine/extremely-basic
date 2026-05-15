@@ -6,6 +6,7 @@ import {
   FaCog,
   FaBolt,
   FaHeartbeat,
+  FaProjectDiagram,
 } from 'react-icons/fa';
 import { IconType } from 'react-icons/lib';
 
@@ -13,6 +14,7 @@ export enum TabKeys {
   Calculators = '/calc',
   Conditions = '/conditions',
   Treatments = '/treatments',
+  Algorithms = '/algorithms',
   Search = '/search',
   Settings = '/settings',
 }
@@ -41,6 +43,12 @@ export const tabs: Tab[] = [
     name: 'Treatments',
     icon: FaSyringe,
     to: TabKeys.Treatments,
+    dock: true,
+  },
+  {
+    name: 'Algorithms',
+    icon: FaProjectDiagram,
+    to: TabKeys.Algorithms,
     dock: true,
   },
   {

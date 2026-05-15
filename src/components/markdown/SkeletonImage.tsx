@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { cn } from '../../utils/uiUtils';
+import { PhotoView } from 'react-photo-view';
 
 export interface SkeletonImageProps {
   title?: string;
@@ -22,21 +23,23 @@ export default function SkeletonImage({
     <>
       <span
         className={cn(
-          'skeleton block w-full max-w-[400px] h-64',
+          'skeleton block w-full max-w-100 h-64',
           className,
           isLoading || 'hidden'
         )}
       ></span>
-      <img
-        className={cn(className, isLoading && 'hidden')}
-        loading="eager"
-        src={src}
-        alt={alt}
-        title={title}
-        onLoad={() => setIsLoading(false)}
-        onError={() => setIsLoading(false)}
-        {...rest}
-      />
+      <PhotoView src={src}>
+        <img
+          className={cn(className, isLoading && 'hidden')}
+          loading="eager"
+          src={src}
+          alt={alt}
+          title={title}
+          onLoad={() => setIsLoading(false)}
+          onError={() => setIsLoading(false)}
+          {...rest}
+        />
+      </PhotoView>
     </>
   );
 }

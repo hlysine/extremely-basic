@@ -1,6 +1,7 @@
 import treatmentsIndex from './treatments/-list.gen.json';
 import conditionsIndex from './conditions/-list.gen.json';
 import calcIndex from './calc/-list.gen.json';
+import algorithmsIndex from './algorithms/-list.gen.json';
 import MiniSearch, { SearchResult } from 'minisearch';
 import { markdownToText } from '../utils/markdownUtils';
 import { r } from 'readable-regexp';
@@ -23,6 +24,13 @@ const conditionsContent = Object.entries(
 );
 const calcContent = Object.entries(
   import.meta.glob<true, string, string>('../content/calc/*.md', {
+    query: '?raw',
+    import: 'default',
+    eager: true,
+  })
+);
+const algorithmsContent = Object.entries(
+  import.meta.glob<true, string, string>('../content/algorithms/*.md', {
     query: '?raw',
     import: 'default',
     eager: true,
@@ -67,6 +75,9 @@ conditionsIndex.forEach(entry => {
 });
 calcIndex.forEach(entry => {
   addToSearchStore('calc', calcContent, entry);
+});
+algorithmsIndex.forEach(entry => {
+  addToSearchStore('algorithms', algorithmsContent, entry);
 });
 
 const miniSearch = new MiniSearch({

@@ -21,6 +21,7 @@ import { cn } from '../utils/uiUtils';
 import {
   FaBookMedical,
   FaCalculator,
+  FaProjectDiagram,
   FaSearch,
   FaSyringe,
 } from 'react-icons/fa';
@@ -96,6 +97,8 @@ function BookmarkItem({ link, title }: { link: string; title: string }) {
         <FaBookMedical />
       ) : link.startsWith('/treatments') ? (
         <FaSyringe />
+      ) : link.startsWith('/algorithms') ? (
+        <FaProjectDiagram />
       ) : (
         <FaSearch />
       )}

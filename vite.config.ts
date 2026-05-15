@@ -22,6 +22,10 @@ export default defineConfig({
           folderPath: 'src/content/calc',
           output: 'src/routes/calc/-list.gen.json',
         },
+        {
+          folderPath: 'src/content/algorithms',
+          output: 'src/routes/algorithms/-list.gen.json',
+        },
       ],
     }),
     react({
